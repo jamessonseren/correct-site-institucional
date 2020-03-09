@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route,  } from "react-router-dom";
+import "./app.css"
+import NavBar from './components/navbar/Navbar'
+import { AnimatedSwitch } from 'react-router-transition';
+// Routes
+import SobreNos from './components/sobre_nos/SobreNos'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+          <AnimatedSwitch atEnter={{ opacity: 0 }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }} className="switch-wrapper">
+            <Route path='/sobre_nos'>
+              <SobreNos/>
+            </Route>
+          </AnimatedSwitch>
+    </BrowserRouter>
   );
 }
 

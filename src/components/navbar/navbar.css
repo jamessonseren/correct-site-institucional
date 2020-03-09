@@ -1,0 +1,17 @@
+.navbar-trade{
+    background: rgba(14, 14, 14, 0.9);
+    padding: 0 !important
+}
+
+.navbar-link-trade{
+    color: whitesmoke !important;
+    font-size: 0.5rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.navbar-link-trade:hover{
+    color: var(--trade-light) !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
