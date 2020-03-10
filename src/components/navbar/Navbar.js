@@ -11,8 +11,8 @@ export default function NavBar(){
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
                 <Nav className="ml-auto mr-auto">
-                    <Navbar.Brand>
-                        <img src={require('../../assets/tradecard_logo_white.png')} alt='Tradecard Logo' height='50%' width='70' className='logo' />
+                    <Navbar.Brand  className='logo'>
+                        <img src={require('../../assets/tradecard_logo_white.png')} alt='Tradecard Logo' height='70%' width='120' className='logo' />
                     </Navbar.Brand>
                     <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre nós</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Produtos</Link></Nav.Link>

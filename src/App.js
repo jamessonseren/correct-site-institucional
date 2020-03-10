@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route,  } from "react-router-dom";
-import "./app.css"
+import "./App.css"
 import NavBar from './components/navbar/Navbar'
 import { AnimatedSwitch } from 'react-router-transition';
 
@@ -9,7 +9,6 @@ import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
 
 function App() {
-
   return (
     <BrowserRouter>
       <NavBar/>

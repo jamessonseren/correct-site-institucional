@@ -1,0 +1,37 @@
+.cor{
+    font-family: 'Roboto' !important;
+    color: white;
+}
+.firstSection{
+    background-color:#00788c;
+}
+.secondSection{
+    background-color:black;
+}
+.title{
+    margin-top:2%;
+    margin-bottom:5%;
+}
+.text{
+  margin-top:15px;
+  text-align: justify;
+  text-justify: inter-word;
+  vertical-align: middle;
+}
+.img{
+    justify-content: "center";
+    align-items: "center";
+}
+.paragrafh{
+    margin-bottom:3%;
+}
+.img-right{
+    margin-top:15px;
+    margin-left:20%;
+    margin-bottom:15px;
+}
+.img-left{
+    margin-top:15px;
+    margin-left:10%;
+    margin-bottom:15px;
+}
