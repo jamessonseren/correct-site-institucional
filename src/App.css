@@ -9,9 +9,15 @@
   }
 
 html, body{
-    height:'auto';width:'100%';
+  height:'auto';width:'100%';
     font-family: 'Roboto' !important;
     background-image: url("assets/background1.png");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-attachment: fixed;
 }
 
 #root{

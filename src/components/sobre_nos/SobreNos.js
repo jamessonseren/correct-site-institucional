@@ -9,7 +9,7 @@ export default function SobreNos(){
             <Col sm={5}></Col>
             <Col className="title" sm={2}><h2>Sobre Nós</h2></Col>
         </Row>
-        <Row className="paragrafh" style={{ backgroundColor:"#444444",borderBottomRightRadius: 40,borderTopLeftRadius:40}}>
+        <Row className="paragrafh" style={{ backgroundColor:"#303030",borderBottomRightRadius: 40,borderTopLeftRadius:40}}>
             <Col sm={6} clasName="text text-center dist">
                 <p className="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Tradecard surgiu no Brasil em 2018, com sede em Campo Grande/MS, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras. Fez grandes investimentos em “Tecnologia misturado com apreço aos seus Usuários”, focado nas necessidades cotidiana de seus Clientes, pessoas Físicas e Jurídicas, permitindo a eles, como novo conceito de mercado – “Liberdade de Ação e Conveniência”.</p>
             </Col>
