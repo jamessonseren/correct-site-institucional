@@ -3,18 +3,24 @@
     --trade-light: #00788c
 }
 
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('./assets/RobotoCondensed-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+
 html, body{
+    height:'auto';width:'100%';
     font-family: 'Roboto' !important;
-    height: 100%;
+    background-image: url("assets/background1.png");
 }
 
 #root{
-    height: 100%;
-    background-color: var(--trade-dark);
+    height:'auto';width:'100%';
 }
 
 .switch-wrapper {
     position: relative;
+    width: 100%;
   }
    
   .switch-wrapper > div {

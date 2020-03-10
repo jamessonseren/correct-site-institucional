@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar/>
-          <AnimatedSwitch atEnter={{ left: -1000 }} atLeave={{ left: -1000 }} atActive={{ left: 0 }} className="switch-wrapper">
+          <AnimatedSwitch atEnter={{ left: -1000 }} atLeave={{ left: -1600 }} atActive={{ left: 0 }} className="switch-wrapper">
             <Route path='/sobre_nos'>
               <SobreNos/>
             </Route>

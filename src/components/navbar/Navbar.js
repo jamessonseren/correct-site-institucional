@@ -20,7 +20,7 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/aplicativos'>Aplicativos</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/clientes'>Clientes</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/trade_shop'>StarkShop</Link></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/trade_shop'>TradeShop</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
