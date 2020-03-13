@@ -14,6 +14,7 @@ import slide4 from "../../assets/slides/slide_4.png"
 import slide5 from "../../assets/slides/slide_5.png"
 import slide6 from "../../assets/slides/slide_6.png"
 import slide7 from "../../assets/slides/slide_7.png"
+import slide8 from "../../assets/slides/slide_8.png"
 
 export default function CarouselComponent() {
   return (
@@ -45,6 +46,9 @@ export default function CarouselComponent() {
         </div>
         <div>
           <img src={slide7} />
+        </div>
+        <div>
+          <img src={slide8} />
         </div>
       </Carousel>
     </div>

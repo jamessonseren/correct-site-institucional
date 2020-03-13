@@ -11,7 +11,7 @@ import {Col, Row, Container, Image} from 'react-bootstrap'
 
 import './apresentacao.css'
 
-export default function Presetation() {
+export default function Vantagens() {
   return (
     <div>
       <Carousel
@@ -25,10 +25,10 @@ export default function Presetation() {
         <Container>
           <Row>
               <Col sm={4}>
-                  <Image src={require('../../assets/cell-phone.png')} className="img-left" rounded fluid/>
+                  
               </Col>
               <Col sm={8}>
-                  <p className="textBlack">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor relacionamento com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento “APP TRADECLUB”, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!</p>
+                  <p className="textBlack">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.6.	Clube de Vantagens - TRADECLUB: proporcionando descontos, controle e economia. Disponibiliza ainda, mais do que um Banco pode oferecer. Extensivo aos familiares e amigos.</p>
               </Col>
           </Row>
           </Container>
