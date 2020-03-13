@@ -18,33 +18,8 @@
 }
 .title{
     font-family: 'Roboto Condensed' !important;
-    margin-top:2%;
-    margin-bottom:3%;
-}
-.text{
-    font-family: 'Roboto' !important;
-    margin-top:35px;
-    margin-bottom:35px;
-    margin-left:25px;
-    margin-right:25px;
-    text-align: justify;
-    text-justify: inter-word;
-    vertical-align: middle;
-}
-.img{
-    justify-content: "center";
-    align-items: "center";
-}
-.paragrafh{
-    margin-bottom:3%;
-}
-.img-right{
-    margin-top:35px;
-    margin-bottom:35px;
-    margin-left:20%;
-}
-.img-left{
-    margin-left:10%;
-    margin-top:35px;
-    margin-bottom:35px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 40px;
+    color: white;
+    margin-left:10%
 }

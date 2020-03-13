@@ -1,0 +1,52 @@
+.fundo_slide_1{
+    background-image: url('../../assets/city.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.fundo_slide_2{
+    background-image: url('../../assets/bussiness.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.fundo_slide_3{
+    background-image: url('../../assets/table.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.textBlack{
+    background-color: black;
+    border-radius: 20px     0px      20px           0;
+    /* top-left top-right bottom-right bottom-left. */
+    color:white;
+    margin-left: 20px;
+    margin-top: 180px;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+}
+.textGray{
+    background-color:#303030;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border-radius: 0px 20px 0 20px;
+    /* top-left top-right bottom-right bottom-left. */
+    color:white;
+    margin-left: 20px;
+    margin-top: 520px;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+}
+.textOutline{
+    background-color: rgba(0, 0, 0, 0.08);
+    margin-top:10%;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-align: justify;
+}
+.slide{
+    max-height: 100% !important;
+}
