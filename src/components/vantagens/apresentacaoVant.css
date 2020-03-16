@@ -1,0 +1,46 @@
+.fundo_slide1{
+    background-image: url('../../assets/market.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.fundo_slide2{
+    background-image: url('../../assets/city.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.fundo_slide3{
+    background-image: url('../../assets/cafe.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.textBlackVant{
+    color:white;
+    font-size:24px;
+    border-radius: 20px     0px      20px           0;
+    /* top-left top-right bottom-right bottom-left. */
+    margin-left: 20px;
+    margin-top: 10%;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+.textBlackItens{
+    color:white;
+    font-size:18px;
+    border-radius: 20px     0px      10px           0;
+    /* top-left top-right bottom-right bottom-left. */
+    margin-left: 40px;
+    margin-top: 0px;
+    text-align: justify;
+    padding-top:0px;
+}
+.slide{
+    max-height: 100% !important;
+}

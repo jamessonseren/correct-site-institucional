@@ -8,6 +8,7 @@ import { AnimatedSwitch } from 'react-router-transition';
 import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/produtos'
+import Vantagens from './components/vantagens/vantagens'
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path='/contato'>
               <Contato/>
+            </Route>
+            <Route path='/vantagens'>
+              <Vantagens/>
             </Route>
           </AnimatedSwitch>
     </BrowserRouter>

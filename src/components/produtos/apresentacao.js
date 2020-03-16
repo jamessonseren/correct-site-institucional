@@ -38,7 +38,7 @@ export default function Presetation() {
         <Container>
           <Row>
               <Col sm={7}>
-                  <p className="textGray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor relacionamento com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento “APP TRADECLUB”, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!</p>
+                  <p className="textGray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tanto no mundo corporativo, quanto no mundo das pessoas físicas, a Tradecard traz vantagens financeiras, econômicas e operacionais, através do uso de seus Aplicativos (Desktop e Celulares) em sua grande Rede de Compras. Uma dessas vantagens é o ganho de KRATS (Cashback) nas operações de compras. Criou ainda, o Cartão TRADECLUB (virtual e pré-pago) que recebe todos os KRATS ganhados em suas compras, com qualquer cartão cadastrado no “APP TRADECLUB”, podendo gasta-los a qualquer momento. O KRATS é uma moeda virtual equivalente ao Real. Um KRATS = Um Real.</p>
               </Col>
               <Col sm={4}>
                   <Image src={require('../../assets/cell-phone.png')} className="img-left" rounded fluid/>
