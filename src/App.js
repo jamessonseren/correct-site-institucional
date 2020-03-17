@@ -9,12 +9,13 @@ import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/produtos'
 import Vantagens from './components/vantagens/vantagens'
+import Aplicativos from './components/aplicativos/aplicativos'
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar/>
-          <AnimatedSwitch atEnter={{ left: -1000 }} atLeave={{ left: -1600 }} atActive={{ left: 0 }} className="switch-wrapper">
+          <AnimatedSwitch atEnter={{ left: -1000 }} atLeave={{ left: -2000 }} atActive={{ left: 0 }} className="switch-wrapper">
             <Route path='/sobre_nos'>
               <SobreNos/>
             </Route>
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path='/vantagens'>
               <Vantagens/>
+            </Route>
+            <Route path='/aplicativos'>
+              <Aplicativos/>
             </Route>
           </AnimatedSwitch>
     </BrowserRouter>

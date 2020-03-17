@@ -13,14 +13,15 @@
     height:100vh;
 }
 .fundo_slide3{
-    background-image: url('../../assets/cafe.jpg');
+    background-image: url('../../assets/cafe.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
 }
 .textBlackVant{
-    color:white;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size:24px;
     border-radius: 20px     0px      20px           0;
     /* top-left top-right bottom-right bottom-left. */
@@ -32,15 +33,28 @@
     margin-bottom:0px;
 }
 .textBlackItens{
-    color:white;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size:18px;
     border-radius: 20px     0px      10px           0;
     /* top-left top-right bottom-right bottom-left. */
     margin-left: 40px;
-    margin-top: 0px;
+    margin-top: 40px;
     text-align: justify;
     padding-top:0px;
 }
 .slide{
     max-height: 100% !important;
+}
+.dark_theme{
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background-image: url('../../assets/darktheme.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.imgIcone{
+    width: 1%;
 }

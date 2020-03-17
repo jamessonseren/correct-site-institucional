@@ -1,12 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Carousel } from "react-responsive-carousel";
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
-import adiantamento from "../../assets/cartoes/trade_adiantamento.png";
-import alimentacao from "../../assets/cartoes/trade_alimentacao.png";
-import tradeclub from "../../assets/cartoes/tradeclub.png";
-import tradecard from "../../assets/cartoes/tradecard.png";
-import delivery from "../../assets/cartoes/trade_delivery.png";
 import {Col, Row, Container, Image} from 'react-bootstrap'
 
 import './apresentacaoVant.css'
@@ -48,12 +41,6 @@ export default function Presetation() {
                         ✓ Tem a facilidade de obter instantaneamente as informações de produtos e/ou lojas que oferecem vantagens, através: <br/>
                         ✓ Rede de Compras: (com promoções)<br/>
                         ✓ TradeShop: (com grandes promoções pontuais)<br/>
-                        ✓ Facilidade de utilização de GPS disponível para direcionamento às Lojas Físicas;<br/>
-                        ✓ Controle financeiro através de relatórios da conta corrente TRADECLUB;<br/>
-                        ✓ Possibilidade de efetuar compras mesmo quando não estiver conectado na internet, através da tecnologia Token.<br/>
-                        ✓ Transferências entre contas, entre Bancos, CNPJs e CPFs (depósitos e saques);<br/>
-                        ✓ Pagamentos de contas (boletos – código de barras)<br/>
-                        ✓ Não tem custos, mensalidades, taxas e nem juros.<br/>
                       </p>
                   </Col>
               </Row>
@@ -63,6 +50,14 @@ export default function Presetation() {
           <Container>
               <Row>
                   <Col sm={12}>
+                    <p className="textBlackItens">
+                        ✓ Facilidade de utilização de GPS disponível para direcionamento às Lojas Físicas;<br/>
+                        ✓ Controle financeiro através de relatórios da conta corrente TRADECLUB;<br/>
+                        ✓ Possibilidade de efetuar compras mesmo quando não estiver conectado na internet, através da tecnologia Token.<br/>
+                        ✓ Transferências entre contas, entre Bancos, CNPJs e CPFs (depósitos e saques);<br/>
+                        ✓ Pagamentos de contas (boletos – código de barras)<br/>
+                        ✓ Não tem custos, mensalidades, taxas e nem juros.<br/>
+                      </p>
                       <p className="textBlackItens">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Tradecard não cobra nada por estes produtos/serviços, quando implanta em Empresas/Órgãos Públicos (Sistema Corporativo), como benefícios e, muito pelo contrário, dá ao Colaborador/Servidor, KRATS (Cashback) em cada compra efetuada (KRATS é dinheiro virtual equivalente ao Real).
                       </p>

@@ -1,12 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Carousel } from "react-responsive-carousel";
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
-import adiantamento from "../../assets/cartoes/trade_adiantamento.png";
-import alimentacao from "../../assets/cartoes/trade_alimentacao.png";
-import tradeclub from "../../assets/cartoes/tradeclub.png";
-import tradecard from "../../assets/cartoes/tradecard.png";
-import delivery from "../../assets/cartoes/trade_delivery.png";
 import {Col, Row, Container, Image} from 'react-bootstrap'
 
 import './apresentacao.css'
@@ -18,8 +11,9 @@ export default function Presetation() {
         showThumbs={false}
         showStatus={false}
         infiniteLoop
+        transitionTime={1000}
         autoPlay
-        className="presentation-mode slide"
+        className="presentation-mode"
       >
         <div className="my-slide fundo_slide_1">
         <Container>

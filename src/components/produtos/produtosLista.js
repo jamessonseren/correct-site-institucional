@@ -11,7 +11,7 @@ import {Col, Row, Container, Image} from 'react-bootstrap'
 
 import './apresentacao.css'
 
-export default function Presetation() {
+export default function ListaProdutos() {
   return (
     <div>
       <Carousel
@@ -19,8 +19,10 @@ export default function Presetation() {
         showStatus={false}
         infiniteLoop
         autoPlay
-        className="presentation-mode slide"
+        useKeyboardArrows
+        className="presentation-mode"
       >
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -28,13 +30,15 @@ export default function Presetation() {
                   <Image className="imgLogoProduto" src={require('../../assets/tradecard_logo_white.png')} rounded fluid/>
               </Col>
               <Col sm={8}>
-                  <p className="textoProdutos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plataforma que proporciona muitos benefícios controlados em um só instrumento tecnológico, facilitando a vida dos profissionais de Recursos Humanos, na gestão dos benefícios, podendo ser através de cartões pós-pagos e pré-pagos.
-Mantém o controle dos limites estabelecidos por operação de desconto em folha de pagamento, garantindo o limite original definido. A variação do comprometimento do limite, ficará nos cartões pós-pagos (Adiantamento Salarial ou Convênio), ou seja, mensalmente os limites desses cartões poderão ser flexíveis, podendo chegar a zero, conforme novos comprometimentos de descontos em folha possam acontecer, por motivos da entrada de novos benefícios, faltas, afastamentos ou outros. 
-</p>
+                  <p className="textoProdutos">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plataforma que proporciona muitos benefícios controlados em um só instrumento tecnológico, facilitando a vida dos profissionais de Recursos Humanos, na gestão dos benefícios, podendo ser através de cartões pós-pagos e pré-pagos.
+                    Mantém o controle dos limites estabelecidos por operação de desconto em folha de pagamento, garantindo o limite original definido. A variação do comprometimento do limite, ficará nos cartões pós-pagos (Adiantamento Salarial ou Convênio), ou seja, mensalmente os limites desses cartões poderão ser flexíveis, podendo chegar a zero, conforme novos comprometimentos de descontos em folha possam acontecer, por motivos da entrada de novos benefícios, faltas, afastamentos ou outros. 
+                  </p>
               </Col>
           </Row>
           </Container>
         </div>
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -42,11 +46,13 @@ Mantém o controle dos limites estabelecidos por operação de desconto em folha
                   <Image src={require('../../assets/cartoes/adianta.png')} rounded fluid/>
               </Col>
               <Col sm={8}>
-                  <p className="textoProdutos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adiantamento Salarial: com limite pré-definido, que possibilita atender as necessidades de compras no dia a dia do Usuário (Colaborador/Servidor), com desconto em folha de pagamento. Ganho de Krats (Cashback).</p>
+                  <p className="textoProdutos">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adiantamento Salarial: com limite pré-definido, que possibilita atender as necessidades de compras no dia a dia do Usuário (Colaborador/Servidor), com desconto em folha de pagamento. Ganho de Krats (Cashback).</p>
               </Col>
           </Row>
           </Container>
         </div>
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -59,6 +65,7 @@ Mantém o controle dos limites estabelecidos por operação de desconto em folha
           </Row>
           </Container>
         </div>
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -71,6 +78,7 @@ Mantém o controle dos limites estabelecidos por operação de desconto em folha
           </Row>
           </Container>
         </div>
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -83,6 +91,7 @@ Mantém o controle dos limites estabelecidos por operação de desconto em folha
           </Row>
           </Container>
         </div>
+
         <div className="my-slide fundoProdutos">
         <Container>
           <Row>
@@ -95,6 +104,7 @@ Mantém o controle dos limites estabelecidos por operação de desconto em folha
           </Row>
           </Container>
         </div>
+
       </Carousel>
     </div>
   );
