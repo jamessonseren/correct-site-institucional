@@ -18,7 +18,8 @@ export default function Aplicativos(){
                 </Row>
             </Col>
             <Col sm={6}>
-            <p className="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TradeCard APP</p>
+                <p className="text">TradeCard APP:</p>
+                <p className="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O aplicativo mobile da TradeCard!&nbsp;Acesse todos serviços da TradeCard na palma da sua mão!<br/>Baixe agora</p>
             </Col>
         </Row>
     </Container>

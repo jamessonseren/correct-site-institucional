@@ -27,9 +27,10 @@
     margin-bottom:35px;
     margin-left:25px;
     margin-right:25px;
-  text-align: justify;
-  text-justify: inter-word;
-  vertical-align: middle;
+    text-align: justify;
+    text-justify: inter-word;
+    vertical-align: middle;
+    font-family: 'Roboto' !important;
 }
 .img{
     justify-content: "center";

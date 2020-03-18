@@ -7,10 +7,10 @@ export default function VantagensCards() {
   return (
     <div
     className="presentation-mode">
-        <div className="my-slide sem_fundo">
+        <div className="my-slide">
           <Container fluid>
             <Row>
-                <Col sm={6} style={{color:'white'}}>
+                <Col sm={6} className="fundoAzul" style={{color:'white'}}>
                 <h3>Cartões Pré-Pagos</h3>
                 <p className="textoEmBranco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para os cartões de Adiantamento Salarial e Convênio, a Tradecard oferece as seguintes vantagens:</p>
                 <p className="textoEmBrancotab">
@@ -26,10 +26,10 @@ export default function VantagensCards() {
                   <br/>Não tem custos: mensalidades, taxas e nem juros.
                 </p>
                 </Col>
-                <Col sm={6}>
+                <Col className="fundoEscuro" sm={6} style={{color:'white'}}>
                 <h3>Cartões Pós-Pagos</h3>
-                <p className="textoEmPreto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para os cartões de Adiantamento Salarial e Convênio, a Tradecard oferece as seguintes vantagens:</p>
-                <p className="textoEmPretotab">
+                <p className="textoEmBranco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para os cartões de Adiantamento Salarial e Convênio, a Tradecard oferece as seguintes vantagens:</p>
+                <p className="textoEmBrancotab">
                   Ganha um Banco de presente, podendo utilizar vários recursos sem taxas e juros, através do APP TRADECLUB; 
                   <br/>Compras na Rede TRADECLUB com prazo (média de 45 dias) e sem juros; 
                   <br/>Não precisa esperar dia do pagamento para realizar suas compras;

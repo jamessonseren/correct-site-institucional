@@ -90,33 +90,29 @@
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 }
+.fundoEscuro{
+    font-family: 'Roboto' !important;
+    background: rgb(18,18,18);
+    background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(9,9,9,1) 50%, rgba(0,0,0,1) 100%);
+    text-align: center;
+}
+.fundoAzul{
+    font-family: 'Roboto' !important;
+    background: rgba(22,35,49,1);
+    text-align: center;
+}
 .textoEmBranco{
     font-family: 'Roboto' !important;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-align: justify;
     margin-left: 20px;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 .textoEmBrancotab{
     font-family: 'Roboto' !important;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    text-align: justify;
-    margin-left: 80px;
-}
-.textoEmPreto{
-    font-family: 'Roboto' !important;
-    color: black;
-    font-weight: 800;
-    text-align: justify;
-    margin-left: 20px;
-    margin-top: 120px;
-}
-.textoEmPretotab{
-    font-weight: 800;
-    font-family: 'Roboto' !important;
-    color: black;
     text-align: justify;
     margin-left: 80px;
 }
