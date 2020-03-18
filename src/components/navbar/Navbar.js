@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Navbar, Nav} from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 import "./navbar.css"
 
-
 export default function NavBar(){
+
+    useEffect(() => {
+        console.log('oi')
+    })
     return(
         <Navbar className='navbar-trade' expand="md">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -23,6 +26,7 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
+            {    console.log(window.location.pathname) }
         </Navbar>
     )
 }

@@ -13,7 +13,7 @@ import Aplicativos from './components/aplicativos/aplicativos'
 function App() {
   return (
     <BrowserRouter>
-      <NavBar/>
+      <NavBar/> 
       <Switch>
         <Route path='/sobre_nos'>
           <SobreNos/>

@@ -7,11 +7,13 @@ const Box = posed.div({
     visible: { 
         x: 0,
         opacity: 1,
+        scaleY: 1,
         transition: { duration: 1000 }
     },
     hidden: { 
         x: -500,
-        opacity: 0.3,
+        opacity: 0,
+        scaleY: 0,
         transition: { duration: 1000 }
     }
 });
