@@ -1,11 +1,12 @@
 .navbar-trade{
     background: rgba(14, 14, 14, 0.9);
-    padding: 0 !important
+    padding: 0 !important;
+    height: 5vh;
 }
 
 .navbar-link-trade{
     color: whitesmoke !important;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     align-self: center;
 }

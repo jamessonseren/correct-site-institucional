@@ -1,0 +1,27 @@
+.backgroundImage{
+    color: white;
+    max-height: 100% !important;
+    max-width:  100%;
+    background-image: url("../../assets/people_talking.png") ;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 60vh;
+    min-height: 60vh;
+    position: relative; 
+}
+
+.section{
+    background-color: rgba(14, 14, 14, 1);
+    height: 35vh;
+    min-height: 35vh;
+}
+
+.description{
+    color: whitesmoke;
+    font-size: 18px
+}

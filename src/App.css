@@ -3,33 +3,31 @@
     --trade-light: #00788c
 }
 
-@font-face {
-    font-family: 'Roboto Condensed';
-    src: url('./assets/RobotoCondensed-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
 html, body{
-  height:'auto';width:'100%';
-    font-family: 'Roboto' !important;
-    background-image: url("assets/background1.png");
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-attachment: fixed;
+  height: 'auto';
+  width: '100%';
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif !important;
+  background-image: url("assets/background1.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #root{
-    height:'auto';width:'100%';
+    height: 'auto'; 
+    width: '100%';
 }
 
 .switch-wrapper {
     position: relative;
     width: 100%;
-  }
+}
    
-  .switch-wrapper > div {
-    position: absolute;
-    width: 100%;
-  }
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}
