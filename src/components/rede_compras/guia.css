@@ -1,0 +1,14 @@
+.fundoBranco{
+    background-color:white;
+    color:black;
+}
+.new-line {
+  white-space: pre-line;
+}
+.label{
+    padding: 0 0 0 0;
+    margin: 0;
+}
+.imagem{
+    width:20%;
+}

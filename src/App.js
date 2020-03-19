@@ -9,6 +9,7 @@ import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/produtos'
 import Vantagens from './components/vantagens/vantagens'
 import Aplicativos from './components/aplicativos/aplicativos'
+import RedeCompras from './components/rede_compras/redeCompras'
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/aplicativos'>
           <Aplicativos/>
+        </Route>
+        <Route path='/rede_compras'>
+          <RedeCompras/>
         </Route>
       </Switch>
     </BrowserRouter>
