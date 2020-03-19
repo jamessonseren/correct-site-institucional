@@ -1,152 +1,80 @@
 import React from 'react'
-import {Col, Row, Container, Form} from 'react-bootstrap'
+import {Col, Row} from 'react-bootstrap'
+import { MDBInput, MDBFormInline, MDBAlert } from "mdbreact";
 import './contato.css'
 
+const apiKey = "G8icTPGPQJhd0uMHRqaE";
+
 class Contato extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: '',
+    state = {
+        nome: '',
+        email: '',
+        message: '',
+        empresa: '',
+        tipo: 'pf',
+        err: false, 
+        success: false
+    }
+
+    submit = async () => {
+        this.setState({isLoading: true})
+        const {nome, email, message, empresa, tipo} = this.state
+
+        if(nome == '' || email == '' || message == ''){
+            this.setState({err: true, isLoading: false})
+            return true
+        }
+        if(tipo == 'pj' && empresa == ''){
+            this.setState({err: true, isLoading: false})
+            return true
+        }
+
+        let url = `https://www.sisclub.com.br/ws_tradecard/sendEmail.php?nome=${nome}&email=${email}&message=${message}&empresa=${empresa}&tipo=${tipo}&apiKey=${apiKey}`
+        await fetch(url, { mode: "no-cors"})
+        this.setState({
+            err: false, 
+            success: true,
+            nome: '',
             email: '',
             message: '',
-            telefone: '',
             empresa: '',
-            tipo:'pf'
-        }
+            tipo: 'pf',
+            isLoading: false
+        })
     }
+    
 
     render() {
         return(
-            <Container  fluid={true} className='cor'>
-            <Row className="justify-content-md-center">
-                <h3 className="titulo">Entre em contato conosco!</h3>
-            </Row>
-            <Row className="justify-content-md-center">
-                    {this.state.tipo === 'pf' ?
-                        <>
-                            <Form.Check
-                                type="radio"
-                                label="Pessoa Física"
-                                name="formHorizontalRadios"
-                                id="formHorizontalRadios1"
-                                className="esp"
-                                value="pf"
-                                custom
-                                checked
-                                onChange={this.onTipoChange.bind(this)}
-                            />
-                            <Form.Check
-                                type="radio"
-                                label="Pessoa Jurídica"
-                                name="formHorizontalRadios"
-                                id="formHorizontalRadios2"
-                                value="pj"
-                                custom
-                                onChange={this.onTipoChange.bind(this)}
-                            />
-                        </>
+            <Row className='justify-content-center align-items-center'>
+                <Col sm={8} className="mt-5 text-light">
+                    <h1 className='text-center'>Entre em contato conosco!</h1>
+                </Col>
+                <Col sm={8} className="justify-content-md-center mt-5">
+                    <MDBFormInline className='justify-content-around'>
+                        <MDBInput onClick={() => this.setState({tipo: 'pf'})} checked={this.state.tipo == 'pf' ? true : false} label="Pessoa física" type="radio"
+                           />
+                        <MDBInput onClick={() => this.setState({tipo: 'pj'})} checked={this.state.tipo == 'pj' ? true : false} label="Pessoa jurídica" type="radio" />
+                    </MDBFormInline>
+                </Col>
+                <Col sm={8} className="justify-content-md-center">
+                    <MDBInput label="Nome" className='input' value={this.state.nome} onChange={(e) => this.setState({nome: e.target.value}) } />
+                    <MDBInput label="E-mail" className='input' value={this.state.email} onChange={(e) => this.setState({email: e.target.value}) } />
+                    {this.state.tipo == 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
+                    <MDBInput className='input' type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
+                    <button onClick={() => this.submit()} className="btn-trade">
+                        {this.state.isLoading ? 
+                            <div className="spinner-border text-light"></div>
                         :
-                        this.state.tipo === 'pj' ?
-                        <>
-                            <Form.Check
-                                type="radio"
-                                label="Pessoa Física"
-                                name="formHorizontalRadios"
-                                id="formHorizontalRadios1"
-                                className="esp"
-                                value="pf"
-                                custom
-                                onChange={this.onTipoChange.bind(this)}
-                            />
-                            <Form.Check
-                                type="radio"
-                                label="Pessoa Jurídica"
-                                name="formHorizontalRadios"
-                                id="formHorizontalRadios2"
-                                value="pj"
-                                custom
-                                checked
-                                onChange={this.onTipoChange.bind(this)}
-                            />
-                        </>
-                        :
-                        ''
-                    }
+                            'Enviar'
+                        }
+                    </button>      
+                    {this.state.err && <MDBAlert color='primary' className='mt-3'> Preencha todos os campos </MDBAlert> }
+                    {this.state.success && <MDBAlert color='success' className='mt-3'> E-mail enviado com sucesso! </MDBAlert> }
+
+                </Col>
             </Row>
-                <Row className="justify-content-md-center">
-                    <Col sm={6}>
-                        <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                            <div className="form-group">
-                                <input type="text" placeholder="Nome:" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-                            </div>
-                            <div className="form-group">
-                                <input type="email" placeholder="Email:" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-                            </div>
-                            <div className="form-group">
-                                <input type="text" placeholder="Telefone:" className="form-control" value={this.state.telefone} onChange={this.onTelChange.bind(this)} />
-                            </div>
-                            {(this.state.tipo === 'pj') 
-                                ?
-                            <div className="form-group">
-                                <input type="text" placeholder="Empresa:" className="form-control" value={this.state.empresa} onChange={this.onEmpresa.bind(this)} />
-                            </div> : ''
-                            }
-                            <div className="form-group">
-                                <textarea className="form-control" placeholder="Mensagem:" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-                            </div>
-                            <div className="wrapper">
-                                <button type="submit" className="btn btn-primary">Enviar</button>
-                            </div>
-                        </form>
-                    </Col>
-                </Row>
-            </Container>
         )
-    }
-
-    onNameChange(event) {
-        this.setState({name: event.target.value})
-    }
-
-    onEmailChange(event) {
-        this.setState({email: event.target.value})
-    }
-
-    onMessageChange(event) {
-        this.setState({message: event.target.value})
-    }
-
-    onTelChange(event) {
-        this.setState({telefone: event.target.value})
-    }
-
-    onEmpresa(event) {
-        this.setState({empresa: event.target.value})
-    }
-
-    onTipoChange(event) {
-        this.setState({tipo: event.target.value})
-    }
-
-    async handleSubmit(event) {
-        event.preventDefault();
-        let url = (this.state.tipo === 'pf') ?
-        `https://www.sisclub.com.br/ws/ws_tradecard/sendEmail.php?apiKey=G8icTPGPQJhd0uMHRqaE&nome=${this.state.name}&email=${this.state.email}&telefone=${this.state.telefone}&mesg=${this.state.message}&tipo=pf`
-        :
-        `https://www.sisclub.com.br/ws/ws_tradecard/sendEmail.php?apiKey=G8icTPGPQJhd0uMHRqaE&nome=${this.state.name}&email=${this.state.email}&telefone=${this.state.telefone}&mesg=${this.state.message}&emp=${this.state.empresa}&tipo=pj`
-        //console.log(url);
-        let response = await fetch(url, { mode: "no-cors"})
-        // let result   = await response.text()
-        // if(result == 1){
-            this.setState({
-                name: '',
-                email: '',
-                message: '',
-                telefone: '',
-                empresa: '',
-                tipo:'pf'
-            })
-        
     }
 }
 

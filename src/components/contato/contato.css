@@ -1,37 +1,9 @@
-.cor{
-    color: white;
-    width: 100%;
-    background-image: url("../../assets/background1.png");
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-attachment: fixed;
-    padding:  0 0 0 0;
-    height: 100vh;
+.input{
+    color: #fff !important;
+    border-bottom: 1px solid #fff !important;
 }
 
-.titulo{
-    margin-top: 5%;
-    font-family: roboto;
+label{
+    color: #fff !important
 }
 
-#contact-form{
-    margin-top: 5%;
-    font-family: roboto;
-}
-
-.btn-black{
-    background-color: black;
-    border-color: black;
-    color: white;
-}
-.wrapper {
-    text-align: center;
-}
-
-.esp{
-    margin-right:20px;
-    font-family: roboto;
-}

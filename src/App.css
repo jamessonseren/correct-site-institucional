@@ -22,12 +22,17 @@ html, body{
     width: '100%';
 }
 
-.switch-wrapper {
-    position: relative;
-    width: 100%;
-}
-   
-.switch-wrapper > div {
-  position: absolute;
+.btn-trade{
+  background-color: #00788c !important;
+  border-radius: 5px !important;
+  color: #fff !important;
   width: 100%;
+  margin: 0 !important;
+  border: none;
+  padding: 5px 10px;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.btn-trade:active{
+  opacity: 0.5;
 }
