@@ -8,7 +8,7 @@ import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/produtos'
 import Vantagens from './components/vantagens/vantagens'
-import Aplicativos from './components/aplicativos/aplicativos'
+import Aplicativos from './components/aplicativos/Aplicativos'
 import RedeCompras from './components/rede_compras/redeCompras'
 
 function App() {
