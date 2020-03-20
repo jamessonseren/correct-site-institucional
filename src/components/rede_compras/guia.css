@@ -1,14 +1,44 @@
 .fundoBranco{
-    background-color:white;
-    color:black;
+    background-color:#212529;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.ramo{
+    font-size:20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif !important;
+    padding-top: 20px;
+}
+.final{
+    padding-bottom: 20px;
+}
+.basicInfo{
+    margin-left: 7.5%;
 }
 .new-line {
   white-space: pre-line;
 }
 .label{
-    padding: 0 0 0 0;
-    margin: 0;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    margin-bottom: 0px;
+    font-size:14px;
+}
+.images{
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 .imagem{
     width:20%;
+}
+.hide{
+    display:none
+}
+.listraUm{
+    background-color: #262a2e;
+    margin-left:-15px;margin-right:-15px;
+}
+.listraDois{
+    background-color: #40474e;
+    margin-left:-15px;margin-right:-15px;
 }
