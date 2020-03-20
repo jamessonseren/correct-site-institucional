@@ -23,13 +23,13 @@ export default function SobreNos(){
     
     useEffect(() => {
         setVisible(true)
-    })
+    }, [])
 
     return(
         <Container fluid={true} className='p-0 m-0'>
             <Container fluid={true} className='backgroundImage d-flex'>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-end ml-4 row'>
-                    <h1> Sobre Nós </h1>
+                    <h1 className='font-weight-bold'> Sobre Nós </h1>
                 </Box>
             </Container>
             <Container fluid={true} className="section p-5">

@@ -6,7 +6,7 @@ import NavBar from './components/navbar/Navbar'
 // Routes
 import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
-import Produtos from './components/produtos/produtos'
+import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
 import RedeCompras from './components/rede_compras/redeCompras'

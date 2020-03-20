@@ -20,11 +20,11 @@ class Contato extends React.Component {
         this.setState({isLoading: true})
         const {nome, email, message, empresa, tipo} = this.state
 
-        if(nome == '' || email == '' || message == ''){
+        if(nome === '' || email === '' || message === ''){
             this.setState({err: true, isLoading: false})
             return true
         }
-        if(tipo == 'pj' && empresa == ''){
+        if(tipo === 'pj' && empresa === ''){
             this.setState({err: true, isLoading: false})
             return true
         }

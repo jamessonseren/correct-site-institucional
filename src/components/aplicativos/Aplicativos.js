@@ -24,7 +24,7 @@ export default function Aplicativos(){
     
     useEffect(() => {
         setVisible(true)
-    })
+    }, [])
 
     return(
     <Container className='p-5'>
