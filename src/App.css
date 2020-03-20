@@ -8,17 +8,12 @@ html, body{
   width: '100%';
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif !important;
-  background-image: url("assets/background1.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
+  background: var(--trade-dark)
 }
 
 #root{
     height: 'auto'; 
+    background: var(--trade-dark);
     width: '100%';
 }
 
