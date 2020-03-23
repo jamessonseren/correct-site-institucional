@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Container} from 'react-bootstrap'
 import posed from 'react-pose';
+import Footer from '../footer/Footer'
 import "./SobreNos.css"
 
 const Box = posed.div({
@@ -51,6 +52,7 @@ export default function SobreNos(){
                     </p>
                 </Box>
             </Container> 
+            <Footer />
         </Container>
     )
 }

@@ -11,7 +11,7 @@ export default function NavBar(){
             <Navbar.Collapse>
                 <Nav className="ml-auto mr-auto">
                     <Navbar.Brand  className='logo'>
-                        <img src={require('../../assets/tradecard_logo_white.png')} alt='Tradecard Logo' height='70%' width='120' className='logo' />
+                        <img src={require('../../assets/tradecard_logo_white.png')} alt='Tradecard Logo' height='80%' width='150' className='logo' />
                     </Navbar.Brand>
                     <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre nós</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Produtos</Link></Nav.Link>
@@ -22,7 +22,6 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-            {    console.log(window.location.pathname) }
         </Navbar>
     )
 }
