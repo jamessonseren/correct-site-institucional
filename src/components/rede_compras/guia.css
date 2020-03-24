@@ -3,6 +3,10 @@
     color: whitesmoke;
     font-family: 'Montserrat', sans-serif !important;
 }
+.esp{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .ramo{
     font-size:20px;
     font-weight: 600;
@@ -41,4 +45,18 @@
 .listraDois{
     background-color: #40474e;
     margin-left:-15px;margin-right:-15px;
+}
+.c1{
+    background-color: #262a2e;
+    border:none;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif !important;
+    outline: none !important;
+}
+.c2{
+    background-color: #40474e;
+    border:none;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif !important;
+    outline: none !important;
 }
