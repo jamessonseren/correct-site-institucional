@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Collapse } from "reactstrap";
+import { Container, Button } from "react-bootstrap";
 import './guia.css'
 
 function CollapsiblePanelParceiros({ children, ...props }) {
-  const { title, collapse, color } = props;
+  const { title, collapse } = props;
+  const [isOpen, setIsOpen] = useState(false);
   const [isCollapse, setIsCollapse] = useState(collapse);
   const [icon, setIcon] = useState("fa fa-chevron-down");
+  let i = 0;
+
   const toggle = () => {
     setIsCollapse(!isCollapse);
+    setIsOpen(!isOpen);
     setIcon(state => {
       return state === "fa fa-chevron-down"
         ? "fa fa-chevron-right"
@@ -28,21 +33,17 @@ function CollapsiblePanelParceiros({ children, ...props }) {
     animate(!collapse);
   }, [collapse]);
 
-    //Auxilia no efeito Zebra
-    const check = (i) =>{
-        return (i%2 === 0) ? 1 : 0
-    }
 
   return (
     <div className="coll-panel">
       <button
         type="button"
-        className={(check(color)) ? 'c1 coll-panel-btn btn-block text-left' : 'c2 coll-panel-btn btn-block text-left'}
+        className='c1 coll-panel-btn btn-block'
         onClick={() => toggle()}
       >
          {title}
       </button>
-      <Collapse className="border text-left p-2" isOpen={isCollapse}>
+      <Collapse className="border text-left p-2 estabInfo" isOpen={isOpen}>
         {children}
       </Collapse>
     </div>

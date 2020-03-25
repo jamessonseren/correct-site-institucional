@@ -1,29 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Col, Row, Container, Image, Form} from 'react-bootstrap'
-import posed from 'react-pose';
 import CollapsiblePanel from './colapse.js'
 import CollapsiblePanelParceiros from './parceiros.js'
-import { MDBInput, MDBFormInline, MDBAlert } from "mdbreact";
+import EstabInfo from './estabInfo.js'
+import { Button, ButtonGroup } from 'reactstrap';
 import './guia.css'
-
-const itemConfig = {
-    open: { height: 'auto', opacity:1, flip:true },
-    closed: { height: '1px', opacity:0, flip: true } 
-}
-
-const Item = posed.div(itemConfig)
 
 class GuiaComercios extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             result: '',
-            isOpen: true,
             cities: '',
             partners: '',
-            selCity:'',
-            idPart:0,
-            partInfo:'',
             tipo:'fisica'
         }
     }
@@ -63,7 +52,6 @@ class GuiaComercios extends React.Component {
         this.setState({
             partners : dados
         })
-        console.log(dados)
     }
 
     //Coleta todas as cidades disponíveis
@@ -74,17 +62,6 @@ class GuiaComercios extends React.Component {
         this.setState({
             cities : dados
         })
-    }
-
-    getParceiroInfo = async (id) => {
-        let id_estabelecimento = id
-        let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/parceiroInfo.php?id_estabelecimento=${id_estabelecimento}&cifra=2L6AcgOMu47bDTprQlIw`)
-        let result   = await response.text()
-        let dados    = result.split(';')
-        this.setState({
-            partInfo : dados
-        })
-        console.log(result)
     }
 
     //Lista as bandeiras autorizadas
@@ -120,25 +97,17 @@ class GuiaComercios extends React.Component {
     pushImg = (item) => {
         let data = item.split(';')
         let path = data[0]
-        let id_estabelecimento = data[1]
-        if(path != undefined || path != ''){
+        if(path !== undefined || path !== '')
             return `https://sisclub.com.br/upload_logo/${path}`
-        }
-        else{
-            return ''
-        }
+        return ''
     }
 
     pushId = (item) => {
         let data = item.split(';')
-        let path = data[0]
         let id_estabelecimento = data[1]
-        if(id_estabelecimento != undefined || id_estabelecimento != ''){
+        if(id_estabelecimento !== undefined || id_estabelecimento !== '')
             return id_estabelecimento
-        }
-        else{
-            return ''
-        }
+        return ''
     }
 
     //Auxilia no efeito Zebra
@@ -147,12 +116,11 @@ class GuiaComercios extends React.Component {
     }
     
     render() {
-        const {result, isOpen, cities, partners, tipo} = this.state
+        const {result, cities, partners, tipo} = this.state
         let ndx = 0;
         let ramoAtual='';
         
         return(
-            <Container className=''>
                     <div className="fundoBranco">
                         {result?
                             <div>
@@ -160,14 +128,14 @@ class GuiaComercios extends React.Component {
                                 <h3 className="esp">Rede de compras:</h3>
                             </Row>
                             <Row className="justify-content-around">
-                                <MDBFormInline className=''>
-                                    <MDBInput onClick={() => this.setState({tipo: 'virtual'})} checked={this.state.tipo == 'virtual' ? true : false} label="Loja virtual" type="radio" className="op"/>
-                                    <MDBInput onClick={() => this.setState({tipo: 'fisica'})} checked={this.state.tipo == 'fisica' ? true : false} label="Loja Física" type="radio" />
-                                </MDBFormInline>
+                                <ButtonGroup>
+                                    <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
+                                    <Button color="dark" onClick={() => this.setState({tipo: 'virtual'})} active={this.state.tipo === 'virtual'}>Lojas Virtuais</Button>
+                                </ButtonGroup>
                             </Row>
                             
                             {
-                                (tipo=='fisica') ? <Row className="justify-content-md-center esp">
+                                (tipo === 'fisica') ? <Row className="justify-content-md-center esp">
                                 <Form.Group controlId="exampleForm.ControlSelect1">
                                     <Form.Control as="select"
                                     onChange={this.getContentBySelect.bind(this)}>
@@ -181,13 +149,14 @@ class GuiaComercios extends React.Component {
                             </Row> : ''
                             }
                             
-                            {(tipo == 'virtual') ? <Container>
+                            {(tipo === 'virtual') ? <Container>
                                 {partners.map((item, index) =>
                                     <span key={index}>
                                         <CollapsiblePanelParceiros title={ (this.pushImg(item) != '' && this.pushImg(item) != 'https://sisclub.com.br/upload_logo/') ? <Image src={this.pushImg(item)} fluid width="300px"/> : '' }>
                                             <span>
                                                 <Row className="justify-content-md-center ramo">
-                                                    { (this.pushId(item) != '') ? this.pushId(item) : '' }
+                                                    { (this.pushId(item) !== '') ? 
+                                                        <EstabInfo id_estab={this.pushId(item)}></EstabInfo> : '' }
                                                 </Row>
                                             </span>
                                         </CollapsiblePanelParceiros>
@@ -195,7 +164,8 @@ class GuiaComercios extends React.Component {
                                 )}
                             </Container> : ''}
 
-                            {(tipo == 'fisica') ?
+                            {(tipo === 'fisica') ?
+                            <Container>
                             <div>
                             {result.map((item, index) =>
                                 <div>
@@ -275,12 +245,10 @@ class GuiaComercios extends React.Component {
                                 </div>
                             )}
                             </div>
+                        </Container>
                         :null}
                             </div> : ''}
-
                     </div>
-                   
-            </Container>
         )
     }
 

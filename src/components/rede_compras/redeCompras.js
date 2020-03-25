@@ -1,15 +1,39 @@
 import React from 'react';
-import {Col, Row, Container, Image, Carousel} from 'react-bootstrap'
+import {Container } from 'react-bootstrap'
 import GuiaComercios from './guia'
 
 export default function Produtos(){
     return(
-    <div>
-    <Container fluid>
-        <Row className="">
-        <GuiaComercios/>
-        </Row>
-    </Container>
-    </div>
+        <div>
+            <div className="area" >
+        <div className="context">
+            <Container>
+            <GuiaComercios/>
+            </Container>
+        </div>
+                <ul className="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div>
+        </div>
     )
 }

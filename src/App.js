@@ -9,6 +9,7 @@ import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
+import Tradeshop from './components/trade_shop/tradeshop'
 import RedeCompras from './components/rede_compras/redeCompras'
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path='/vantagens'>
           <Vantagens/>
+        </Route>
+        <Route path='/trade_shop'>
+          <Tradeshop/>
         </Route>
         <Route path='/aplicativos'>
           <Aplicativos/>

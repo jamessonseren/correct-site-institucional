@@ -4,10 +4,13 @@ import './guia.css'
 
 function CollapsiblePanel({ children, ...props }) {
   const { title, collapse, color } = props;
+  const [isOpen, setIsOpen] = useState(false);
   const [isCollapse, setIsCollapse] = useState(collapse);
   const [icon, setIcon] = useState("fa fa-chevron-down");
+
   const toggle = () => {
     setIsCollapse(!isCollapse);
+    setIsOpen(!isOpen);
     setIcon(state => {
       return state === "fa fa-chevron-down"
         ? "fa fa-chevron-right"
@@ -42,7 +45,7 @@ function CollapsiblePanel({ children, ...props }) {
       >
          {title}
       </button>
-      <Collapse className="border text-left p-2" isOpen={isCollapse}>
+      <Collapse className="border text-left p-2" isOpen={isOpen}>
         {children}
       </Collapse>
     </div>

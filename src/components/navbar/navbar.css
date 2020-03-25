@@ -2,6 +2,7 @@
     background: rgba(14, 14, 14, 0.9);
     padding: 0 !important;
     height: 10vh;
+    z-index: 1;
 }
 
 .navbar-link-trade{
