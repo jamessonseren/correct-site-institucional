@@ -12,8 +12,26 @@
     padding-left: 20px;
 }
 .info{
-    padding-top: 10%;
+    padding-top: 3%;
 }
 .item{
     padding-top: 50px;
+}
+.tituloEstab{
+    font-weight: 600;
+}
+.infoLocal{
+    font-size: 16px;
+    color:#00788c;
+    font-weight: 400;
+}
+.descricaoPromo{
+    font-size: 12px;
+    color:#00788c;
+    font-weight: 600;
+}
+.validade{
+    font-size: 12px;
+    color:#d41616de;
+    font-weight: 600;
 }
