@@ -11,7 +11,7 @@ import Vantagens from './components/vantagens/vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
 import Tradeshop from './components/trade_shop/tradeshop'
 import RedeCompras from './components/rede_compras/redeCompras'
-
+import Footer from './components/footer/Footer'
 function App() {
   return (
     <BrowserRouter>
@@ -19,21 +19,27 @@ function App() {
       <Switch>
         <Route path='/sobre_nos'>
           <SobreNos/>
+          <Footer />
         </Route>
         <Route path='/produtos'>
           <Produtos/>
+          <Footer />
         </Route>
         <Route path='/contato'>
           <Contato/>
+          <Footer />
         </Route>
         <Route path='/vantagens'>
           <Vantagens/>
+          <Footer />
         </Route>
         <Route path='/trade_shop'>
           <Tradeshop/>
+          <Footer />
         </Route>
         <Route path='/aplicativos'>
           <Aplicativos/>
+          <Footer />
         </Route>
         <Route path='/rede_compras'>
           <RedeCompras/>

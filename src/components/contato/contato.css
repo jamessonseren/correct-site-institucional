@@ -7,3 +7,10 @@ label{
     color: #fff !important
 }
 
+.content{
+    height: 80vh;
+}
+
+.container{
+    padding-bottom: 25px;
+}

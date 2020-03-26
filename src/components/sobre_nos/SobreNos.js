@@ -52,7 +52,6 @@ export default function SobreNos(){
                     </p>
                 </Box>
             </Container> 
-            <Footer />
         </Container>
     )
 }

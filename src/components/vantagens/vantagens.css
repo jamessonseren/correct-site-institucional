@@ -6,7 +6,8 @@
 @font-face {
     font-family: 'Roboto Condensed';
     src: url('../../assets/RobotoCondensed-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
+}
+
 .cor{
     color: white;
 }

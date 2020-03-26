@@ -156,7 +156,7 @@ class GuiaComercios extends React.Component {
                                             <span>
                                                 <Row className="justify-content-md-center ramo">
                                                     { (this.pushId(item) !== '') ? 
-                                                        <EstabInfo id_estab={this.pushId(item)}></EstabInfo> : '' }
+                                                        <EstabInfo logo={this.pushImg(item)} id_estab={this.pushId(item)}></EstabInfo> : '' }
                                                 </Row>
                                             </span>
                                         </CollapsiblePanelParceiros>

@@ -1,22 +1,22 @@
-import React from 'react';
-import { Row, Container} from 'react-bootstrap'
-import ProdutosPessoaFisica  from './produtos_pessoas_fisicas.js'
-import Presetation  from './apresentacao.js'
-import "./vantagens.css"
+import React from "react";
+import { Row, Container } from "react-bootstrap";
+import ProdutosPessoaFisica from "./produtos_pessoas_fisicas.js";
+import Presetation from "./apresentacao.js";
+import "./vantagens.css";
 
-export default function Vantagens(){
-    return(
+export default function Vantagens() {
+  return (
     <div>
-    <Container fluid>
+      <Container fluid>
         <Row className="">
-            <Presetation />
+          <Presetation />
         </Row>
-    </Container>
-    <Container fluid>
+      </Container>
+      <Container fluid>
         <Row className="">
-            <ProdutosPessoaFisica />
+          <ProdutosPessoaFisica />
         </Row>
-    </Container>
+      </Container>
     </div>
-    )
+  );
 }

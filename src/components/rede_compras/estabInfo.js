@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Container, Button } from "reactstrap";
+import { Container, Button, Row, Col } from "reactstrap";
+import {Image } from 'react-bootstrap'
 import './guia.css'
 
 function EstabInfo({ children, ...props }) {
 
   const [token, setToken] = useState('');
-  const { id_estab } = props;
+  const { id_estab, logo } = props;
 
   useEffect(() => {
-    // You need to restrict it at some point
-    // This is just dummy code and should be replaced by actual
     if (id_estab !== null) {
       getParceiroInfo();
     }
@@ -36,17 +35,39 @@ function EstabInfo({ children, ...props }) {
     return(
       <Container>
         <div className="estabInfo">
-          <h3>{fantasia}</h3>
-          {vantagem !== '' && <p>{vantagem}</p>}
-          {cupom != '' && <p>Cupom de desconto: {cupom}</p>}
-          {gerabonus != '' && gerabonus == 's' && <p>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
-          {gerabonus != '' && gerabonus == 'n' && <p>Não Acumula KRATS</p>}
-          {aceitabonus != '' && aceitabonus == 's' && abrangencia != 'nacional' && <p>Aceita KRATS como forma de pagamento</p>}
-          {aceitabonus != '' && aceitabonus == 'n' || abrangencia == 'nacional' && <p>Não aceita KRATS como forma de pagamento</p>}
-          <Button outline color="danger" href={ecommerce}>Comprar</Button>
-          <h4>Aviso:</h4>
-          <p>Os créditos do seu cartão Tradeclub não poderão ser utilizados como meio de pagamento.</p>
-          <p>Consulte as regras e formas de pagamento de cada parceiro nacional.</p>
+          <Row>
+              <Col sm={1}>
+                <Image src={logo} />
+              </Col>
+              <Col sm={{ span: 5, offset: 1 }}>
+                <h3>{fantasia}</h3>
+              </Col>
+              <Col sm={{ span: 1, offset: 4 }}>
+                <Button outline color="danger" href={ecommerce}>Comprar</Button>
+              </Col>
+          </Row>
+          <Container>
+            <Row className="vantagens">
+              <h5>Vantagens :</h5>
+            </Row>
+            <Row>
+              {vantagem !== '' && <p>{vantagem}</p>}
+              {cupom != '' && <p>Cupom de desconto: {cupom}</p>}
+              {gerabonus != '' && gerabonus == 's' && <p>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
+              {gerabonus != '' && gerabonus == 'n' && <p>Não Acumula KRATS</p>}
+              {aceitabonus != '' && aceitabonus == 's' && abrangencia != 'nacional' && <p>Aceita KRATS como forma de pagamento</p>}
+              {aceitabonus != '' && aceitabonus == 'n' || abrangencia == 'nacional' && <p>Não aceita KRATS como forma de pagamento</p>}
+            </Row>
+            <Row>
+                <h4>Aviso:</h4>
+            </Row>
+            <Row>
+              <p className="aviso">Os créditos do seu cartão Tradeclub não poderão ser utilizados como meio de pagamento.</p><br/>
+            </Row>
+            <Row>
+              <p className="aviso">Consulte as regras e formas de pagamento de cada parceiro nacional.</p>
+            </Row>
+          </Container>
         </div>
       </Container>
     )

@@ -1,14 +1,19 @@
 import React from 'react';
 import {Container } from 'react-bootstrap'
 import GuiaComercios from './guia'
+import Footer from '../footer/Footer'
 
 export default function Produtos(){
     return(
-        <div>
+        <>
+            <div>
             <div className="area" >
         <div className="context">
             <Container>
             <GuiaComercios/>
+            </Container>
+            <Container fluid={'yes'}>
+                <Footer/>
             </Container>
         </div>
                 <ul className="circles">
@@ -35,5 +40,6 @@ export default function Produtos(){
                 </ul>
             </div>
         </div>
+        </>
     )
 }

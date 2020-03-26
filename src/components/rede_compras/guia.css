@@ -200,3 +200,11 @@
 .estabInfo{
     font-size:18px;
 }
+.vantagens{
+    padding-top: 3%;
+}
+.aviso{
+    font-size: 12px;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif !important;
+}
