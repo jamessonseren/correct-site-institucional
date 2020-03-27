@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Container} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 import posed from 'react-pose';
 import Footer from '../footer/Footer'
 import "./SobreNos.css"
@@ -27,13 +27,13 @@ export default function SobreNos(){
     }, [])
 
     return(
-        <Container fluid={true} className='p-0 m-0'>
-            <Container fluid={true} className='backgroundImage d-flex'>
+        <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
+            <Row className='backgroundImage d-flex'>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-end ml-4 row'>
                     <h1 className='font-weight-bold'> Sobre Nós </h1>
                 </Box>
-            </Container>
-            <Container fluid={true} className="section p-5">
+            </Row>
+            <Row fluid={true} className="section p-5">
                 <Box pose={isVisible ? 'visible' : 'hidden'}>
                     <p className="description ">
                         A Tradecard surgiu no Brasil em 2018, com sede em Campo Grande/MS, 
@@ -51,7 +51,7 @@ export default function SobreNos(){
                         adaptando-os às suas políticas internas, leis, sindicatos e outros motivos se houverem.
                     </p>
                 </Box>
-            </Container> 
+            </Row> 
         </Container>
     )
 }

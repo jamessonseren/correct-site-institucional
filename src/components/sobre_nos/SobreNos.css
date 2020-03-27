@@ -2,22 +2,16 @@
     color: white;
     background-image: url("../../assets/people_talking.png") ;
     background-size: cover;
-    height: 60vh;
-    min-height: 60vh;
+    height: 50vh;
 }
 
 .section{
-    background-color: rgba(14, 14, 14, 1);
-    height: 50vh;
-    min-height: 35vh;
+    background-color: rgb(34, 34, 34);
+    height: 40vh;
 }
 
 .description{
     text-indent: 2rem;
     color: whitesmoke;
     font-size: 18px
-}
-
-.foot{
-    padding-bottom: 100px;
 }
