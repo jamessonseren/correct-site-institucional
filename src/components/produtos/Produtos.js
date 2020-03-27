@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Row, Container} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import CarouselProdutos  from './Carousel/CarouselProdutos'
 import VantagensProdutos from './VantagensProdutos'
 import posed from 'react-pose'
@@ -28,9 +28,7 @@ export default function Produtos(){
 
     return(
         <Container fluid>
-            <Box className='row' pose={isVisible ? 'visible' : 'hidden'}>
-                <CarouselProdutos/>
-            </Box>
+            <CarouselProdutos/>
             <Box className='row' pose={isVisible ? 'visible' : 'hidden'}>
                 <VantagensProdutos />
             </Box>

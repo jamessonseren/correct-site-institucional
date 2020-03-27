@@ -14,6 +14,11 @@ export default function CarouselProdutos() {
       className="presentation-mode"
     >
       <CarouselItem 
+        title='Tradeclub'
+        description="Proporcionando descontos, controle e economia. Disponibiliza ainda, mais do que um Banco pode oferecer. Extensivo aos familiares e amigos.."
+        image={require('../../../assets/cartoes/card_tradeclub.png')}
+      />
+      <CarouselItem 
         title='Adiantamento salárial'
         description="Com limite pré-definido, que possibilita atender as necessidades de compras no dia a dia do Usuário (Colaborador/Servidor), com desconto em folha de pagamento. Ganho de Krats (Cashback)."
         image={require('../../../assets/cartoes/card_adiantamento.png')}

@@ -4,6 +4,20 @@ ul{
     margin: 0;
 }
 
-li{
+.products > li{
     margin-bottom: 0.7rem;
+    align-items: center;
+    display: flex;
+}
+
+.carousel .slide{
+    background-color: transparent !important;
+}
+
+strong{
+    font-weight: 700 !important;
+}
+
+span{
+    width: 90% !important
 }
