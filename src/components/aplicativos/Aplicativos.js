@@ -50,6 +50,38 @@ export default function Aplicativos(){
                 </Box>
             </Col>
         </Row>
+        <Row className='justify-content-center'>
+            <Col sm={6} className='align-items-center justify-content-center d-flex'>
+                <Box pose={isVisible ? 'visible' : 'hidden'}>
+                    <Row>
+                        <Col sm={12}>
+                            <Row>
+                                <h4 className='text-light' style={{fontWeight: 500}}>Aplicativo Desktop</h4>
+                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
+                                    O Aplicativo Desktop da Tradecard oferecece várias funções para seus associados, dentre elas os serviços de Módulo de Vendas e Fidelidade.<br/>
+                                </p>
+                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
+                                    O Módulo de vendas da Tradecard permite realizar venda através de Qr Code, Tokens, Cartões ou Krats!<br/>
+                                </p>
+                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
+                                    Já a função Fidelidade permite administrar o atendimento por meio de aplicações IOT.<br/>
+                                </p>
+                            </Row>
+                            <Row>
+                                <Col sm={{ span: 5, offset: 7 }}>
+                                    <Box pose={isVisible ? 'visible' : 'hidden'}>
+                                        <a> <Image src={require('../../assets/download_windows.png')} style={{width: '100%'}} rounded fluid/> </a>
+                                    </Box>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Box>
+            </Col>
+            <Col>
+                <Image src={require('../../assets/computador.png')} style={{width: '100%'}} rounded fluid/>
+            </Col>
+        </Row>
     </Container>
     )
 }
