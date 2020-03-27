@@ -11,21 +11,25 @@ export default function Footer() {
             </Col>
             <Col sm={8} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
                 <Row>
-                    <Link className='navbar-link-trade'>Privacidade</Link>
-                    <span className='ml-2 mr-2 text-light'>|</span>
-                    <Link className='navbar-link-trade'>Segurança</Link>
-                    <span className='ml-2 mr-2 text-light'>|</span>
-                    <Link className='navbar-link-trade' to='/contato'>Contato</Link>
+                    <span  className='ml-2 mr-2 text-light'>
+                    <Link className='navbar-link-trade ml-2 mr-2'>Privacidade</Link>
+                    |
+                    <Link className='navbar-link-trade ml-2 mr-2'>Segurança</Link>
+                    |
+                    <Link className='navbar-link-trade ml-2 mr-2' to='/contato'>Contato</Link>
+                    </span>
                 </Row>
                 <Row className='mt-3'>
                     <FaFacebook color='white' className='mr-3' size={30}/>
                     <FaInstagram color='white' size={30}/>
                 </Row>
-                <Row className='mt-3 text-light'>
-                    <span className='navbar-link-trade'>(67) 3253-7232</span>
-                    <span className='ml-2 mr-2 text-light'>|</span>
-                    <span className='navbar-link-trade'>teste@tradecard.net.br</span>
-                </Row>
+                <div className='mt-3 text-light'>
+                    <span className='text-lightml-2 mr-2 text-light'>
+                    <Link className='text-light ml-2 mr-2'>(67) 3253-7232</Link>
+                    |
+                    <Link className='text-light ml-2 mr-2'>teste@tradecard.net.br</Link>
+                    </span>
+                </div>
             </Col>
             <Col sm={2} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
                 <a> <Image src={require('../../assets/download_google_play.png')} style={{width: '50%'}} rounded fluid/> </a>
