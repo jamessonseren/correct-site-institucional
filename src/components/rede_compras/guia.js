@@ -127,7 +127,7 @@ class GuiaComercios extends React.Component {
                             <Row className="justify-content-md-center">
                                 <h3 className="esp">Rede de compras:</h3>
                             </Row>
-                            <Row className="justify-content-around">
+                            <Row className="justify-content-around esp">
                                 <ButtonGroup>
                                     <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
                                     <Button color="dark" onClick={() => this.setState({tipo: 'virtual'})} active={this.state.tipo === 'virtual'}>Lojas Virtuais</Button>
