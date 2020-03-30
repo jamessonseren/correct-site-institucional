@@ -28,7 +28,6 @@ class Catalogo extends React.Component {
         this.setState({
             ofertas : re
         })
-        console.log(this.state.ofertas)
     }
 
     //Consulta estabelecimento a partir do select
@@ -52,15 +51,14 @@ class Catalogo extends React.Component {
         })
     }
 
+    //Pega itens do TradeShop
     getShop = async () => {
         let re = await fetch(`https://www.sisclub.com.br/ws_tradecard/tradeshop.php?cifra=HCADir2rVpBB0ROA1PxY`)
         re = await re.text()
         this.setState({
             result : re
         })
-        console.log(re)
     }
-
     
     //Retorna cidade
     pushCity = (item) => {
@@ -83,12 +81,12 @@ class Catalogo extends React.Component {
         return data.map((produto,id) => {
             var item = produto.split(';')
             if(item !== '' && item !== null && item !== undefined){
-                var logotipo  = item[0]
-                var descricao = item[1]
-                var preco     = item[2]
-                var imagem    = item[3] 
-                var link      = item[4]
-                var preco_inicio      = item[5]
+                var logotipo      = item[0]
+                var descricao     = item[1]
+                var preco         = item[2]
+                var imagem        = item[3] 
+                var link          = item[4]
+                var preco_inicio  = item[5]
 
                 var url = `https://starkclub.com.br/club/uploadIMG/${imagem}`
                 var logo = `https://sisclub.com.br/upload_logo/${logotipo}`
@@ -100,9 +98,7 @@ class Catalogo extends React.Component {
                                 <a href={link}><Image src={url} fluid/></a>
                             </Col>
                             <Col >
-                                <Row>
-                                    <h3 className="descricao">{descricao}</h3>
-                                </Row>
+                                <Row> <h3 className="descricao">{descricao}</h3> </Row>
                                 <Row className="info">
                                     <Col sm={6}>
                                         <Row>
@@ -121,9 +117,7 @@ class Catalogo extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="justify-content-center">
-                                    <Button href={link}>
-                                        Comprar
-                                    </Button>
+                                    <Button href={link}>Comprar</Button>
                                 </Row>
                             </Col>
                         </Row>
@@ -135,7 +129,7 @@ class Catalogo extends React.Component {
 
     render() {
         return(
-            <div className="fundoBranco">
+            <div className="fundoCinza">
                 <Container>
                     <Row className="justify-content-md-center">
                         <h3 className="esp">TradeShop:</h3>
@@ -146,7 +140,6 @@ class Catalogo extends React.Component {
                             <Button color="dark" onClick={() => this.setState({tipo: 'virtuais'})} active={this.state.tipo === 'virtuais'}>Lojas Virtuais</Button>
                         </ButtonGroup>
                     </Row>
-
                     {
                         (this.state.tipo === 'fisica') ? <Row className="justify-content-md-center esp">
                             <Form.Group controlId="exampleForm.ControlSelect1">
@@ -161,14 +154,11 @@ class Catalogo extends React.Component {
                             </Form.Group>
                         </Row> : ''
                     }
-                    
                     {
                         (this.state.tipo === 'virtuais') ?
                             <Row>
-                        {
-                            this.renderShop()
-                        }
-                         </Row>
+                            {  this.renderShop()  }
+                            </Row>
                     :
                        <>
                        {

@@ -14,6 +14,7 @@ function EstabInfo({ children, ...props }) {
     }
   }, []);
 
+  //Coleta informações de estabelecimento de acordo com o id informado
   const getParceiroInfo = async() => {
       let id_estabelecimento = id_estab
       let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/parceiroInfo.php?id_estabelecimento=${id_estabelecimento}&cifra=2L6AcgOMu47bDTprQlIw`)
@@ -22,8 +23,7 @@ function EstabInfo({ children, ...props }) {
   };
 
   const show = () => {
-    //console.log('aqui'+token)
-    let result = token;
+    let result      = token;
     let dados       = result.split(';')
     let fantasia    = dados[0]
     let vantagem    = dados[1]
@@ -32,13 +32,12 @@ function EstabInfo({ children, ...props }) {
     let gerabonus   = dados[4]
     let aceitabonus = dados[5]
     let abrangencia = dados[6]
+
     return(
       <Container>
         <div className="estabInfo">
           <Row>
-              <Col sm={1}>
-                <Image src={logo} />
-              </Col>
+              <Col sm={1}> <Image src={logo} /> </Col>
               <Col sm={{ span: 5, offset: 1 }}>
                 <h3>{fantasia}</h3>
               </Col>
@@ -75,7 +74,7 @@ function EstabInfo({ children, ...props }) {
 
   return (
     <div className="coll-panel">
-    {show()}
+      {show()}
     </div>
   );
 }

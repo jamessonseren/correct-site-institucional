@@ -18,10 +18,10 @@ export default function ProdutosPessoaFisica() {
           <Container>
             <Row>
               <Col sm={12}>
-                <p className="textBlackVant">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TradeWallet:{" "}
+                <p className="textBlackVant description">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='font-weight-bold'>TradeWallet:</span>{" "}
                 </p>
-                <p className="textBlackItens">
+                <p className="textBlackItens description">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Carteira Virtual que
                   carrega todos os cartões (benefícios e crédito). Tem a opção
                   de escolha do cartão para efetuar pagamentos. Utiliza único
@@ -42,12 +42,12 @@ export default function ProdutosPessoaFisica() {
               <Col sm={12}>
                 <Row>
                   <Col sm={4}>
-                    <p className="textBlackVant">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fidelidade:
+                    <p className="textBlackVant description">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='font-weight-bold'>Fidelidade:</span>
                     </p>
                   </Col>
                 </Row>
-                <p className="textBlackItens">
+                <p className="textBlackItens description">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O Clube de Vantagens
                   disponibiliza aos Associados, com um único recurso (APP
                   TRADECLUB), vários Estabelecimentos que oferecem Fidelização,
@@ -75,10 +75,10 @@ export default function ProdutosPessoaFisica() {
           <Container>
             <Row>
               <Col sm={12}>
-                <p className="textBlackVant">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivery:{" "}
+                <p className="textBlackVant description">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='font-weight-bold'>Delivery:</span>{" "}
                 </p>
-                <p className="textBlackItens">
+                <p className="textBlackItens description">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Além das vantagens que o
                   Fidelidade oferece, o Delivery permite a comodidade de um
                   sistema simples, rápido e seguro, na escolha de seus pedidos e

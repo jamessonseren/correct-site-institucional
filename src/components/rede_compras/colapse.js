@@ -8,6 +8,7 @@ function CollapsiblePanel({ children, ...props }) {
   const [isCollapse, setIsCollapse] = useState(collapse);
   const [icon, setIcon] = useState("fa fa-chevron-down");
 
+  //Para expandir informações extras
   const toggle = () => {
     setIsCollapse(!isCollapse);
     setIsOpen(!isOpen);
@@ -18,6 +19,7 @@ function CollapsiblePanel({ children, ...props }) {
     });
   };
 
+  //Animar
   const animate = collapse => {
     setIsCollapse(collapse);
     setIcon(state => {
@@ -27,27 +29,22 @@ function CollapsiblePanel({ children, ...props }) {
     });
   };
 
+  //Iniciar animação
   useEffect(() => {
     animate(!collapse);
   }, [collapse]);
 
-    //Auxilia no efeito Zebra
-    const check = (i) =>{
-        return (i%2 === 0) ? 1 : 0
-    }
+  //Auxilia no efeito Zebra
+  const check = (i) =>{
+      return (i%2 === 0) ? 1 : 0
+  }
 
   return (
     <div className="coll-panel">
-      <button
-        type="button"
-        className={(check(color)) ? 'c1 coll-panel-btn btn-block text-left' : 'c2 coll-panel-btn btn-block text-left'}
-        onClick={() => toggle()}
-      >
+      <button type="button" className={(check(color)) ? 'c1 coll-panel-btn btn-block text-left' : 'c2 coll-panel-btn btn-block text-left'} onClick={() => toggle()}>
          {title}
       </button>
-      <Collapse className="border text-left p-2" isOpen={isOpen}>
-        {children}
-      </Collapse>
+      <Collapse className="border text-left p-2" isOpen={isOpen}> {children} </Collapse>
     </div>
   );
 }

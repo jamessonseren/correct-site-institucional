@@ -27,9 +27,9 @@ export default function Presetation() {
                 />
               </Col>
               <Col sm={12}>
-                <p className="textBlackVant">
+                <p className="description">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clube de Vantagens -
-                  TRADECLUB: proporcionando descontos, controle e economia.
+                  <span className='font-weight-bold'>TRADECLUB</span>: proporcionando descontos, controle e economia.
                   Disponibiliza ainda, mais do que um Banco pode oferecer.
                   Extensivo aos familiares e amigos.
                 </p>
@@ -41,7 +41,7 @@ export default function Presetation() {
           <Container>
             <Row>
               <Col sm={12}>
-                <p className="textBlackVant">
+                <p className="textBlackVant description">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para o TRADECLUB, a
                   Tradecard foi além dos benefícios de um Clube, chega a tudo
                   que um Banco pode oferecer, agregando muito mais benefícios
@@ -49,7 +49,7 @@ export default function Presetation() {
                   oferece:
                   <br />
                 </p>
-                <p className="textBlackItens">
+                <p className="textBlackItens descriptionsm">
                   ✓ Ganha um Banco de presente, podendo utilizar vários recursos
                   sem taxas e juros, através do APP TRADECLUB;
                   <br />
@@ -82,7 +82,7 @@ export default function Presetation() {
           <Container>
             <Row>
               <Col sm={12}>
-                <p className="textBlackItens">
+                <p className="textBlackItens descriptionsm">
                   ✓ Facilidade de utilização de GPS disponível para
                   direcionamento às Lojas Físicas;
                   <br />
@@ -100,7 +100,7 @@ export default function Presetation() {
                   ✓ Não tem custos, mensalidades, taxas e nem juros.
                   <br />
                 </p>
-                <p className="textBlackItens">
+                <p className="textBlackItens descriptionsm">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Tradecard não
                   cobra nada por estes produtos/serviços, quando implanta em
                   Empresas/Órgãos Públicos (Sistema Corporativo), como
@@ -108,7 +108,7 @@ export default function Presetation() {
                   Colaborador/Servidor, KRATS (Cashback) em cada compra efetuada
                   (KRATS é dinheiro virtual equivalente ao Real).
                 </p>
-                <p className="textBlackItens">
+                <p className="textBlackItens descriptionsm">
                   &nbsp;&nbsp;&nbsp;&nbsp;O objetivo desses benefícios é
                   proporcionar uma vida melhor e segura para os
                   Colaboradores/Servidores, evitando o endividamento, não

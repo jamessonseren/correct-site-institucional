@@ -8,36 +8,14 @@ export default function Produtos(){
         <>
             <div>
             <div className="area" >
-        <div className="context">
-            <Container>
-            <GuiaComercios/>
-            </Container>
-            <Container fluid={'yes'}>
-                <Footer/>
-            </Container>
-        </div>
-                <ul className="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                </ul>
+                <div className="context">
+                    <Container>
+                        <GuiaComercios/>
+                    </Container>
+                    <Container fluid={'yes'}>
+                        <Footer/>
+                    </Container>
+                </div>
             </div>
         </div>
         </>

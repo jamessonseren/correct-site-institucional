@@ -11,6 +11,21 @@ label{
     height: 80vh;
 }
 
+.fundo{
+    background-color:#1d1c1cc4;
+}
+
+.btn-trade-contato{
+    background-color:#343537 !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    width: 100%;
+    margin: 0 !important;
+    border: none;
+    padding: 5px 10px;
+    transition: opacity 0.1s ease-in-out;
+}
+
 .container{
     padding-bottom: 25px;
 }

@@ -23,6 +23,7 @@ class GuiaComercios extends React.Component {
         this.getParceiros()
     }
 
+    //Altenar
     toggle = () => this.setState(prevState => ({ isOpen: !prevState.isOpen }))
 
     //Carrega página com estabelecimentos da primeira cidade do select
@@ -94,6 +95,7 @@ class GuiaComercios extends React.Component {
         return label
     }
 
+    //Retorna endereço de imagem
     pushImg = (item) => {
         let data = item.split(';')
         let path = data[0]
@@ -102,6 +104,7 @@ class GuiaComercios extends React.Component {
         return ''
     }
 
+    //Retorna id do estabelecimento
     pushId = (item) => {
         let data = item.split(';')
         let id_estabelecimento = data[1]
@@ -121,21 +124,23 @@ class GuiaComercios extends React.Component {
         let ramoAtual='';
         
         return(
-                    <div className="fundoBranco">
-                        {result?
-                            <div>
-                            <Row className="justify-content-md-center">
-                                <h3 className="esp">Rede de compras:</h3>
-                            </Row>
-                            <Row className="justify-content-around esp">
-                                <ButtonGroup>
-                                    <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
-                                    <Button color="dark" onClick={() => this.setState({tipo: 'virtual'})} active={this.state.tipo === 'virtual'}>Lojas Virtuais</Button>
-                                </ButtonGroup>
-                            </Row>
-                            
-                            {
-                                (tipo === 'fisica') ? <Row className="justify-content-md-center esp">
+            <div className="fundoBranco">
+                {result?
+                    <div>
+                        <Row className="justify-content-md-center">
+                            <h3 className="esp">Rede de compras:</h3>
+                        </Row>
+                        <Row className="justify-content-around esp">
+                            <ButtonGroup>
+                                <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
+                                <Button color="dark" onClick={() => this.setState({tipo: 'virtual'})} active={this.state.tipo === 'virtual'}>Lojas Virtuais</Button>
+                            </ButtonGroup>
+                        </Row>
+
+                        {/*Cidades disponíveis para lojas físicas*/}
+                        {
+                            (tipo === 'fisica') ? 
+                            <Row className="justify-content-md-center esp">
                                 <Form.Group controlId="exampleForm.ControlSelect1">
                                     <Form.Control as="select"
                                     onChange={this.getContentBySelect.bind(this)}>
@@ -147,108 +152,105 @@ class GuiaComercios extends React.Component {
                                     </Form.Control>
                                 </Form.Group>
                             </Row> : ''
-                            }
-                            
-                            {(tipo === 'virtual') ? <Container>
-                                {partners.map((item, index) =>
-                                    <span key={index}>
-                                        <CollapsiblePanelParceiros title={ (this.pushImg(item) != '' && this.pushImg(item) != 'https://sisclub.com.br/upload_logo/') ? <Image src={this.pushImg(item)} fluid width="300px"/> : '' }>
-                                            <span>
-                                                <Row className="justify-content-md-center ramo">
-                                                    { (this.pushId(item) !== '') ? 
-                                                        <EstabInfo logo={this.pushImg(item)} id_estab={this.pushId(item)}></EstabInfo> : '' }
-                                                </Row>
-                                            </span>
-                                        </CollapsiblePanelParceiros>
-                                    </span>
-                                )}
-                            </Container> : ''}
+                        }
 
-                            {(tipo === 'fisica') ?
+                        {/*Lojas virtuais*/}
+                        {
+                            (tipo === 'virtual') ?
+                                <Container>
+                                    {
+                                        partners.map((item, index) =>
+                                            <span key={index}>
+                                                <CollapsiblePanelParceiros title={ (this.pushImg(item) != '' && this.pushImg(item) != 'https://sisclub.com.br/upload_logo/') ? <Image src={this.pushImg(item)} fluid width="300px"/> : '' }>
+                                                    <span>
+                                                        <Row className="justify-content-md-center ramo">
+                                                            { (this.pushId(item) !== '') ? <EstabInfo logo={this.pushImg(item)} id_estab={this.pushId(item)}></EstabInfo> : '' }
+                                                        </Row>
+                                                    </span>
+                                                </CollapsiblePanelParceiros>
+                                            </span>)
+                                    }
+                                </Container> : ''}
+
+                    {
+                        (tipo === 'fisica') ?
                             <Container>
-                            <div>
-                            {result.map((item, index) =>
                                 <div>
-                                    <div class="hide">
-                                        {
-                                            ndx= (item.ramo !== ramoAtual) ? ndx+1 : ndx
-                                        }
-                                    </div>
-                                    <div className={(this.check(ndx)) ? 'listraUm ' : 'listraDois '} >
-                                    
-                                        <span key={index}>
-                                            <Row className="justify-content-md-center ramo" onClick={this.toggle}>
-                                                {
-                                                    (item.ramo !== ramoAtual) ? ramoAtual = item.ramo : ''
-                                                }
-                                            </Row>
+                                    {result.map((item, index) =>
+                                        <div>
+                                            <div class="hide"> { ndx= (item.ramo !== ramoAtual) ? ndx+1 : ndx } </div>
                                             
-                                            <CollapsiblePanel 
-                                            title={
-                                                <div className="basicInfo">
-                                                <Row><p className="label">{item.Nome}</p></Row>
-                                                <Row><p className="label">{item.Cidade} - {item.Estado}</p></Row>
-                                                <Row><p>{item.Telefone}</p></Row>
+                                            <div className={(this.check(ndx)) ? 'listraUm ' : 'listraDois '} >
+                                            
+                                                <span key={index}>
+                                                    <Row className="justify-content-md-center ramo" onClick={this.toggle}>{ (item.ramo !== ramoAtual) ? ramoAtual = item.ramo : '' }</Row>
+                                                    
+                                                    <CollapsiblePanel 
+                                                    title={
+                                                        <div className="basicInfo">
+                                                            <Row><p className="label">{item.Nome}</p></Row>
+                                                            <Row><p className="label">{item.Cidade} - {item.Estado}</p></Row>
+                                                            <Row><p>{item.Telefone}</p></Row>
+                                                        </div>
+                                                    } 
+                                                    color={ndx}
+                                                    >
+                                                    <span>
+                                                        <Container>
+                                                            <Row className="final">
+                                                                <Col className="justify-content-md-center">
+                                                                    <Row  className="justify-content-md-center images">
+                                                                        <Col sm={2}>{(item.deal === 's') ? <Image src="https://www.starkclub.com.br/new/img2/StarkDeal.png" fluid/> : ""}</Col>
+                                                                        <Col sm={2}>{(item.club === 's') ? <Image src="https://www.starkclub.com.br/new/img2/StarkClub.png" fluid/> : ""}</Col>
+                                                                        <Col sm={2}>{(item.alim === 's') ? <Image src="https://www.starkclub.com.br/new/img2/starkticket.png" fluid/> : ""}</Col>
+                                                                        <Col sm={2}>{(item.refei === 's') ? <Image src="https://www.starkclub.com.br/new/img2/starkticketAl.png" fluid/> : ""}</Col>
+                                                                        <Col sm={2}>{(item.qrcode === 1) ? <Image src="https://www.starkclub.com.br/new/img2/venda_qrcode_vermelho.png" fluid/> : ""}</Col>
+                                                                    </Row>
+                                                                    <Row className="justify-content-md-center">
+                                                                        <Col sm={3}>
+                                                                            {
+                                                                                (item.deal === 's') ?
+                                                                                <div className="new-line">
+                                                                                    <h5>Adiantamento Salarial</h5>
+                                                                                    {this.listar(item.bandeiras)}
+                                                                                </div>
+                                                                                :
+                                                                                ''
+                                                                            }
+                                                                        </Col>
+                                                                        <Col sm={3}>
+                                                                            {
+                                                                                (item.club === 's') ?
+                                                                                <div className="new-line">
+                                                                                    <h5>Vantagens</h5>
+                                                                                    {this.vantagens(item.vantagens)}
+                                                                                </div>
+                                                                                :
+                                                                                ''
+                                                                            }
+                                                                        </Col>
+                                                                        <Col sm={4}>
+                                                                            <div className="new-line">
+                                                                                <h5>Endereço</h5>
+                                                                                <p className="label">{item.logradouro}, {item.numero} - {item.bairro}</p>
+                                                                                <p className="label">{item.cidade} - {item.estado}</p>
+                                                                            </div>
+                                                                        </Col>
+                                                                    </Row>
+                                                                </Col>
+                                                            </Row>
+                                                        </Container>
+                                                    </span>
+                                                    </CollapsiblePanel>
+                                                </span>
                                             </div>
-                                            } 
-                                            color={ndx}
-                                            >
-                                            <span>
-                                                <Container>
-                                                    <Row className="final">
-                                                        <Col className="justify-content-md-center">
-                                                            <Row  className="justify-content-md-center images">
-                                                                <Col sm={2}>{(item.deal === 's') ? <Image src="https://www.starkclub.com.br/new/img2/StarkDeal.png" fluid/> : ""}</Col>
-                                                                <Col sm={2}>{(item.club === 's') ? <Image src="https://www.starkclub.com.br/new/img2/StarkClub.png" fluid/> : ""}</Col>
-                                                                <Col sm={2}>{(item.alim === 's') ? <Image src="https://www.starkclub.com.br/new/img2/starkticket.png" fluid/> : ""}</Col>
-                                                                <Col sm={2}>{(item.refei === 's') ? <Image src="https://www.starkclub.com.br/new/img2/starkticketAl.png" fluid/> : ""}</Col>
-                                                                <Col sm={2}>{(item.qrcode === 1) ? <Image src="https://www.starkclub.com.br/new/img2/venda_qrcode_vermelho.png" fluid/> : ""}</Col>
-                                                            </Row>
-                                                            <Row className="justify-content-md-center">
-                                                                <Col sm={3}>
-                                                                    {
-                                                                        (item.deal === 's') ?
-                                                                        <div className="new-line">
-                                                                            <h5>Adiantamento Salarial</h5>
-                                                                            {this.listar(item.bandeiras)}
-                                                                        </div>
-                                                                        :
-                                                                        ''
-                                                                    }
-                                                                </Col>
-                                                                <Col sm={3}>
-                                                                    {
-                                                                        (item.club === 's') ?
-                                                                        <div className="new-line">
-                                                                            <h5>Vantagens</h5>
-                                                                            {this.vantagens(item.vantagens)}
-                                                                        </div>
-                                                                        :
-                                                                        ''
-                                                                    }
-                                                                </Col>
-                                                                <Col sm={4}>
-                                                                    <div className="new-line">
-                                                                        <h5>Endereço</h5>
-                                                                        <p className="label">{item.logradouro}, {item.numero} - {item.bairro}</p>
-                                                                        <p className="label">{item.cidade} - {item.estado}</p>
-                                                                    </div>
-                                                                </Col>
-                                                            </Row>
-                                                    </Col>
-                                                </Row>
-                                            </Container>
-                                            </span>
-                                    </CollapsiblePanel>
-                                        </span>
-                                    </div>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                            </div>
-                        </Container>
+                            </Container>
                         :null}
-                            </div> : ''}
-                    </div>
+                    </div> : ''}
+                </div>
         )
     }
 

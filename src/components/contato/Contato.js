@@ -43,10 +43,9 @@ class Contato extends React.Component {
         })
     }
     
-
     render() {
         return(
-            <Container className="container" fluid={'yes'}>
+            <Container className="container fundo" fluid={'yes'}>
                 <Row className='justify-content-center align-items-center content'>
                     <Col sm={8} className="mt-5 text-light">
                         <h1 className='text-center'>Entre em contato conosco!</h1>
@@ -63,7 +62,7 @@ class Contato extends React.Component {
                         <MDBInput label="E-mail" className='input' value={this.state.email} onChange={(e) => this.setState({email: e.target.value}) } />
                         {this.state.tipo == 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
                         <MDBInput className='input' type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
-                        <button onClick={() => this.submit()} className="btn-trade">
+                        <button onClick={() => this.submit()} className="btn-trade-contato">
                             {this.state.isLoading ? 
                                 <div className="spinner-border text-light"></div>
                             :
