@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Col, Row, Container, Image} from 'react-bootstrap'
 import posed from 'react-pose'
-import "./aplicativos.css"
   
 const Box = posed.div({
     visible: { 
@@ -27,61 +26,43 @@ export default function Aplicativos(){
     }, [])
 
     return(
-    <Container className='p-5'>
-        <Row className='justify-content-center'>
-            <Col sm={3} className='align-items-center justify-content-center d-flex'>
-                <Box pose={isVisible ? 'visible' : 'hidden'}>
-                    <Image src={require('../../assets/main_screen_app.png')} style={{width: '80%'}} rounded fluid/>
-                </Box>
-            </Col>
+        <Container className='p-5'>
+            <Row className='justify-content-center'>
+                <Col sm={3} className='align-items-center justify-content-center d-flex'>
+                    <Box pose={isVisible ? 'visible' : 'hidden'}>
+                        <Image src={require('../../assets/main_screen_app.png')} style={{width: '80%'}} rounded fluid/>
+                    </Box>
+                </Col>
 
-            <Col>
-                <Box pose={isVisible ? 'visible' : 'hidden'}>
-                    <h4 className='text-light' style={{fontWeight: 500}}>APP Tradecard</h4>
+                <Col>
+                    <Box pose={isVisible ? 'visible' : 'hidden'}>
+                        <h4 className='text-light' style={{fontWeight: 500}}>APP Tradecard</h4>
+                        <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
+                            Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, 
+                            com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
+                            para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor 
+                            relacionamento com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento 
+                            <strong> "APP Tradcard"</strong>, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!
+                        </p>
+                        <a> <Image src={require('../../assets/download_google_play.png')} style={{width: '20%'}} rounded fluid/> </a>
+                        <a> <Image src={require('../../assets/download_app_store.png')} style={{width: '21%'}} className='ml-5' rounded fluid/> </a>
+                    </Box>
+                </Col>
+            </Row>
+            <Row className='justify-content-center mt-5'>
+                <Col>
+                    <h4 className='text-light' style={{fontWeight: 500}}>Módulo de vendas - Tradecard</h4>
                     <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
-                        Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, 
-                        com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
-                        para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor 
-                        relacionamento com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento 
-                        <strong> "APP Tradcard"</strong>, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!
+                        O Módulo de vendas da Tradecard permite realizar venda através de Qr Code, Tokens, Cartões ou Krats!
                     </p>
-                    <a> <Image src={require('../../assets/download_google_play.png')} style={{width: '20%'}} rounded fluid/> </a>
-                    <a> <Image src={require('../../assets/download_app_store.png')} style={{width: '21%'}} className='ml-5' rounded fluid/> </a>
-                </Box>
-            </Col>
-        </Row>
-        <Row className='justify-content-center'>
-            <Col sm={6} className='align-items-center justify-content-center d-flex'>
-                <Box pose={isVisible ? 'visible' : 'hidden'}>
-                    <Row>
-                        <Col sm={12}>
-                            <Row>
-                                <h4 className='text-light' style={{fontWeight: 500}}>Aplicativo Desktop</h4>
-                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
-                                    O Aplicativo Desktop da Tradecard oferecece várias funções para seus associados, dentre elas os serviços de Módulo de Vendas e Fidelidade.<br/>
-                                </p>
-                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
-                                    O Módulo de vendas da Tradecard permite realizar venda através de Qr Code, Tokens, Cartões ou Krats!<br/>
-                                </p>
-                                <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
-                                    Já a função Fidelidade permite administrar o atendimento por meio de aplicações IOT.<br/>
-                                </p>
-                            </Row>
-                            <Row>
-                                <Col sm={{ span: 5, offset: 7 }}>
-                                    <Box pose={isVisible ? 'visible' : 'hidden'}>
-                                        <a> <Image src={require('../../assets/download_windows.png')} style={{width: '100%'}} rounded fluid/> </a>
-                                    </Box>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Box>
-            </Col>
-            <Col>
-                <Image src={require('../../assets/computador.png')} style={{width: '100%'}} rounded fluid/>
-            </Col>
-        </Row>
-    </Container>
+                    <a> <Image src={require('../../assets/download_windows.png')} style={{width: '21%'}} rounded fluid/> </a>
+                </Col>
+                <Col sm={5} className='align-items-center justify-content-center d-flex'>
+                    <Box pose={isVisible ? 'visible' : 'hidden'}>
+                        <Image src={require('../../assets/app_windows.png')} style={{width: '100%'}} rounded fluid/>
+                    </Box>
+                </Col>
+            </Row>
+        </Container>
     )
 }
