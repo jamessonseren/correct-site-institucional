@@ -9,7 +9,7 @@ export default function Produtos(){
             <div>
             <div className="area" >
                 <div className="context">
-                    <Container>
+                    <Container fluid={'yes'}>
                         <GuiaComercios/>
                     </Container>
                     <Container fluid={'yes'}>

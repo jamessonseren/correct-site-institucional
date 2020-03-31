@@ -3,16 +3,39 @@
     border-bottom: 1px solid #fff !important;
 }
 
+/* ----------  Estilo do input de telefone   ----------*/
+.input-tel{
+    color: #fff !important;
+    border-color: #fff !important;
+    width: 100%;
+}
+.MuiInput-input{
+    color: #fff !important;
+}
+.MuiInput-underline{
+    border-color: #fff !important;
+}
+.MuiInput-underline:before{
+    border-bottom: 2px solid #fff !important;
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before{
+    border-bottom: 2px solid #fff !important;
+}
+.MuiInput-underline:after{
+    border-bottom: 2px solid #fff !important;
+}
+/* ----------------------------------------------------*/
+
 label{
     color: #fff !important
 }
-
 .content{
     height: 80vh;
 }
 
 .fundo{
     background-color:#1d1c1cc4;
+    height:100vh;
 }
 
 .btn-trade-contato{

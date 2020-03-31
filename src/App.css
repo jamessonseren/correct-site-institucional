@@ -2,7 +2,12 @@
     --trade-dark: #162331;
     --trade-light: #00788c
 }
-
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/Montserrat-Regular.ttf');
+}
 html, body{
   height: 'auto';
   width: '100%';

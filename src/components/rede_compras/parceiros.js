@@ -1,59 +1,46 @@
-import React, { useState, useEffect } from "react";
-import { Collapse } from "reactstrap";
-import { Container, Button } from "react-bootstrap";
+import React from "react";
+import { Button, Modal } from "react-bootstrap";
 import './guia.css'
 
-function CollapsiblePanelParceiros({ children, ...props }) {
-  const { title, collapse } = props;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isCollapse, setIsCollapse] = useState(collapse);
-  const [icon, setIcon] = useState("fa fa-chevron-down");
-  let i = 0;
-
-  const toggle = () => {
-    setIsCollapse(!isCollapse);
-    setIsOpen(!isOpen);
-    setIcon(state => {
-      return state === "fa fa-chevron-down"
-        ? "fa fa-chevron-right"
-        : "fa fa-chevron-down";
-    });
-  };
-
-  const animate = collapse => {
-    setIsCollapse(collapse);
-    setIcon(state => {
-      return state === "fa fa-chevron-down"
-        ? "fa fa-chevron-right"
-        : "fa fa-chevron-down";
-    });
-  };
-
-  useEffect(() => {
-    animate(!collapse);
-  }, [collapse]);
-
-
+function MyVerticallyCenteredModal({ children, ...props }) {
   return (
-    <div className="coll-panel">
-      <button
-        type="button"
-        className='c1 coll-panel-btn btn-block'
-        onClick={() => toggle()}
-      >
-         {title}
-      </button>
-      <Collapse className="border text-left p-2 estabInfo" isOpen={isOpen}>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
         {children}
-      </Collapse>
-    </div>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Fechar</Button>
+      </Modal.Footer>
+    </Modal>
   );
 }
 
-CollapsiblePanelParceiros.defaultProps = {
-  children: "Add node as a child",
-  title: "Collapsible Panel",
-  collapse: true
-};
+function CollapsiblePanelParceiros({ children, ...props }) {
+  const { title } = props;
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <div className="icones">
+      <button
+        className="cor_branca" onClick={() => setModalShow(true)}
+      >
+        {title}
+      </button>
+      <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)}>
+        {children}
+      </MyVerticallyCenteredModal>
+    </div>
+  );
+}
 
 export default CollapsiblePanelParceiros;
