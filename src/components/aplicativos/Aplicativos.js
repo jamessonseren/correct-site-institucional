@@ -36,7 +36,7 @@ export default function Aplicativos(){
 
                 <Col>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
-                        <h4 className='text-light' style={{fontWeight: 500}}>APP Tradecard</h4>
+                        <h4 className='text-light' style={{fontWeight: 600}}>APP Tradecard</h4>
                         <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
                             Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, 
                             com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
@@ -51,11 +51,11 @@ export default function Aplicativos(){
             </Row>
             <Row className='justify-content-center mt-5'>
                 <Col>
-                    <h4 className='text-light' style={{fontWeight: 500}}>Módulo de vendas - Tradecard</h4>
+                    <h4 className='text-light' style={{fontWeight: 600}}>Módulo de vendas - Tradecard</h4>
                     <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
-                        O Módulo de vendas da Tradecard permite realizar venda através de Qr Code, Tokens, Cartões ou Krats!
+                        O Módulo de vendas da Tradecard permite realizar vendas através de QR-Code e Token com técnologia e segurança de ponta!
                     </p>
-                    <a> <Image src={require('../../assets/download_windows.png')} style={{width: '21%'}} rounded fluid/> </a>
+                    <a> <Image src={require('../../assets/download_windows.png')} style={{width: '28%'}} rounded fluid/> </a>
                 </Col>
                 <Col sm={5} className='align-items-center justify-content-center d-flex'>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
