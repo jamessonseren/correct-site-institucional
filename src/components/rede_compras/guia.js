@@ -10,10 +10,10 @@ class GuiaComercios extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            result: '',
-            cities: '',
+            result:   '',
+            cities:   '',
             partners: '',
-            tipo:'fisica'
+            tipo: 'fisica'
         }
     }
 
@@ -157,19 +157,29 @@ class GuiaComercios extends React.Component {
                         {/*Lojas virtuais*/}
                         {
                             (tipo === 'virtual') ?
-                                <Container>
-                                    {
-                                        partners.map((item, index) =>
-                                            <span key={index}>
-                                                <CollapsiblePanelParceiros title={ (this.pushImg(item) != '' && this.pushImg(item) != 'https://sisclub.com.br/upload_logo/') ? <Image src={this.pushImg(item)} fluid width="300px"/> : '' }>
-                                                    <span>
-                                                        <Row className="justify-content-md-center ramo">
-                                                            { (this.pushId(item) !== '') ? <EstabInfo logo={this.pushImg(item)} id_estab={this.pushId(item)}></EstabInfo> : '' }
-                                                        </Row>
-                                                    </span>
-                                                </CollapsiblePanelParceiros>
-                                            </span>)
-                                    }
+                                <Container  fluid={'yes'}>
+                                    <div className="center">
+                                        {
+                                            partners.map((item, index) =>
+                                            <>
+                                                {
+                                                    (this.pushId(item) !== '' && this.pushImg(item) !== 'https://sisclub.com.br/upload_logo/') ?  
+                                                    <CollapsiblePanelParceiros 
+                                                    title={ 
+                                                        (this.pushImg(item) !== '' && this.pushImg(item) !== 'https://sisclub.com.br/upload_logo/') ? 
+                                                        <Image className="logo" src={this.pushImg(item)} fluid /> : '' }
+                                                    >
+                                                        <span>
+                                                            <Row className="justify-content-md-center ramo">
+                                                                { (this.pushId(item) !== '') ? <EstabInfo logo={this.pushImg(item)} id_estab={this.pushId(item)}></EstabInfo> : '' }
+                                                            </Row>
+                                                        </span>
+                                                    </CollapsiblePanelParceiros> : ''
+                                                }
+                                            </>
+                                            )
+                                        }
+                                    </div>
                                 </Container> : ''}
 
                     {
