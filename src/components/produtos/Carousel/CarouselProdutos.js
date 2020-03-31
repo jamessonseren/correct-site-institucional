@@ -38,7 +38,6 @@ export default function CarouselProdutos() {
         description="Com benefício específico para aquisição de refeições prontas. Pode ser utilizado em restaurantes, padarias, lanchonetes e similares. Facilitando a rotina da Empresa/Órgão Público e dando mais qualidade de vida ao seu Colaborador/Servidor. Ganho de Krats (Cashback)."
         image={require('../../../assets/cartoes/card_refeicao.png')}
       />
-
     </Carousel> 
   );
 }
