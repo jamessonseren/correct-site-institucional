@@ -21,3 +21,10 @@ strong{
 span{
     width: 90% !important
 }
+
+.icon-vantagens{
+    color: #28a745 !important;
+    font-size: 30px !important; 
+    margin-right: 10px !important; 
+    width: 5% !important
+}

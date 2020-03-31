@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row, Container, Image } from 'react-bootstrap'
+import {Col, Row, Image } from 'react-bootstrap'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {GiBank, GiBuyCard, GiCardExchange, GiCardPickup} from 'react-icons/gi'
 import {AiOutlineClockCircle} from 'react-icons/ai'
@@ -21,59 +21,59 @@ export default function VantagensProdutos() {
                 </h4>
                 <ul className="products">
                   <li>
-                    <GiBank style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <GiBank className='icon-vantagens'/> 
                     <span>
                       Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Tradecard</strong>;
                     </span>
                   </li>
                   <li>
-                    <GiBuyCard style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/>
+                    <GiBuyCard className='icon-vantagens'/>
                     <span>
                       Compras na Rede <strong>Tradeclub com prazo (média de 45 dias) e sem juros;</strong>
                     </span>
                   </li>
                   <li>
-                    <AiOutlineClockCircle style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <AiOutlineClockCircle className='icon-vantagens'/> 
                     <span>
                       Não precisa esperar dia do pagamento para realizar suas <strong>compras</strong>;
                     </span>
                   </li>
                   <li>
-                    <FaHandshake style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaHandshake className='icon-vantagens'/> 
                     <span>
                       Obtém facilidades nas compras sem burocracia, com tecnologia e <strong>sem consultas no SPC/Serasa</strong>;
                     </span>
                   </li>
                   <li>
-                    <MdRedeem style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <MdRedeem className='icon-vantagens'/> 
                     <span>
                       <strong>Rede TRADECLUB</strong> de compras na cidade, podendo inclusive, dar sugestões de estabelecimentos comerciais de sua preferência;
                     </span>
                   </li>
                   <li>
-                    <GiCardExchange style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <GiCardExchange className='icon-vantagens'/> 
                     <span>
                       Ganha <strong>KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - TRADECLUB;
                     </span>
                   </li>
                   <li>
-                    <FaCommentsDollar style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaCommentsDollar className='icon-vantagens'/> 
                     <span>
                       Cartão Virtual que proporciona maior <strong>segurança e facilidade de pagamentos;</strong>
                     </span>
                   </li>
                   <li>
-                    <MdSignalWifiOff style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <MdSignalWifiOff className='icon-vantagens'/> 
                     <span>
                       Possibilidade de efetuar compras mesmo quando não estiver conectado na internet, através da <strong>tecnologia Token;</strong>
                     </span>
                   </li>
                   <li>
-                    <GiCardPickup style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <GiCardPickup className='icon-vantagens'/> 
                     <span> Utilização destes benefícios é opcional e seu limite renovado mensalmente; </span>
                   </li>
                   <li>
-                    <FaPercent style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaPercent className='icon-vantagens'/> 
                     <strong>Não tem custos, mensalidades, taxas e nem juros.</strong>
                   </li>
                 </ul>
@@ -86,49 +86,49 @@ export default function VantagensProdutos() {
                 </h4>
                 <ul className="products">
                   <li>
-                    <GiBank style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <GiBank className='icon-vantagens'/> 
                     <span>
                       Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Tradecard</strong>;
                     </span>
                   </li>
                   <li>
-                    <FaHandshake style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaHandshake className='icon-vantagens'/> 
                     <span>
                       <strong>Desburocratização</strong> e automação dos processos de convênios
                     </span>
                   </li>
                   <li>
-                    <FaTasks style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaTasks className='icon-vantagens'/> 
                     <span>
                       <strong>Padronização de benefícios</strong> a todos os Colaboradores/Servidores, independentemente do local de trabalho                    
                     </span>
                   </li>
                   <li>
-                    <GiCardExchange style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <GiCardExchange className='icon-vantagens'/> 
                     <span>
                       <strong>Ganha KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - TRADECLUB;
                     </span>
                   </li>
                   <li>
-                    <IoMdCheckmarkCircleOutline style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <IoMdCheckmarkCircleOutline className='icon-vantagens'/> 
                     <span>
                       Vale Alimentação contempla a <strong>minimização de processos e custos</strong> em relação a substituição da Cesta Básica.
                     </span>
                   </li>
                   <li>
-                    <FaClipboardList style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaClipboardList className='icon-vantagens'/> 
                     <span>
                       <strong>Autogestão dos processos de convênios</strong>, permitindo que a área de Recursos Humanos tenha o controle de todos os procedimentos administrativos sobre o sistema, de forma centralizada ou não.
                     </span>
                   </li>
                   <li>
-                    <MdSignalWifiOff style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/>
+                    <MdSignalWifiOff className='icon-vantagens'/>
                     <span>
                       Possibilidade de efetuar compras mesmo quando não estiver conectado na internet, através da tecnologia Token
                     </span>
                   </li>
                   <li>
-                    <FaPercent style={{color: '#28a745', fontSize: 30, marginRight: 10, width: '5%'}}/> 
+                    <FaPercent className='icon-vantagens'/> 
                     <span>
                       <strong>Não tem custos: mensalidades, taxas e nem juros.</strong>
                     </span>
