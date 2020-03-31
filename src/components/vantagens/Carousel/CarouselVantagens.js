@@ -21,7 +21,7 @@ export default function CarouselVantagens() {
           senha única, válida para todos os cartões. Conta também, com arquivos de agenda e cadastros necessários para o dia a dia.
           Todas informações da carteira são criptografadas, por questões de segurança.
         "
-        image={require('../../../assets/cartoes/card_tradeclub.png')}
+        image={require('../../../assets/wallet.png')}
       />
       <CarouselItem 
         title='Fidelidade'
@@ -30,12 +30,12 @@ export default function CarouselVantagens() {
           atendimento personalizado. E consequentemente, através da tecnologia aplicada, conseguem redução de custos e melhorias
           na qualificação de mão de obra, bem como, na sofisticação do atendimento aos seus Fidelizados.
         "
-        image={require('../../../assets/cartoes/card_adiantamento.png')}
+        image={require('../../../assets/cartoes/card_fidelidade.png')}
       />
       <CarouselItem 
         title='Delivery'
         description="Além das vantagens que o Fidelidade oferece, o Delivery permite a comodidade de um sistema simples, rápido e seguro, na escolha de seus pedidos e forma de pagamento, no conforto de sua casa, escritório ou outros locais."
-        image={require('../../../assets/cartoes/card_convenio.png')}
+        image={require('../../../assets/cartoes/card_delivery.png')}
       />
     </Carousel> 
   );

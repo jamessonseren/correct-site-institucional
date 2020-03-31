@@ -9,9 +9,10 @@ import Contato from './components/contato/Contato'
 import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/Vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
-import Tradeshop from './components/trade_shop/tradeshop'
+import Tradeshop from './components/trade_shop/Tradeshop'
 import RedeCompras from './components/rede_compras/redeCompras'
 import Footer from './components/footer/Footer'
+
 function App() {
   return (
     <BrowserRouter>

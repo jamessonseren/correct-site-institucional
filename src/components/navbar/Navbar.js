@@ -15,7 +15,7 @@ export default function NavBar(){
             <Nav.Item><Link className='navbar-link-trade' to='/vantagens'>Vantagens</Link></Nav.Item> 
             <Nav.Item><Link className='navbar-link-trade' to='/aplicativos'>Aplicativos</Link></Nav.Item>
             <Nav.Item><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Item>
-            <Nav.Item><Link className='navbar-link-trade' to='/trade_shop'>TradeShop</Link></Nav.Item>
+            <Nav.Item><Link className='navbar-link-trade' to='/trade_shop'>Tradeshop</Link></Nav.Item>
             <Nav.Item><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Item>
         </Nav>
     )
