@@ -12,11 +12,11 @@ export default function Footer() {
             <Col sm={8} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
                 <Row>
                     <span  className='ml-2 mr-2 text-light'>
-                    <Link className='navbar-link-trade ml-2 mr-2'>Privacidade</Link>
+                    <Link className='navbar-link-trade ml-2 mr-2 pl-0'>Privacidade</Link>
                     |
-                    <Link className='navbar-link-trade ml-2 mr-2'>Segurança</Link>
+                    <Link className='navbar-link-trade ml-2 mr-2 pl-0'>Segurança</Link>
                     |
-                    <Link className='navbar-link-trade ml-2 mr-2' to='/contato'>Contato</Link>
+                    <Link className='navbar-link-trade ml-2 mr-2 pl-0' to='/contato'>Contato</Link>
                     </span>
                 </Row>
                 <Row className='mt-3'>
