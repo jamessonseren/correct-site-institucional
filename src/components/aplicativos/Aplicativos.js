@@ -36,8 +36,8 @@ export default function Aplicativos(){
 
                 <Col>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
-                        <h4 className='text-light' style={{fontWeight: 600}}>APP Tradecard</h4>
-                        <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
+                        <h3 className='text-light' style={{fontWeight: 600}}>APP Tradecard</h3>
+                        <p className='text-light text-justify mb-5' style={{textIndent: '1.5rem'}}>
                             Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, 
                             com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
                             para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor 
@@ -49,14 +49,14 @@ export default function Aplicativos(){
                     </Box>
                 </Col>
             </Row>
-            <Row className='justify-content-center mt-5'>
-                <Col>
+            <Row className='justify-content-between mt-5 pt-5'>
+                <Col sm={6}>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
-                        <h4 className='text-light' style={{fontWeight: 600}}>Módulo de vendas - Tradecard</h4>
+                        <h3 className='text-light' style={{fontWeight: 600}}>Módulo de vendas - Tradecard</h3>
                         <p className='text-light text-justify' style={{textIndent: '1.5rem'}}>
                             O Módulo de vendas da Tradecard permite realizar vendas através de QR-Code e Token com técnologia e segurança de ponta!
                         </p>
-                        <a> <Image src={require('../../assets/download_windows.png')} style={{width: '28%'}} rounded fluid/> </a>
+                        <a> <Image src={require('../../assets/download_windows.png')} style={{width: '28%'}} className='mt-4' rounded fluid/> </a>
                     </Box>
                 </Col>
                 <Col sm={5} className='align-items-center justify-content-center d-flex'>

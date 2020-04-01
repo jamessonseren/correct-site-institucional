@@ -15,15 +15,16 @@ ul{
 }
 
 strong{
-    font-weight: 700 !important;
+    font-weight: 1000 !important;
 }
 
 span{
+    font-size: 1.1rem;
     width: 90% !important
 }
 
 .icon-vantagens{
-    color: #28a745 !important;
+    color: #00788c !important;
     font-size: 30px !important; 
     margin-right: 10px !important; 
     width: 5% !important

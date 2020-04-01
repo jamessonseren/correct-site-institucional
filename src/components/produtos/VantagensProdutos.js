@@ -15,10 +15,10 @@ export default function VantagensProdutos() {
                 <Image src={require('../../assets/adiantamento_convenio.png')} style={{width: '100%'}} rounded fluid/>
               </Col>
               <Col sm={6} className='text-light'>
-                <h4 className='mb-3 text-center'>
+                <h3 className='mb-3 text-center'>
                   Para os cartões de <strong> Adiantamento Salarial</strong> e <strong>Convênio</strong>, 
                   a <strong>Tradecard</strong> oferece as seguintes vantagens:
-                </h4>
+                </h3>
                 <ul className="products">
                   <li>
                     <GiBank className='icon-vantagens'/> 
@@ -81,9 +81,9 @@ export default function VantagensProdutos() {
             </Row>
             <Row className='p-5'>
               <Col sm={6} className='text-light'>
-                <h4 className='text-center'>
+                <h3 className='text-center'>
                   Para os cartões de <strong>Alimentação</strong> e <strong>Refeição</strong>, a <strong>Tradecard</strong> oferece as seguintes vantagens:
-                </h4>
+                </h3>
                 <ul className="products">
                   <li>
                     <GiBank className='icon-vantagens'/> 

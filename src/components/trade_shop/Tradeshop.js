@@ -125,31 +125,30 @@ class Tradeshop extends React.Component {
                 </Col>
                 { this.state.tipo === 'fisica' &&
                     <Col sm={12} className="justify-content-center align-items-center d-flex mt-3">
-                        <Form.Control as="select" className='col-2'
-                            onChange={this.getOfertas.bind(this)}>
+                        <Form.Control as="select" className='col-2' onChange={this.getOfertas.bind(this)} >
                             <option value={'selecione'}>Selecione...</option> 
                             {renderCities}
                         </Form.Control>
                     </Col>
                 }
+
                 { this.state.tipo === 'virtuais' ? 
                     <Col sm={12}>
                         {this.renderShop()}
                     </Col>
                 :
                     <>
-                {
-                    this.state.ofertas.length > 0 ?
-                        renderPromos                        
-                    : 
-                        <Row className="justify-content-md-center mt-3 mb-3">
-                            {this.state.cidade === 'selecione' ? 
-                                <h3 className="text-light">Selecione uma cidade</h3>
-                            :
-                                <h3 className="text-light">Nenhuma oferta disponível em {this.state.cidade}</h3>
-                            }
-                        </Row>
-                    }
+                        { this.state.ofertas.length > 0 ?
+                            renderPromos                        
+                        : 
+                            <Row className="justify-content-md-center mt-3 mb-3">
+                                {this.state.cidade === 'selecione' ? 
+                                    <h3 className="text-light">Selecione uma cidade</h3>
+                                :
+                                    <h3 className="text-light">Nenhuma oferta disponível em {this.state.cidade}</h3>
+                                }
+                            </Row>
+                        }
                     </>
                 }
             </Row>

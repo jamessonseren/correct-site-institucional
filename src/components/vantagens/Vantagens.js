@@ -33,10 +33,10 @@ export default function Vantagens() {
         <CarouselVantagens />
       </Col>
       <Box className='col-10' pose={isVisible ? 'visible' : 'hidden'}>
-        <h4 className='text-center col-12 pt-5'>
+        <h3 className='text-center col-12 pt-5'>
           Para o <strong>TRADECLUB</strong>, a Tradecard foi além dos benefícios de um Clube, chega a tudo que um Banco pode oferecer, 
           agregando <strong>muito mais benefícios</strong> aos seus usuários. 
-        </h4>
+        </h3>
         <Col sm={12} className='mt-3 mb-3'>
           <Row className='justify-content-center align-items-center'>
             <Col sm={4}>

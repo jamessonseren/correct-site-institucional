@@ -10,7 +10,7 @@ import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/Vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
 import Tradeshop from './components/trade_shop/Tradeshop'
-import RedeCompras from './components/rede_compras/redeCompras'
+import RedeDeCompras from './components/rede_compras/RedeDeCompras'
 import Footer from './components/footer/Footer'
 
 function App() {
@@ -43,7 +43,8 @@ function App() {
           <Footer />
         </Route>
         <Route path='/rede_compras'>
-          <RedeCompras/>
+          <RedeDeCompras/>
+          <Footer/>
         </Route>
       </Switch>
     </BrowserRouter>
