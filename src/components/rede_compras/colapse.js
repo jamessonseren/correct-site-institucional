@@ -40,10 +40,10 @@ function CollapsiblePanel({ children, ...props }) {
   }
 
   return (
-    <div className="coll-panel">
-      <button type="button" className={(check(color)) ? 'c1 coll-panel-btn btn-block text-left' : 'c2 coll-panel-btn btn-block text-left'} onClick={() => toggle()}>
+    <div className="p-3 col-12">
+      <div className="row" onClick={() => toggle()}>
          {title}
-      </button>
+      </div>
       <Collapse className="border text-left p-2" isOpen={isOpen}> {children} </Collapse>
     </div>
   );
