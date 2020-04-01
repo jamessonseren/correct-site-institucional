@@ -1,6 +1,6 @@
 import React from 'react'
 import {Col, Row, Container} from 'react-bootstrap'
-import { MDBInput, MDBFormInline, MDBAlert } from "mdbreact";
+import { MDBInput, MDBAlert } from "mdbreact";
 import MuiPhoneNumber from "material-ui-phone-number";
 import { Button, ButtonGroup } from 'reactstrap';
 import './contato.css'
@@ -49,53 +49,47 @@ class Contato extends React.Component {
         })
     }
 
-    handlePhoneChange(value) {
-        this.setState({ phone: value });
-    }
-
     render() {
         return(
-            <Container className="container fundo" fluid={'yes'}>
-                <Row className='justify-content-center align-items-center content'>
-                    <Col sm={8} className="mt-5 text-light">
-                        <h1 className='text-center'>Entre em contato conosco!</h1>
-                        <p className='text-center'>Preencha o formulário abaixo e aguarde nosso contato em breve.</p>
-                    </Col>
-                    <Col sm={8} className="justify-content-md-center">
-                        <Row className="justify-content-around">
-                            <ButtonGroup>
-                                <Button color="dark"  onClick={() => this.setState({tipo: 'pf'})} active={this.state.tipo == 'pf' ? true : false}>Pessoa física</Button>
-                                <Button color="dark" onClick={() => this.setState({tipo: 'pj'})} active={this.state.tipo == 'pj' ? true : false}>Pessoa jurídica</Button>
-                            </ButtonGroup>
-                        </Row>
-                    </Col>
-                    <Col sm={8} className="justify-content-md-center">
-                        <MDBInput label="Nome" className='input' required value={this.state.nome} onChange={(e) => this.setState({nome: e.target.value}) } />
-                        <MDBInput label="E-mail" className='input' required value={this.state.email} onChange={(e) => this.setState({email: e.target.value}) } />
-                        <MDBInput label="Cidade" className='input' required value={this.state.cidade} onChange={(e) => this.setState({cidade: e.target.value}) } />
-                        <MuiPhoneNumber
-                            name="phone"
-                            label="Telefone"
-                            data-cy="user-phone"
-                            defaultCountry={"br"}
-                            className='input-tel'
-                            value={this.state.phone}
-                            onChange={this.handlePhoneChange.bind(this)}
-                        />
-                        {this.state.tipo == 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
-                        <MDBInput className='input' required type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
-                        <button onClick={() => this.submit()} className="btn-trade-contato">
-                            {this.state.isLoading ? 
-                                <div className="spinner-border text-light"></div>
-                            :
-                                'Enviar'
-                            }
-                        </button>
-                        {this.state.err && <MDBAlert color='primary' className='mt-3'> Preencha todos os campos </MDBAlert> }
-                        {this.state.success && <MDBAlert color='success' className='mt-3'> E-mail enviado com sucesso! </MDBAlert> }
-                    </Col>
-                </Row>
-            </Container>
+            <Row className='justify-content-center align-items-center'>
+                <Col sm={8} className="mt-5 text-light">
+                    <h1 className='text-center'>Entre em contato conosco!</h1>
+                    <p className='text-center'>Preencha o formulário abaixo e aguarde nosso contato em breve.</p>
+                </Col>
+                <Col sm={8} className="justify-content-md-center">
+                    <Row className="justify-content-around">
+                        <ButtonGroup>
+                            <Button color="dark"  onClick={() => this.setState({tipo: 'pf'})} active={this.state.tipo == 'pf' ? true : false}>Pessoa física</Button>
+                            <Button color="dark" onClick={() => this.setState({tipo: 'pj'})} active={this.state.tipo == 'pj' ? true : false}>Pessoa jurídica</Button>
+                        </ButtonGroup>
+                    </Row>
+                </Col>
+                <Col sm={6} className="justify-content-center mb-5">
+                    <MDBInput label="Nome" className='input' required value={this.state.nome} onChange={(e) => this.setState({nome: e.target.value}) } />
+                    <MDBInput label="E-mail" className='input' required value={this.state.email} onChange={(e) => this.setState({email: e.target.value}) } />
+                    <MDBInput label="Cidade" className='input' required value={this.state.cidade} onChange={(e) => this.setState({cidade: e.target.value}) } />
+                    <MuiPhoneNumber
+                        name="phone"
+                        label="Telefone"
+                        data-cy="user-phone"
+                        defaultCountry={"br"}
+                        className='input-tel'
+                        value={this.state.phone}
+                        onChange={value => this.setState({phone: value})}
+                    />
+                    {this.state.tipo == 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
+                    <MDBInput className='input' required type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
+                    <button onClick={() => this.submit()} className="btn-trade">
+                        {this.state.isLoading ? 
+                            <div className="spinner-border text-light"></div>
+                        :
+                            'Enviar'
+                        }
+                    </button>
+                    {this.state.err && <MDBAlert color='primary' className='mt-3'> Preencha todos os campos </MDBAlert> }
+                    {this.state.success && <MDBAlert color='success' className='mt-3'> E-mail enviado com sucesso! </MDBAlert> }
+                </Col>
+            </Row>
         )
     }
 }

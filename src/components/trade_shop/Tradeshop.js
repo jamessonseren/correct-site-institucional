@@ -1,7 +1,6 @@
 import React from 'react'
 import {Col, Row, Container, Image, Form} from 'react-bootstrap'
 import { Button, ButtonGroup } from 'reactstrap';
-import './catalogo.css'
 
 class Tradeshop extends React.Component {
 
@@ -94,7 +93,7 @@ class Tradeshop extends React.Component {
                             {item.telefone_formatado}
                         </p>
                     </Col>
-                    <Col sm={6} className='align-items-center justify-content-center'>
+                    <Col sm={4} className='align-items-center justify-content-center'>
                         <h5 className="text-center font-weight-bold">{item.titulo_promo}</h5>
                         <p className="text-center"> {item.descricao} </p>
                         <p className="text-center">
@@ -105,11 +104,11 @@ class Tradeshop extends React.Component {
                         }
                         </p>
                     </Col>
-                    <Col sm={2} style={{flexDirection: 'column', display: 'flex'}}>
-                        {(item.deal === 's') ? <img src="https://www.starkclub.com.br/new/img2/StarkDeal.png" width="75%" className='mt-2'/> : ''}
-                        {(item.club === 's') ? <img src="https://www.starkclub.com.br/new/img2/StarkClub.png" width="75%" className='mt-2'/> : ''}
-                        {(item.alim === 's') ? <img src="https://www.starkclub.com.br/new/img2/starkticket.png" width="75%" className='mt-2'/> : ''}
-                        {(item.ref === 's') ? <img src="https://www.starkclub.com.br/new/img2/starkticketAl.png" width="75%" className='mt-2'/> : ''}
+                    <Col sm={4}>
+                        {item.deal === 's' && <img src="https://www.starkclub.com.br/new/img2/StarkDeal.png" width="50%" className='mt-2 text-center'/>}
+                        {item.club === 's' && <img src="https://www.starkclub.com.br/new/img2/StarkClub.png" width="50%" className='mt-2 text-center'/>}
+                        {item.alim === 's' && <img src="https://www.starkclub.com.br/new/img2/starkticket.png" width="50%" className='mt-2 text-center'/>}
+                        {item.ref === 's' && <img src="https://www.starkclub.com.br/new/img2/starkticketAl.png" width="50%" className='mt-2 text-center'/>}
                     </Col>
                 </Row>
             </Col>
