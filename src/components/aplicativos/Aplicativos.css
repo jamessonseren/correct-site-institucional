@@ -1,0 +1,24 @@
+.container-margin{
+    margin-top: 2rem !important;
+    padding-top: 2rem !important;
+    margin: 0 !important
+}
+
+@media (max-width: 960px){
+    .icon-download{
+        display: none
+    }
+    .app-description{
+        font-size: 0.7rem;
+    }
+    .app-title{
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 1rem
+    }
+    .container-margin{
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin: 0 !important
+    }
+} 
