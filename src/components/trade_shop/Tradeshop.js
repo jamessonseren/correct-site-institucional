@@ -47,26 +47,30 @@ class Tradeshop extends React.Component {
             let logo = `https://sisclub.com.br/upload_logo/${logotipo}`
             if(link === undefined){return false}
             return (
-                <Row className="ml-5 mr-5 p-5 justify-content-center align-items-center text-light" key={index}>
+                <Container>
+                    <Row className="ml-5 mr-5 p-5 justify-content-center align-items-center text-light padding-sm" key={index}>
                     <Col sm={3}>
+                        <Row className="" key={index}>
                         <a href={link} target='_blank'>
                             <Image src={url} fluid style={{borderRadius: 10}} />
                         </a>
+                        </Row>
                     </Col>
-                    <Col sm={5}>
+                    <Col sm={6}>
                         <Row className='justify-content-around align-items-center'> 
-                            <h3 className='font-weight-bold'>{descricao}</h3> 
+                            <h3 className='text-center'><strong>{descricao}</strong></h3>
                             <Image src={logo} fluid style={{borderRadius: 10}}/>
                         </Row>
                         <Col sm={12} className='align-items-center justify-content-center mt-4 mb-4'> 
                             <h5 className='text-center'>De: R$ {parseFloat(preco).toFixed(2).replace('.',',')} </h5>
-                            <h2 className='text-center'>Por: <strong> R$ {parseFloat(preco_inicio).toFixed(2).replace('.',',')} </strong> </h2>
+                            <h3 className='text-center'><strong>Por: R$ {parseFloat(preco_inicio).toFixed(2).replace('.',',')}</strong></h3>
                         </Col>
                         <Row className='align-items-center justify-content-center'> 
-                            <a href={link} className='btn-trade' style={{width: '50%', textAlign: 'center'}} target='_blank'>Comprar</a>
+                            <a href={link} className='btn-trade' style={{width: '70%', textAlign: 'center'}} target='_blank'>Comprar</a>
                         </Row>
                     </Col>
                 </Row>
+                </Container>
             )
         })
     }
@@ -84,24 +88,24 @@ class Tradeshop extends React.Component {
             return (
 
             <Col sm={8} key={index} className='border-bottom p-4'>
-                <Row className='align-items-center justify-content-center text-light'>
+                <Row className='align-items-center justify-content-center text-light padding-sm'>
                     <Col sm={4} className='align-items-center justify-content-center'>
-                        <h3 className="text-center font-weight-bold"> {item.Nome} </h3>
-                        <p className="text-center">
+                        <h3 className="text-justify title-sm"><strong> {item.Nome} </strong></h3>
+                        <p className="text-justify">
                             {item.Cidade} ({item.Estado})<br />
                             {item.logradouro}, {item.numero}<br />
                             {item.telefone_formatado}
                         </p>
                     </Col>
                     <Col sm={4} className='align-items-center justify-content-center'>
-                        <h5 className="text-center font-weight-bold">{item.titulo_promo}</h5>
-                        <p className="text-center"> {item.descricao} </p>
-                        <p className="text-center">
+                        <h5 className="text-justify title-sm"><strong>{item.titulo_promo}</strong></h5>
+                        <p className="text-justify"> {item.descricao} </p>
+                        <p className="text-justify"> <strong>
                         {(item.dura_estoque === 1) ?
                             `Promoção válida enquanto durarem os estoques e válida de <strong>${item.data_inicio}</strong> até <strong>${item.data_final}</strong>`
                             :
                             `Promoção válida de ${item.data_inicio} até ${item.data_final}`
-                        }
+                        } </strong>
                         </p>
                     </Col>
                     <Col sm={4}>
@@ -117,15 +121,17 @@ class Tradeshop extends React.Component {
 
         return(
             <Row className='align-items-center justify-content-center'>
-                <Col sm={12} className='justify-content-center align-items-center d-flex'>
-                    <ButtonGroup>
-                        <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
-                        <Button color="dark" onClick={() => this.setState({tipo: 'virtuais'})} active={this.state.tipo === 'virtuais'}>Lojas Virtuais</Button>
-                    </ButtonGroup>
+                <Col sm={8} className='justify-content-center align-items-center d-flex'>
+                    <Row className="justify-content-around">
+                        <ButtonGroup>
+                            <Button color="dark"  onClick={() => this.setState({tipo: 'fisica'})} active={this.state.tipo === 'fisica'}>Lojas Físicas</Button>
+                            <Button color="dark" onClick={() => this.setState({tipo: 'virtuais'})} active={this.state.tipo === 'virtuais'}>Lojas Virtuais</Button>
+                        </ButtonGroup>
+                    </Row>
                 </Col>
                 { this.state.tipo === 'fisica' &&
                     <Col sm={12} className="justify-content-center align-items-center d-flex mt-3">
-                        <Form.Control as="select" className='col-2' onChange={this.getOfertas.bind(this)} >
+                        <Form.Control as="select" className='col-6' onChange={this.getOfertas.bind(this)} >
                             <option value={'selecione'}>Selecione...</option> 
                             {renderCities}
                         </Form.Control>
@@ -134,19 +140,25 @@ class Tradeshop extends React.Component {
 
                 { this.state.tipo === 'virtuais' ? 
                     <Col sm={12}>
+                        <Row className="justify-content-around">
                         {this.renderShop()}
+                        </Row>
                     </Col>
                 :
                     <>
                         { this.state.ofertas.length > 0 ?
                             renderPromos                        
                         : 
-                            <Row className="justify-content-md-center mt-3 mb-3">
-                                {this.state.cidade === 'selecione' ? 
-                                    <h3 className="text-light">Selecione uma cidade</h3>
-                                :
-                                    <h3 className="text-light">Nenhuma oferta disponível em {this.state.cidade}</h3>
-                                }
+                            <Row className="justify-content-md-around mt-3 mb-3 text-light padding-sm'">
+                                <Col sm={10}>
+                                    <Row>
+                                        {this.state.cidade === 'selecione' ? 
+                                            <h3 className="text-light text-center">Selecione uma cidade</h3>
+                                        :
+                                            <h3 className="text-light text-center">Nenhuma oferta disponível em {this.state.cidade}</h3>
+                                        }
+                                    </Row>
+                                </Col>
                             </Row>
                         }
                     </>
