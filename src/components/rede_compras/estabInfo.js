@@ -37,25 +37,25 @@ function EstabInfo({ children, ...props }) {
       <Container>
         <div className="estabInfo">
           <Row>
-              <Col sm={1}> <Image src={logo} /> </Col>
-              <Col sm={{ span: 5, offset: 1 }}>
-                <h3>{fantasia}</h3>
+              <Col sm={4}> <Image src={logo} /> </Col>
+              <Col sm={4}>
+                <h3 className='text-center'><strong>{fantasia}</strong></h3>
               </Col>
-              <Col sm={{ span: 1, offset: 4 }}>
+              <Col sm={4}>
                 <Button outline color="danger" href={ecommerce}>Comprar</Button>
               </Col>
           </Row>
           <Container>
             <Row className="vantagens">
-              <h5>Vantagens :</h5>
+              <h5 className='text-center'><strong>Vantagens :</strong></h5>
             </Row>
-            <Row>
-              {vantagem !== '' && <p>{vantagem}</p>}
-              {cupom != '' && <p>Cupom de desconto: {cupom}</p>}
-              {gerabonus != '' && gerabonus == 's' && <p>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
-              {gerabonus != '' && gerabonus == 'n' && <p>Não Acumula KRATS</p>}
-              {aceitabonus != '' && aceitabonus == 's' && abrangencia != 'nacional' && <p>Aceita KRATS como forma de pagamento</p>}
-              {aceitabonus != '' && aceitabonus == 'n' || abrangencia == 'nacional' && <p>Não aceita KRATS como forma de pagamento</p>}
+            <Row className="ml-5 mr-5 p-5 justify-content-center align-items-center text-light padding-sm">
+              {vantagem !== '' && <p className='text-center'>{vantagem}</p>}
+              {cupom != '' && <p  className='text-center'>Cupom de desconto: {cupom}</p>}
+              {gerabonus != '' && gerabonus == 's' && <p  className='text-center'>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
+              {gerabonus != '' && gerabonus == 'n' && <p className='text-center'>Não Acumula KRATS</p>}
+              {aceitabonus != '' && aceitabonus == 's' && abrangencia != 'nacional' && <p className='text-center'>Aceita KRATS como forma de pagamento</p>}
+              {aceitabonus != '' && aceitabonus == 'n' || abrangencia == 'nacional' && <p className='text-center'>Não aceita KRATS como forma de pagamento</p>}
             </Row>
             <Row>
                 <h4>Aviso:</h4>

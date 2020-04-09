@@ -140,7 +140,7 @@ class RedeDeCompras extends React.Component {
                     {imprimirRamo && <Col sm={12} className="justify-content-center ramo-title"> <h3>{item.ramo}</h3> </Col>}
                     <CollapsiblePanel className='col-12'  
                         title={
-                            <Col sm={12} className="d-flex text-light justify-content-center border-lista" >
+                            <Col sm={12} className="d-flex text-light justify-content-center border-lista padding-sm" >
                                 <Col sm={8}>
                                     <h3 className='text-underline'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
@@ -156,7 +156,7 @@ class RedeDeCompras extends React.Component {
                             </Col> 
                         } 
                     >
-                        <Col sm={12} className='d-flex text-light'>
+                        <Row className='d-flex text-light padding-sm'>
                             <Col sm={4} className='justify-content-center align-items-center'>
                                 { item.deal === 's' &&
                                     <div>
@@ -175,14 +175,14 @@ class RedeDeCompras extends React.Component {
                                     </div>
                                 }
                             </Col>
-                            <Col sm={4} className='justify-content-center align-items-center'>
+                            <Col sm={4} className='justify-content-center align-items-center m-1'>
                                 <div>
                                     <h3><u>Endereço</u></h3>
                                     <p className="label">{item.logradouro}, {item.numero} - {item.bairro}</p>
                                     <p className="label">{item.cidade} - {item.estado}</p>
                                 </div>
                             </Col>
-                        </Col>
+                        </Row>
                     </CollapsiblePanel>
                 </Row>
             )
@@ -204,7 +204,7 @@ class RedeDeCompras extends React.Component {
 
                 { tipo === 'fisica' &&
                     <Col sm={12} className="justify-content-center d-flex align-items-center">
-                        <Form.Group controlId="exampleForm.ControlSelect1" className='col-2 mt-3'>
+                        <Form.Group controlId="exampleForm.ControlSelect1" className='col-6 mt-3'>
                             <Form.Control as="select" onChange={this.getRedeCompras.bind(this)}> 
                                 <option value={'selecione'}>Selecione...</option> 
                                 {renderCities}
