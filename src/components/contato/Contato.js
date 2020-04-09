@@ -1,5 +1,5 @@
 import React from 'react'
-import {Col, Row, Container} from 'react-bootstrap'
+import {Col, Row} from 'react-bootstrap'
 import { MDBInput, MDBAlert } from "mdbreact";
 import MuiPhoneNumber from "material-ui-phone-number";
 import { Button, ButtonGroup } from 'reactstrap';
@@ -79,8 +79,8 @@ class Contato extends React.Component {
                     <Col sm={8} className="justify-content-md-center">
                         <Row className="justify-content-around">
                             <ButtonGroup>
-                                <Button color="dark"  onClick={() => this.setState({tipo: 'pf'})} active={this.state.tipo == 'pf' ? true : false}>Pessoa física</Button>
-                                <Button color="dark" onClick={() => this.setState({tipo: 'pj'})} active={this.state.tipo == 'pj' ? true : false}>Pessoa jurídica</Button>
+                                <Button color="dark"  onClick={() => this.setState({tipo: 'pf'})} active={this.state.tipo === 'pf' ? true : false}>Pessoa física</Button>
+                                <Button color="dark" onClick={() => this.setState({tipo: 'pj'})} active={this.state.tipo === 'pj' ? true : false}>Pessoa jurídica</Button>
                             </ButtonGroup>
                         </Row>
                     </Col>
@@ -97,7 +97,7 @@ class Contato extends React.Component {
                             value={this.state.phone}
                             onChange={value => this.setState({phone: value})}
                         />
-                        {this.state.tipo == 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
+                        {this.state.tipo === 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
                         <MDBInput className='input' required type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
                         <button onClick={() => this.submit()} className="btn-trade">
                             {this.state.isLoading ? 

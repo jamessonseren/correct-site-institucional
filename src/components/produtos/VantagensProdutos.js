@@ -74,7 +74,7 @@ export default function VantagensProdutos() {
                   </li>
                   <li>
                     <FaPercent className='icon-vantagens'/> 
-                    <strong>Não tem custos, mensalidades, taxas e nem juros.</strong>
+                    <span><strong>Não tem custos, mensalidades, taxas e nem juros.</strong></span>
                   </li>
                 </ul>
               </Col>
