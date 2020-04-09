@@ -30,7 +30,7 @@ export default function Footer() {
                 <a> <Image src={require('../../assets/download_google_play.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
                 <a> <Image src={require('../../assets/download_app_store.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
             </Col>
-            <Col sm={12} className="justify-content-center align-items-center d-flex mt-3" style={{color: '#ccc'}}>
+            <Col sm={12} className="justify-content-center align-items-center d-flex mt-3 text-center" style={{color: '#ccc'}}>
                 © Tradecard 2018 - 2020 - Todos os direitos reservados.
             </Col>
         </Row>

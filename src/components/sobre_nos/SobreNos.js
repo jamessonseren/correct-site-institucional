@@ -28,10 +28,10 @@ export default function SobreNos(){
     return(
         <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
             <Row className='backgroundImage d-flex justify-content-center'>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center ml-5 row col-8'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-10'>
                     <p className="description">
-                        A <span className='font-weight-bold description'>Tradecard</span> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), 
-                        <span className='font-weight-bold description'> Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras</span>.
+                        A <strong>Tradecard</strong> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), 
+                        <strong> Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras</strong>.
                     </p>
                 </Box>
             </Row>
