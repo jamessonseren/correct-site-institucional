@@ -32,10 +32,6 @@ export default function SobreNos(){
                     <p className="description">
                         A <span className='font-weight-bold description'>Tradecard</span> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), 
                         <span className='font-weight-bold description'> Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras</span>.
-
-                        A <span className='font-weight-bold' style={{fontSize: '2rem'}}>Tradecard</span> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), 
-                        <span className='font-weight-bold' style={{fontSize: '2rem'}}> Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras</span>.
-
                     </p>
                 </Box>
             </Row>
