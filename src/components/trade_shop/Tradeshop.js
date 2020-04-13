@@ -60,10 +60,10 @@ class Tradeshop extends React.Component {
                     </Col>
                     <Col sm={6}>
                         <Row className='justify-content-around align-items-center'> 
-                            <h5 className='text-center'><strong>{descricao}</strong></h5>
-                                <Image className={"img"} src={logo} fluid style={{borderRadius: 10}}/>
+                            <h5 className='text-center title'><strong>{descricao}</strong></h5>
+                            <Image className={"img"} src={logo} fluid/>
                         </Row>
-                        <Col sm={12} className='align-items-center justify-content-center mt-4 mb-4'> 
+                        <Col sm={12} className='align-items-center justify-content-center mb-4'> 
                             <h5 className='text-center text'>De: R$ {parseFloat(preco).toFixed(2).replace('.',',')} </h5>
                             <h3 className='text-center strong'><strong className='strong'>Por: R$ {parseFloat(preco_inicio).toFixed(2).replace('.',',')}</strong></h3>
                         </Col>

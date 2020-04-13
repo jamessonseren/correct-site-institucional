@@ -75,7 +75,7 @@ class RedeDeCompras extends React.Component {
             let parceiro = item.split(';')
             let logotipo = parceiro[0]
             let id_estabelecimento = parceiro[1]
-            if(id_estabelecimento == '' || logotipo == ''){return <></>}
+            if(id_estabelecimento === '' || logotipo === ''){return <></>}
             return( 
                 <Image 
                     key={index} 
@@ -114,11 +114,11 @@ class RedeDeCompras extends React.Component {
                         <h4 className='font-weight-bold col-12'>Vantagens :</h4>
                         <Col sm={12} style={{fontSize: '10px'}}>
                             {vantagem !== '' && <p>{vantagem}</p>}
-                            {cupom != '' && <p>Cupom de desconto: {cupom}</p>}
-                            {gerabonus != '' && gerabonus == 's' && <p>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
-                            {gerabonus != '' && gerabonus == 'n' && <p>Não Acumula KRATS</p>}
-                            {aceitabonus != '' && aceitabonus == 's' && abrangencia != 'nacional' && <p>Aceita KRATS como forma de pagamento</p>}
-                            {aceitabonus != '' && aceitabonus == 'n' || abrangencia == 'nacional' && <p>Não aceita KRATS como forma de pagamento</p>}
+                            {cupom !== '' && <p>Cupom de desconto: {cupom}</p>}
+                            {gerabonus !== '' && gerabonus === 's' && <p>Acumula KRATS (Creditados até 30 dias após a compra)</p>}
+                            {gerabonus !== '' && gerabonus === 'n' && <p>Não Acumula KRATS</p>}
+                            {aceitabonus !== '' && aceitabonus === 's' && abrangencia !== 'nacional' && <p>Aceita KRATS como forma de pagamento</p>}
+                            {(aceitabonus !== '' && aceitabonus === 'n') || abrangencia === 'nacional' && <p>Não aceita KRATS como forma de pagamento</p>}
                         </Col>
                         <h5 className='col-12'>Aviso:</h5>
                         <Col sm={12} style={{fontSize: '10px'}}>
