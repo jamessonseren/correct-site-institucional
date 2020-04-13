@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Collapse } from "reactstrap";
-import './guia.css'
 
 function CollapsiblePanel({ children, ...props }) {
   const { title, collapse, color } = props;
@@ -33,11 +32,6 @@ function CollapsiblePanel({ children, ...props }) {
   useEffect(() => {
     animate(!collapse);
   }, [collapse]);
-
-  //Auxilia no efeito Zebra
-  const check = (i) =>{
-      return (i%2 === 0) ? 1 : 0
-  }
 
   return (
     <div className="p-3 col-12">

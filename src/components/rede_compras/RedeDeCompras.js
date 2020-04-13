@@ -1,12 +1,10 @@
 import React from 'react'
-import {Col, Row, Container, Image, Form} from 'react-bootstrap'
+import {Col, Row, Image, Form} from 'react-bootstrap'
 import CollapsiblePanel from './colapse.js'
-import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
-import CollapsiblePanelParceiros from './parceiros.js'
-import EstabInfo from './estabInfo.js'
-import {Modal} from 'mdbreact'
+import {IoIosClose} from 'react-icons/io'
+import { MDBModal, MDBModalHeader } from 'mdbreact';
 import { Button, ButtonGroup } from 'reactstrap';
-import './guia.css'
+import './RedeDeCompras.css'
 
 class RedeDeCompras extends React.Component {
   
@@ -65,8 +63,7 @@ class RedeDeCompras extends React.Component {
     render() {
         const {result, tipo} = this.state
         let prevRamo = '';
-        let ramoAtual= '';
-        
+
         const renderCities = this.state.cities.map((item, index) => {
             let city = item.split(",")
             let cidade = city[0]
@@ -101,10 +98,15 @@ class RedeDeCompras extends React.Component {
             let abrangencia = estabelecimento[6]
             return (
                 <>
-                    <MDBModalHeader className='justify-content-center'>{fantasia}</MDBModalHeader>
+                    <Row className='justify-content-between align-items-center m-0'>
+                        <MDBModalHeader className='justify-content-center'>
+                            {fantasia}
+                        </MDBModalHeader>
+                        <IoIosClose color='black' onClick={() => this.setState({modalVisible: false}) } />
+                    </Row>
                     <Row className='align-items-center justify-content-center'>
-                        <Col sm={5}> <Image src={`https://sisclub.com.br/upload_logo/${this.state.logotipo}`} /> </Col>
-                        <Col sm={5}>
+                        <Col sm={5} className='justify-content-center d-flex'> <Image src={`https://sisclub.com.br/upload_logo/${this.state.logotipo}`} /> </Col>
+                        <Col sm={5} className='justify-content-center d-flex'>
                             <Button outline color="danger" href={ecommerce}>Comprar</Button>
                         </Col>
                     </Row>
@@ -140,9 +142,9 @@ class RedeDeCompras extends React.Component {
                     {imprimirRamo && <Col sm={12} className="justify-content-center ramo-title"> <h3>{item.ramo}</h3> </Col>}
                     <CollapsiblePanel className='col-12'  
                         title={
-                            <Col sm={12} className="d-flex text-light justify-content-center border-lista padding-sm" >
+                            <Col sm={12} className="d-flex text-light justify-content-center border-lista" >
                                 <Col sm={8}>
-                                    <h3 className='text-underline'><u>{item.Nome}</u></h3>
+                                    <h3 className='text-underline small-font'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
                                     <p className='mb-0'>{item.Telefone}</p>
                                 </Col>
@@ -156,8 +158,8 @@ class RedeDeCompras extends React.Component {
                             </Col> 
                         } 
                     >
-                        <Row className='d-flex text-light padding-sm'>
-                            <Col sm={4} className='justify-content-center align-items-center'>
+                        <Col sm={12} className='d-flex text-light column'>
+                            <Col lg={4} className='justify-content-center align-items-center'>
                                 { item.deal === 's' &&
                                     <div>
                                         <h3><u>Adiantamento Salarial</u></h3>
@@ -167,7 +169,7 @@ class RedeDeCompras extends React.Component {
                                     </div>
                                 }
                             </Col>
-                            <Col sm={4} className='justify-content-center align-items-center'>
+                            <Col lg={4} className='justify-content-center align-items-center'>
                                 { item.club === 's' &&
                                     <div>
                                         <h3><u>Vantagens</u></h3>
@@ -175,14 +177,14 @@ class RedeDeCompras extends React.Component {
                                     </div>
                                 }
                             </Col>
-                            <Col sm={4} className='justify-content-center align-items-center m-1'>
+                            <Col lg={4} className='justify-content-center align-items-center'>
                                 <div>
                                     <h3><u>Endereço</u></h3>
                                     <p className="label">{item.logradouro}, {item.numero} - {item.bairro}</p>
                                     <p className="label">{item.cidade} - {item.estado}</p>
                                 </div>
                             </Col>
-                        </Row>
+                        </Col>
                     </CollapsiblePanel>
                 </Row>
             )
@@ -204,7 +206,7 @@ class RedeDeCompras extends React.Component {
 
                 { tipo === 'fisica' &&
                     <Col sm={12} className="justify-content-center d-flex align-items-center">
-                        <Form.Group controlId="exampleForm.ControlSelect1" className='col-6 mt-3'>
+                        <Form.Group className='col-sm-2 mt-3'>
                             <Form.Control as="select" onChange={this.getRedeCompras.bind(this)}> 
                                 <option value={'selecione'}>Selecione...</option> 
                                 {renderCities}

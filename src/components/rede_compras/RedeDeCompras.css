@@ -3,3 +3,10 @@
     font-weight: bold;
     border-bottom: 1px solid var(--trade-light);
 }
+
+
+@media (max-width: 768px){
+    .column{
+        flex-direction: column;
+    }
+}

@@ -16,6 +16,7 @@
     "react-geolocated": "^3.0.1",
     "react-icons": "^3.9.0",
     "react-pose": "^4.0.10",
+    "react-responsive": "^8.0.3",
     "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
