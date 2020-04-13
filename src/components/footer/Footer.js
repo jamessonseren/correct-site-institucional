@@ -22,7 +22,7 @@ export default function Footer() {
                     <Link className='text-light mr-2 contato'>(67) 3253-7232</Link>
                 </Row>
                 <Row>
-                    <FaFacebook color='white' className='mr-3' />
+                    <a href={"https://www.facebook.com/pg/Tradecard-110138843938889"} target='_blank'><FaFacebook color='white' className='mr-3' /></a>
                     <FaInstagram color='white' />
                 </Row>
             </Col>
