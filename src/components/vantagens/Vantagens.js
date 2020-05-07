@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import CarouselVantagens from "./Carousel/CarouselVantagens";
 import "./vantagens.css";
 import {IoMdCheckmark} from 'react-icons/io'
@@ -29,8 +29,63 @@ export default function Vantagens() {
 
   return (
     <Row className='text-light justify-content-center align-items-center'>
-      <Col sm={12}>
-        <CarouselVantagens />
+      <Col sm={12} className=''>
+        <Row className="my-slide p-2 justify-content-center align-items-center">
+          <Col sm={6} className='d-flex justify-content-center align-items-center'>
+            <Image src={require('../../assets/wallet.png')} style={{width: '100%'}} rounded fluid/>
+          </Col>
+          <Col sm={5} className='text-light align-content-center m-1'>
+            <h3 className='text-left'>
+              TradeWallet
+            </h3>
+            <p className="text-justify tamanho">
+              Estabelecimentos ganham com a transformação dos Clientes em Fregueses. Conseguem obter informações importantes para o 
+              atendimento personalizado. E consequentemente, através da tecnologia aplicada, conseguem redução de custos e melhorias
+              na qualificação de mão de obra, bem como, na sofisticação do atendimento aos seus Fidelizados.
+            </p>
+          </Col>
+        </Row>
+        <Row className="my-slide p-2 justify-content-center align-items-center darkBlue">
+          <Col sm={6} className='text-light align-content-center m-1'>
+            <h3 className='text-left'>
+              Tradeclub
+            </h3>
+            <p className="text-justify tamanho">
+              Proporcionando descontos, controle e economia. Disponibiliza ainda, mais do que um Banco pode oferecer. Extensivo aos familiares e amigos. Ajuste sua vida e suas necessidades.
+            </p>
+          </Col>
+          <Col sm={5} className='d-flex justify-content-center align-items-center'>
+            <Image src={require('../../assets/cartoes/card_tradeclub.png')} style={{width: '100%'}} rounded fluid/>
+          </Col>
+        </Row>
+        <Row className="my-slide p-2 justify-content-center align-items-center">
+          <Col sm={6} className='d-flex justify-content-center align-items-center'>
+            <Image src={require('../../assets/cartoes/card_delivery.png')} style={{width: '100%'}} rounded fluid/>
+          </Col>
+          <Col sm={5} className='text-light align-content-center m-1'>
+            <h3 className='text-left'>
+            Delivery
+            </h3>
+            <p className="text-justify tamanho">
+            Além das vantagens que o Fidelidade oferece, o Delivery permite a comodidade de um sistema simples, rápido e seguro, na escolha de seus pedidos e forma de pagamento, no conforto de sua casa, escritório ou outros locais.
+            </p>
+          </Col>
+        </Row>
+        <Row className="my-slide p-2 justify-content-center align-items-center darkBlue">
+          <Col sm={6} className='text-light align-content-center m-1'>
+            <h3 className='text-left'>
+            Fidelidade
+            </h3>
+            <p className="text-justify tamanho">
+            Estabelecimentos ganham com a transformação dos Clientes em Fregueses. Conseguem obter informações importantes para o 
+              atendimento personalizado. E consequentemente, através da tecnologia aplicada, conseguem redução de custos e melhorias
+              na qualificação de mão de obra, bem como, na sofisticação do atendimento aos seus Fidelizados.
+            </p>
+          </Col>
+          <Col sm={5} className='d-flex justify-content-center align-items-center'>
+            <Image src={require('../../assets/cartoes/card_fidelidade.png')} style={{width: '100%'}} rounded fluid/>
+          </Col>
+        </Row>
       </Col>
       <Box className='col-10' pose={isVisible ? 'visible' : 'hidden'}>
         <h3 className='text-center col-12 pt-5'>
