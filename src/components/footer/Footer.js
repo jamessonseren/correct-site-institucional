@@ -22,13 +22,13 @@ export default function Footer() {
                     <Link className='text-light mr-2 contato'>(67) 3253-7232</Link>
                 </Row>
                 <Row>
-                    <a href={"https://www.facebook.com/pg/Tradecard-110138843938889"} target='_blank'><FaFacebook color='white' className='mr-3' /></a>
-                    <FaInstagram color='white' />
+                    <a href={"https://www.facebook.com/pg/tradecardofc"} target='_blank' rel="noopener noreferrer"><FaFacebook color='white' className='mr-3' /></a>
+                    <a href={"https://www.instagram.com/tradecardofc/"} target='_blank' rel="noopener noreferrer"><FaInstagram color='white' /></a>
                 </Row>
             </Col>
             <Col lg={2} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
-                <a> <Image src={require('../../assets/download_google_play.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
-                <a> <Image src={require('../../assets/download_app_store.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
+                <a href='#'> <Image src={require('../../assets/download_google_play.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
+                <a href='#'> <Image src={require('../../assets/download_app_store.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
             </Col>
             <Col sm={12} className="justify-content-center align-items-center d-flex mt-3 text-center" style={{color: '#ccc'}}>
                 © Tradecard 2018 - 2020 - Todos os direitos reservados.

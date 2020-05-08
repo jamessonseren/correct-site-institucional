@@ -14,7 +14,7 @@ export default function NavBar(){
                 <Nav className="align-items-center justify-content-center margin-auto">
                     <Nav.Link><img src={require('../../assets/tradecard_logo_white.png')} className="logo" alt='Tradecard Logo'/></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre nós</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Para Empresas</Link></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Para empresas</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/vantagens'>Carteira</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-trade' to='/aplicativos'>Aplicativos</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>

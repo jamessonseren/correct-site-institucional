@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import { Row, Col, Image } from "react-bootstrap";
-import CarouselVantagens from "./Carousel/CarouselVantagens";
 import "./vantagens.css";
 import {IoMdCheckmark} from 'react-icons/io'
 import posed from 'react-pose'
@@ -29,36 +28,29 @@ export default function Vantagens() {
 
   return (
     <Row className='text-light justify-content-center align-items-center'>
-      <Col sm={12} className=''>
-        <Row className="my-slide p-2 justify-content-center align-items-center">
+        
+        {/* Tradeclub */}
+        <Box className='row align-items-center justify-content-center' pose={isVisible ? 'visible' : 'hidden'}>
           <Col sm={6} className='d-flex justify-content-center align-items-center'>
             <Image src={require('../../assets/wallet.png')} style={{width: '100%'}} rounded fluid/>
           </Col>
           <Col sm={5} className='text-light align-content-center m-1'>
             <h3 className='text-left'>
-              TradeWallet
-            </h3>
-            <p className="text-justify tamanho">
-              Estabelecimentos ganham com a transformação dos Clientes em Fregueses. Conseguem obter informações importantes para o 
-              atendimento personalizado. E consequentemente, através da tecnologia aplicada, conseguem redução de custos e melhorias
-              na qualificação de mão de obra, bem como, na sofisticação do atendimento aos seus Fidelizados.
-            </p>
-          </Col>
-        </Row>
-        <Row className="my-slide p-2 justify-content-center align-items-center darkBlue">
-          <Col sm={6} className='text-light align-content-center m-1'>
-            <h3 className='text-left'>
               Tradeclub
             </h3>
             <p className="text-justify tamanho">
-              Proporcionando descontos, controle e economia. Disponibiliza ainda, mais do que um Banco pode oferecer. Extensivo aos familiares e amigos. Ajuste sua vida e suas necessidades.
+              Carteira Virtual que carrega todos os cartões (benefícios e crédito). Tem a opção de escolha do cartão para efetuar pagamentos. 
+              Utiliza único sistema “APP TRADECARD para pagamentos e controle, utilizando senha única, válida para todos os cartões. Conta também, 
+              com arquivos de agenda e cadastros necessários para o dia a dia. 
+              Todas informações da carteira são criptografadas, por questões de segurança. 
             </p>
           </Col>
-          <Col sm={5} className='d-flex justify-content-center align-items-center'>
-            <Image src={require('../../assets/cartoes/card_tradeclub.png')} style={{width: '100%'}} rounded fluid/>
-          </Col>
-        </Row>
-        <Row className="my-slide p-2 justify-content-center align-items-center">
+        </Box>
+
+        {/* Inicio serviços */}
+        {/* Delivery */}
+        <Box className='row darkBlue align-items-center justify-content-center' pose={isVisible ? 'visible' : 'hidden'}>
+          <Col sm={12}> <h1 className='text-center mt-5'>Serviços do Aplicativo Tradeclub</h1> </Col>
           <Col sm={6} className='d-flex justify-content-center align-items-center'>
             <Image src={require('../../assets/cartoes/card_delivery.png')} style={{width: '100%'}} rounded fluid/>
           </Col>
@@ -70,8 +62,10 @@ export default function Vantagens() {
             Além das vantagens que o Fidelidade oferece, o Delivery permite a comodidade de um sistema simples, rápido e seguro, na escolha de seus pedidos e forma de pagamento, no conforto de sua casa, escritório ou outros locais.
             </p>
           </Col>
-        </Row>
-        <Row className="my-slide p-2 justify-content-center align-items-center darkBlue">
+        </Box>
+
+        {/* Fidelidade */}
+        <Box className='row align-items-center justify-content-center' pose={isVisible ? 'visible' : 'hidden'}>
           <Col sm={6} className='text-light align-content-center m-1'>
             <h3 className='text-left'>
             Fidelidade
@@ -85,9 +79,9 @@ export default function Vantagens() {
           <Col sm={5} className='d-flex justify-content-center align-items-center'>
             <Image src={require('../../assets/cartoes/card_fidelidade.png')} style={{width: '100%'}} rounded fluid/>
           </Col>
-        </Row>
-      </Col>
-      <Box className='col-10' pose={isVisible ? 'visible' : 'hidden'}>
+        </Box>
+
+      <Box className='row darkBlue p-5' pose={isVisible ? 'visible' : 'hidden'}>
         <h3 className='text-center col-12 pt-5'>
           Para o <strong>TRADECLUB</strong>, a Tradecard foi além dos benefícios de um Clube, chega a tudo que um Banco pode oferecer, 
           agregando <strong>muito mais benefícios</strong> aos seus usuários. 

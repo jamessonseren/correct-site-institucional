@@ -1,7 +1,6 @@
 import React from 'react'
 import {Col, Row, Container, Image, Form} from 'react-bootstrap'
 import { Button, ButtonGroup } from 'reactstrap';
-import { MediaQuery } from 'react-responsive';
 import './checkDevice.css'
 
 class Tradeshop extends React.Component {
@@ -53,7 +52,7 @@ class Tradeshop extends React.Component {
                     <Row className="ml-5 mr-5 p-5 justify-content-center align-items-center text-light padding-sm" key={index}>
                     <Col sm={3}>
                         <Row className="" key={index}>
-                        <a href={link} target='_blank'>
+                        <a href={link} target='_blank' rel="noopener noreferrer">
                             <Image src={url} fluid style={{borderRadius: 10}} />
                         </a>
                         </Row>
@@ -68,7 +67,7 @@ class Tradeshop extends React.Component {
                             <h3 className='text-center strong'><strong className='strong'>Por: R$ {parseFloat(preco_inicio).toFixed(2).replace('.',',')}</strong></h3>
                         </Col>
                         <Row className='align-items-center justify-content-center'> 
-                            <a href={link} className='btn-trade' style={{width: '70%', textAlign: 'center'}} target='_blank'>Comprar</a>
+                            <a href={link} className='btn-trade' style={{width: '70%', textAlign: 'center'}} target='_blank' rel="noopener noreferrer">Comprar</a>
                         </Row>
                     </Col>
                 </Row>
@@ -111,10 +110,10 @@ class Tradeshop extends React.Component {
                         </p>
                     </Col>
                     <Col sm={4}>
-                        {item.deal === 's' && <img src="https://www.starkclub.com.br/new/img2/StarkDeal.png" width="50%" className='mt-2 text-center'/>}
-                        {item.club === 's' && <img src="https://www.starkclub.com.br/new/img2/StarkClub.png" width="50%" className='mt-2 text-center'/>}
-                        {item.alim === 's' && <img src="https://www.starkclub.com.br/new/img2/starkticket.png" width="50%" className='mt-2 text-center'/>}
-                        {item.ref === 's' && <img src="https://www.starkclub.com.br/new/img2/starkticketAl.png" width="50%" className='mt-2 text-center'/>}
+                        {item.deal === 's' && <img alt='StarkDeal' src="https://www.starkclub.com.br/new/img2/StarkDeal.png" width="50%" className='mt-2 text-center'/>}
+                        {item.club === 's' && <img alt='StarkClub' src="https://www.starkclub.com.br/new/img2/StarkClub.png" width="50%" className='mt-2 text-center'/>}
+                        {item.alim === 's' && <img alt='StarkTicket' src="https://www.starkclub.com.br/new/img2/starkticket.png" width="50%" className='mt-2 text-center'/>}
+                        {item.ref === 's' && <img  alt='StarkTicket Alimentação'src="https://www.starkclub.com.br/new/img2/starkticketAl.png" width="50%" className='mt-2 text-center'/>}
                     </Col>
                 </Row>
             </Col>

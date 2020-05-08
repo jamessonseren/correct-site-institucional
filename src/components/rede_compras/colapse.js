@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Collapse } from "reactstrap";
 
 function CollapsiblePanel({ children, ...props }) {
-  const { title, collapse, color } = props;
+  const { title, collapse } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [isCollapse, setIsCollapse] = useState(collapse);
   const [icon, setIcon] = useState("fa fa-chevron-down");

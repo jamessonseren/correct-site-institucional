@@ -7,8 +7,12 @@
 
 .description{
     color: whitesmoke;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-shadow: 6px 7px 8px rgb(0, 0, 0);
+}
+
+.whiteFont{
+    color: whitesmoke
 }
 
 @media (max-width: 960px){
