@@ -122,7 +122,7 @@ class RedeDeCompras extends React.Component {
                         </Col>
                         <h5 className='col-12'>Aviso:</h5>
                         <Col sm={12} style={{fontSize: '10px'}}>
-                            <p className="aviso">Os créditos do seu cartão Tradeclub não poderão ser utilizados como meio de pagamento.</p><br/>
+                            <p className="aviso">Os créditos do seu cartão CorrectClub não poderão ser utilizados como meio de pagamento.</p><br/>
                             <p className="aviso">Consulte as regras e formas de pagamento de cada parceiro nacional.</p>
                         </Col>
                     </Col>

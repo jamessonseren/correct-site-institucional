@@ -61,7 +61,7 @@ function EstabInfo({ children, ...props }) {
                 <h4>Aviso:</h4>
             </Row>
             <Row>
-              <p className="aviso">Os créditos do seu cartão Tradeclub não poderão ser utilizados como meio de pagamento.</p><br/>
+              <p className="aviso">Os créditos do seu cartão Correct não poderão ser utilizados como meio de pagamento.</p><br/>
             </Row>
             <Row>
               <p className="aviso">Consulte as regras e formas de pagamento de cada parceiro nacional.</p>

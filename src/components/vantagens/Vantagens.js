@@ -29,18 +29,18 @@ export default function Vantagens() {
   return (
     <Row className='text-light justify-content-center align-items-center'>
         
-        {/* Tradeclub */}
+        {/* CorrectClub */}
         <Box className='row align-items-center justify-content-center' pose={isVisible ? 'visible' : 'hidden'}>
           <Col sm={6} className='d-flex justify-content-center align-items-center'>
             <Image src={require('../../assets/wallet.png')} style={{width: '100%'}} rounded fluid/>
           </Col>
           <Col sm={5} className='text-light align-content-center m-1'>
             <h3 className='text-left'>
-              Tradeclub
+            CorrectClub
             </h3>
             <p className="text-justify tamanho">
               Carteira Virtual que carrega todos os cartões (benefícios e crédito). Tem a opção de escolha do cartão para efetuar pagamentos. 
-              Utiliza único sistema “APP TRADECARD para pagamentos e controle, utilizando senha única, válida para todos os cartões. Conta também, 
+              Utiliza único sistema “APP CORRECT para pagamentos e controle, utilizando senha única, válida para todos os cartões. Conta também, 
               com arquivos de agenda e cadastros necessários para o dia a dia. 
               Todas informações da carteira são criptografadas, por questões de segurança. 
             </p>
@@ -50,7 +50,7 @@ export default function Vantagens() {
         {/* Inicio serviços */}
         {/* Delivery */}
         <Box className='row darkBlue align-items-center justify-content-center' pose={isVisible ? 'visible' : 'hidden'}>
-          <Col sm={12}> <h1 className='text-center mt-5'>Serviços do Aplicativo Tradeclub</h1> </Col>
+          <Col sm={12}> <h1 className='text-center mt-5'>Serviços do Aplicativo Correct</h1> </Col>
           <Col sm={6} className='d-flex justify-content-center align-items-center'>
             <Image src={require('../../assets/cartoes/card_delivery.png')} style={{width: '100%'}} rounded fluid/>
           </Col>
@@ -83,7 +83,7 @@ export default function Vantagens() {
 
       <Box className='row darkBlue p-5' pose={isVisible ? 'visible' : 'hidden'}>
         <h3 className='text-center col-12 pt-5'>
-          Para o <strong>TRADECLUB</strong>, a Tradecard foi além dos benefícios de um Clube, chega a tudo que um Banco pode oferecer, 
+          Para o <strong>CORRECTCLUB</strong>, a Correct foi além dos benefícios de um Clube, chega a tudo que um Banco pode oferecer, 
           agregando <strong>muito mais benefícios</strong> aos seus usuários. 
         </h3>
         <Col sm={12} className='mt-3 mb-3'>
@@ -93,7 +93,7 @@ export default function Vantagens() {
                 <li>
                   <IoMdCheckmark className='icon-vantagens' /> 
                   <span>
-                    Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do APP Tradecard;
+                    Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do APP Correct;
                   </span>
                 </li>
                 <li>
@@ -134,7 +134,7 @@ export default function Vantagens() {
                 <li>
                   <IoMdCheckmark className='icon-vantagens'/>
                   <span>
-                    TradeShop <strong>(com grandes promoções pontuais)</strong>
+                    CorrectShop <strong>(com grandes promoções pontuais)</strong>
                   </span>
                 </li>
                 <li>
@@ -150,7 +150,7 @@ export default function Vantagens() {
                 <li>
                   <IoMdCheckmark className='icon-vantagens'/>
                   <span>
-                    <strong>Controle financeiro</strong> através de relatórios da conta de pagamentos Tradecard;        
+                    <strong>Controle financeiro</strong> através de relatórios da conta de pagamentos Correct;        
                   </span>
                 </li>
                 <li>
@@ -182,10 +182,10 @@ export default function Vantagens() {
           </Row>
         </Col>
         <p className='col-12 text-center pb-5'>
-          A Tradecard não cobra nada por estes produtos/serviços, quando implanta em Empresas/Órgãos Públicos (Sistema Corporativo), como benefícios e, 
+          A Correct não cobra nada por estes produtos/serviços, quando implanta em Empresas/Órgãos Públicos (Sistema Corporativo), como benefícios e, 
           muito pelo contrário, dá ao Colaborador/Servidor, <strong>KRATS (Cashback) em cada compra efetuada</strong> (KRATS é dinheiro virtual equivalente ao Real).
           O objetivo desses benefícios é <strong>proporcionar uma vida melhor e segura</strong> para os Colaboradores/Servidores, <strong>evitando o endividamento</strong>, não permitindo caírem nas armadilhas de créditos fáceis. 
-          Possibilita ainda, o <strong>controle absoluto de seus gastos na palma de sua mão, através do APP TRADECLUB.</strong>
+          Possibilita ainda, o <strong>controle absoluto de seus gastos na palma de sua mão, através do APP CORRECT.</strong>
         </p>
       </Box>
     </Row>

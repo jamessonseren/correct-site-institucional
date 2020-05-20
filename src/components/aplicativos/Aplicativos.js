@@ -37,13 +37,13 @@ export default function Aplicativos(){
 
                 <Col>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
-                        <h3 className='text-light app-title' style={{fontWeight: 600}}>APP Tradecard</h3>
+                        <h3 className='text-light app-title' style={{fontWeight: 600}}>APP Correct</h3>
                         <p className='text-light text-justify mb-5 app-description' >
                             Para o mundo moderno das pessoas físicas que se importam com a praticidade dos procedimentos, 
                             com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
-                            para obter vantagens nas atividades do seu dia a dia, a Tradecard, como princípio, proporciona o melhor 
+                            para obter vantagens nas atividades do seu dia a dia, a Correct, como princípio, proporciona o melhor 
                             relacionamento com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento 
-                            <strong> "APP Tradecard"</strong>, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!
+                            <strong> "APP Correct"</strong>, permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!
                         </p>
                         <a href='#'> <Image src={require('../../assets/download_google_play.png')} style={{width: '20%'}} className='icon-download' rounded fluid/> </a>
                         <a href='#'> <Image src={require('../../assets/download_app_store.png')} style={{width: '21%'}} className='ml-5 icon-download' rounded fluid/> </a>
@@ -53,9 +53,9 @@ export default function Aplicativos(){
             <Row className='justify-content-between container-margin'>
                 <Col className='p-0'>
                     <Box pose={isVisible ? 'visible' : 'hidden'}>
-                        <h3 className='text-light app-title' style={{fontWeight: 600}}>Módulo de vendas - Tradecard</h3>
+                        <h3 className='text-light app-title' style={{fontWeight: 600}}>Módulo de vendas - Correct</h3>
                         <p className='text-light text-justify app-description'>
-                            O Módulo de vendas da Tradecard permite realizar vendas através de QR-Code e Token com técnologia e segurança de ponta!
+                            O Módulo de vendas da Correct permite realizar vendas através de QR-Code e Token com técnologia e segurança de ponta!
                         </p>
                         <a href='#'> <Image src={require('../../assets/download_windows.png')} style={{width: '28%'}} className='mt-4 icon-download' rounded fluid/> </a>
                     </Box>

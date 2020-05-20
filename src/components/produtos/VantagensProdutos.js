@@ -17,19 +17,19 @@ export default function VantagensProdutos() {
               <Col sm={6} className='text-light'>
                 <h3 className='mb-3 text-center'>
                   Para os cartões de <strong> Adiantamento Salarial</strong> e <strong>Convênio</strong>, 
-                  a <strong>Tradecard</strong> oferece as seguintes vantagens:
+                  a <strong>Correct</strong> oferece as seguintes vantagens:
                 </h3>
                 <ul className="products">
                   <li>
                     <GiBank className='icon-vantagens'/> 
                     <span>
-                      Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Tradecard</strong>;
+                      Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Correct</strong>;
                     </span>
                   </li>
                   <li>
                     <GiBuyCard className='icon-vantagens'/>
                     <span>
-                      Compras na Rede <strong>Tradeclub com prazo (média de 45 dias) e sem juros;</strong>
+                      Compras na Rede <strong>Correct com prazo (média de 45 dias) e sem juros;</strong>
                     </span>
                   </li>
                   <li>
@@ -47,13 +47,13 @@ export default function VantagensProdutos() {
                   <li>
                     <MdRedeem className='icon-vantagens'/> 
                     <span>
-                      <strong>Rede TRADECLUB</strong> de compras na cidade, podendo inclusive, dar sugestões de estabelecimentos comerciais de sua preferência;
+                      <strong>Rede Correct</strong> de compras na cidade, podendo inclusive, dar sugestões de estabelecimentos comerciais de sua preferência;
                     </span>
                   </li>
                   <li>
                     <GiCardExchange className='icon-vantagens'/> 
                     <span>
-                      Ganha <strong>KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - TRADECLUB;
+                      Ganha <strong>KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - CORRECTCLUB;
                     </span>
                   </li>
                   <li>
@@ -82,13 +82,13 @@ export default function VantagensProdutos() {
             <Row className='p-5'>
               <Col sm={6} className='text-light'>
                 <h3 className='text-center'>
-                  Para os cartões de <strong>Alimentação</strong> e <strong>Refeição</strong>, a <strong>Tradecard</strong> oferece as seguintes vantagens:
+                  Para os cartões de <strong>Alimentação</strong> e <strong>Refeição</strong>, a <strong>Correct</strong> oferece as seguintes vantagens:
                 </h3>
                 <ul className="products">
                   <li>
                     <GiBank className='icon-vantagens'/> 
                     <span>
-                      Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Tradecard</strong>;
+                      Ganha um <strong>Banco</strong> de presente, podendo utilizar vários recursos <strong>sem taxas e juros</strong>, através do <strong>APP Correct</strong>;
                     </span>
                   </li>
                   <li>
@@ -106,7 +106,7 @@ export default function VantagensProdutos() {
                   <li>
                     <GiCardExchange className='icon-vantagens'/> 
                     <span>
-                      <strong>Ganha KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - TRADECLUB;
+                      <strong>Ganha KRATS (Cashback)</strong> em todas as compras realizadas, que é creditado automaticamente em sua conta de pagamentos, no Cartão do Clube de Vantagens - CORRECTCLUB;
                     </span>
                   </li>
                   <li>
