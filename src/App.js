@@ -6,6 +6,7 @@ import NavBar from './components/navbar/Navbar'
 // Routes
 import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
+import Empresas from './components/empresas/Empresas'
 import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/Vantagens'
 import Aplicativos from './components/aplicativos/Aplicativos'
@@ -23,7 +24,7 @@ function App() {
           <Footer />
         </Route>
         <Route path='/empresas'>
-          <Produtos/>
+          <Empresas/>
           <Footer />
         </Route>
         <Route path='/contato'>
