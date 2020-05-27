@@ -12,10 +12,11 @@ export default function NavBar(){
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="align-items-center justify-content-center margin-auto">
-                    <Nav.Link><img src={require('../../assets/CORRECT_BRANCO.png')} className="logo" alt='Correct Logo'/></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre nós</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Para empresas</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/vantagens'>Carteira</Link></Nav.Link> 
+                    <Nav.Link><img src={require('../../assets/logo_correct_simbolo.png')} className="logo" alt='Correct Logo'/></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre Nós</Link></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/vantagens'>Para Você</Link></Nav.Link> 
+                    <Nav.Link><Link className='navbar-link-trade' to='/produtos'>Para Empresas</Link></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/vantagens'>Para seu Negócio</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-trade' to='/aplicativos'>Aplicativos</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/trade_shop'>Tradeshop</Link></Nav.Link>

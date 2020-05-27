@@ -22,7 +22,7 @@ function App() {
           <SobreNos/>
           <Footer />
         </Route>
-        <Route path='/produtos'>
+        <Route path='/empresas'>
           <Produtos/>
           <Footer />
         </Route>

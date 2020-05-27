@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {Container, Row, Image} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 import posed from 'react-pose';
+import { Link } from "react-router-dom";
 import "./SobreNos.css"
 
 const Box = posed.div({
@@ -27,41 +28,36 @@ export default function SobreNos(){
 
     return(
         <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
-            <Row className='backgroundImage d-flex justify-content-center'>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-10'>
+            <Row className='d-flex justify-content-center p-5 backgroundImage'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-8'>
                     <p className="description">
-                        A <strong>Correct</strong> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, nas áreas de Recursos Humanos (benefícios), 
+                        A <strong>Correct</strong> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, em um único APP. Atuamos nas áreas de Recursos Humanos (benefícios), 
                         <strong> Compras, Pagamentos, Empréstimos, Economia, Saúde, Bem Estar, Diversão, Segurança e muitas outras</strong>.
                     </p>
                 </Box>
             </Row>
-            <Row className='p-5' >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='col-6 align-items-center justify-content-center d-flex' style={{flexDirection: 'column'}}>
-                    <h2 className='whiteFont'>Para o mundo corporativo:</h2>
-                    <p  className='whiteFont'>
-                        Para o mundo corporativo, em abril de 2020, a <strong>Correct lança no mercado brasileiro</strong>, grandes novidades na <strong>área de Recursos Humanos - Benefícios,  
-                        transformando o que caracteriza produtos de benefícios, como Vales Alimentação, Refeição, Combustível, Adiantamento Salarial, Empréstimos Consignado (juros reduzidos), 
-                        Programas de Saúde e outros, em uma Plataforma de Auto-gestão de Benefícios</strong>, permitindo aos gestores a liberdade de acesso decisório quanto à escolha do tipo e prazo de duração, 
-                        permitindo ainda a definição dos parâmetros necessários a concessão de cada benefícios, adaptando-os às suas políticas internas, leis, sindicatos e outros motivos se houverem.
+            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                    <p className="description_subcategoria">
+                        Para as pessoas físicas que buscam <strong>praticidade, descontos, economia e vantagens</strong>, lançamos o APP Correct. Dentro do APP você pode realizar compras, pagamentos, recargas e muito mais, tudo isso na palma da sua mão.
+                        <br/><strong>Aqui seu Cashback é garantido em toda compra!</strong>
                     </p>
+                    <Link to='/para_voce' className='w-100'><button className='btn-sm w-100 btn-club'>Saiba mais</button> </Link>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='col-6 align-items-center justify-content-center d-flex'>
-                    <Image src={require('../../assets/icon_beneficio_pj.png')} style={{width: '40%'}} rounded fluid/>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                    <img src={require('../../assets/robot_celular.png')} className="logotipo" alt='Correct Logo'/>
                 </Box>
             </Row>
-            <Row className='p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='col-6 align-items-center justify-content-center d-flex'>
-                    <Image src={require('../../assets/icon_beneficio_pf.png')} style={{width: '40%'}} rounded fluid/>
+            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}}>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                    <img src={require('../../assets/robot.png')} className="robot" alt='Correct Logo'/>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='col-6 align-items-center justify-content-center d-flex' style={{flexDirection: 'column'}}>
-                    <h2 className='whiteFont'>Para o mundo das pessoas físicas:</h2>
-                    <p  className='whiteFont'>
-                        Para o mundo moderno das pessoas físicas que se importam com a <strong>praticidade dos procedimentos, 
-                        com a desburocratização, obtenção de descontos e economia, com o avanço da tecnologia e suas tendências, 
-                        para obter vantagens nas atividades do seu dia a dia</strong>, a Correct, como princípio, proporciona o melhor relacionamento 
-                        com todos que são envolvidos nesses processos e revoluciona sua atuação, com a composição de vários serviços em um só instrumento <strong>“APP CORRECTCLUB”</strong>, 
-                        permitindo com facilidade e comodidade, o controle na palma da sua mão. Basta um celular!
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                    <p className="description_subcategoria">
+                        Para o mundo Corporativo, a <strong>Correct</strong> lança no Mercado Brasileiro uma grande novidade na área de Recursos Humanos (Benefícios), como <strong>Adiantamento Salárial, Vale Alimentação, Refeição, Combustível, Programas de Saúde e outros</strong>. Tudo isso em uma plataforma de autogestão.
+                        <br/><strong>Você escolhe como quer trabalhar!</strong>
                     </p>
+                    <Link to='/empresas' className='w-100'><button className='btn-sm w-100 btn-club'>Saiba mais</button> </Link>
                 </Box>
             </Row>
         </Container>
