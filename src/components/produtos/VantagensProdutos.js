@@ -17,7 +17,7 @@ export default function VantagensProdutos() {
               <Col sm={6} className='text-light'>
                 <h3 className='mb-3 text-center'>
                   Para os cartões de <strong> Adiantamento Salarial</strong> e <strong>Convênio</strong>, 
-                  a <strong>Correct</strong> oferece as seguintes vantagens:
+                  a <strong><i>Correct</i></strong> oferece as seguintes vantagens:
                 </h3>
                 <ul className="products">
                   <li>
@@ -82,7 +82,7 @@ export default function VantagensProdutos() {
             <Row className='p-5'>
               <Col sm={6} className='text-light'>
                 <h3 className='text-center'>
-                  Para os cartões de <strong>Alimentação</strong> e <strong>Refeição</strong>, a <strong>Correct</strong> oferece as seguintes vantagens:
+                  Para os cartões de <strong>Alimentação</strong> e <strong>Refeição</strong>, a <strong><i>Correct</i></strong> oferece as seguintes vantagens:
                 </h3>
                 <ul className="products">
                   <li>

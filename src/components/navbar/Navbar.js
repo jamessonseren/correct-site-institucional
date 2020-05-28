@@ -16,11 +16,12 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre Nós</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/para_voce'>Para Você</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-trade' to='/para_empresas'>Para Empresas</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/vantagens'>Para seu Negócio</Link></Nav.Link> 
+                    <Nav.Link><Link className='navbar-link-trade' to='/para_seu_negocio'>Para seu Negócio</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-club' to='/correct_club'>Correct Club</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/correct_shop'>Correct Shop</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Link>
+                    <a style={{backgroundColor: '#00788c', color: 'white', borderWidth: 0, padding: 10, outline: 'none', fontSize: '0.8rem', borderRadius: '20px'}} className='font-weight-bold'>Baixe o APP</a>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

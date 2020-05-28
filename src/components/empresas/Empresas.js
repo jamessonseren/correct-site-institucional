@@ -112,7 +112,7 @@ export default function SobreNos(){
                             <h4 className='text-light'>Outras Vantagens</h4>
                             <ul className="description_subcategoria" style={{listStyle: 'circle'}}>
                                 <li>
-                                    Para os cartões alimentação e refeição se for de interesse do empregador, a Correct mantém registro no PAT, proporcionando a Empresa, redução de custos, isenção de encargos e incentivos fiscais.
+                                    Para os cartões alimentação e refeição se for de interesse do empregador, a <strong><i>Correct</i></strong> mantém registro no PAT, proporcionando a Empresa, redução de custos, isenção de encargos e incentivos fiscais.
                                 </li>
                                 <li>
                                     Moldamos nossos benefícios pré-pagos conforme a necessidade da sua empresa, além dos cartões acima temos: Combustível, Cesta de Natal e outros. Também com ganho Krats (Cashback)

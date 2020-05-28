@@ -8,6 +8,15 @@
     color: #00788b !important
 }
 
+.btn-club{
+    
+}
+
+.btn-club:hover{
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
 .navbar-link-club{
     color: #00788b !important;
     font-size: 0.8rem;

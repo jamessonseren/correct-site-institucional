@@ -39,7 +39,7 @@ export default function Aplicativos(){
                     <p className="description_subcategoria">
                         Aproveite toda nossa <strong>Rede de Compras Local, com Vantagens, Descontos e Sorteios exclusivos</strong> para você! 
                         <br/>Além de todas as vantagens em sua região, disponibilizamos a <strong>Rede de Compras Online</strong>, com mais de 270 parceiros em diversos segmentos.
-                        <br/><strong>Com a Correct seu Cashback já está garantido!</strong>
+                        <br/><strong>Com a <strong><i>Correct</i></strong> seu Cashback já está garantido!</strong>
                     </p>
                     <Link to='/rede_compras' className='btn-sm btn-club mt-2 text-center' >Clique para saber mais</Link>
                 </Box>
