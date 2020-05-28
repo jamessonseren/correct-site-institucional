@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Container, Row, Col} from 'react-bootstrap'
 import posed from 'react-pose';
+import { Link } from "react-router-dom";
 import "./Empresas.css"
 
 const Box = posed.div({
@@ -60,7 +61,7 @@ export default function SobreNos(){
                     {/* PÓS PAGOS */}
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}} >
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
-                            <img src={require('../../assets/cartoes/card_adiantamento.png')} className="card_image" alt='Cartão de adiantamento salárial'/>
+                            <img src={require('../../assets/cartoes/card_adiantamento_reto.png')} className="card_image" alt='Cartão de adiantamento salárial'/>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
                             <p className="description_subcategoria">
@@ -75,12 +76,12 @@ export default function SobreNos(){
                             </p>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
-                            <img src={require('../../assets/cartoes/card_convenio.png')} className="card_image" alt='Cartão convênio'/>
+                            <img src={require('../../assets/cartoes/card_convenio_reto.png')} className="card_image" alt='Cartão convênio'/>
                         </Box>
                     </Row>
                     <div className='align-items-center justify-content-center d-flex w-100 pb-5' style={{flexDirection: 'column', backgroundColor: 'rgba(0,0,0,0.5)' }}>
                         <h4 style={{color: '#00788b'}} className='text-center font-weight-bold'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
-                        <button className='btn-sm btn-club mt-2'>Clique para saber mais</button>
+                        <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
                     </div>
                 </div>
             :
@@ -88,7 +89,7 @@ export default function SobreNos(){
                     {/* PRÉ PAGOS */}
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '50vh'}} >
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
-                            <img src={require('../../assets/cartoes/card_alimentacao.png')} className="card_image" alt='Cartão Vale Alimentação Logo'/>
+                            <img src={require('../../assets/cartoes/card_alimentacao_reto.png')} className="card_image" alt='Cartão Vale Alimentação Logo'/>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
                             <p className="description_subcategoria">
@@ -103,7 +104,7 @@ export default function SobreNos(){
                             </p>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
-                            <img src={require('../../assets/cartoes/card_refeicao.png')} className="card_image" alt='Cartão Vale Refeição'/>
+                            <img src={require('../../assets/cartoes/card_refeicao_reto.png')} className="card_image" alt='Cartão Vale Refeição'/>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}}>
@@ -119,7 +120,7 @@ export default function SobreNos(){
                             </ul>
                             <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
                                 <h4 style={{color: '#00788b'}} className='text-center font-weight-bold'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
-                                <button className='btn-sm btn-club mt-2'>Clique para saber mais</button>
+                                <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
                             </div>
                         </Box>
                     </Row>

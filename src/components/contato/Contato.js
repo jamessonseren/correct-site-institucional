@@ -71,7 +71,7 @@ class Contato extends React.Component {
     render() {
         return(
             <Box pose={this.state.isVisible ? 'visible' : 'hidden'}>
-                <Row className='justify-content-center align-items-center padding-sm'>
+                <Row className='justify-content-center align-items-center d-flex' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '90vh'}}>
                     <Col sm={8} className="mt-5 text-light">
                         <h1 className='text-center title-sm'>Entre em contato conosco!</h1>
                         <p className='text-center'>Preencha o formulário abaixo e aguarde nosso contato em breve.</p>
@@ -99,7 +99,7 @@ class Contato extends React.Component {
                         />
                         {this.state.tipo === 'pj' && <MDBInput label="Empresa" value={this.state.empresa} className='input' onChange={(e) => this.setState({empresa: e.target.value}) } /> }
                         <MDBInput className='input' required type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
-                        <button onClick={() => this.submit()} className="btn-trade">
+                        <button onClick={() => this.submit()} className="btn-club w-100">
                             {this.state.isLoading ? 
                                 <div className="spinner-border text-light"></div>
                             :
@@ -107,7 +107,7 @@ class Contato extends React.Component {
                             }
                         </button>
                         {this.state.err && <MDBAlert color='primary' className='mt-3'> Preencha todos os campos </MDBAlert> }
-                        {this.state.success && <MDBAlert color='success' className='mt-3'> E-mail enviado com sucesso! </MDBAlert> }
+                        {this.state.success && <MDBAlert color='success' className='mt-3'> Mensagem enviada com sucesso! </MDBAlert> }
                     </Col>
                 </Row>
             </Box>

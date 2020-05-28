@@ -4,6 +4,23 @@
     width: auto;
 }
 
+.correct_club{
+    color: #00788b !important
+}
+
+.navbar-link-club{
+    color: #00788b !important;
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+}
+
+.navbar-link-club:hover{
+    color: #00788b !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 .navbar-link-trade{
     color: whitesmoke !important;
     font-size: 0.8rem;

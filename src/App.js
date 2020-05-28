@@ -7,9 +7,8 @@ import NavBar from './components/navbar/Navbar'
 import SobreNos from './components/sobre_nos/SobreNos'
 import Contato from './components/contato/Contato'
 import Empresas from './components/empresas/Empresas'
-import Produtos from './components/produtos/Produtos'
 import Vantagens from './components/vantagens/Vantagens'
-import Aplicativos from './components/aplicativos/Aplicativos'
+import Clube from './components/clube/Clube'
 import Tradeshop from './components/trade_shop/Tradeshop'
 import RedeDeCompras from './components/rede_compras/RedeDeCompras'
 import Footer from './components/footer/Footer'
@@ -23,7 +22,7 @@ function App() {
           <SobreNos/>
           <Footer />
         </Route>
-        <Route path='/empresas'>
+        <Route path='/para_empresas'>
           <Empresas/>
           <Footer />
         </Route>
@@ -35,12 +34,12 @@ function App() {
           <Vantagens/>
           <Footer />
         </Route>
-        <Route path='/trade_shop'>
+        <Route path='/correct_shop'>
           <Tradeshop/>
           <Footer />
         </Route>
-        <Route path='/aplicativos'>
-          <Aplicativos/>
+        <Route path='/correct_club'>
+          <Clube/>
           <Footer />
         </Route>
         <Route path='/rede_compras'>

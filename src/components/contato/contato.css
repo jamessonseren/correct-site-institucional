@@ -29,17 +29,18 @@ label{
     border-bottom: 2px solid #fff !important;
 }
 /* ----------------------------------------------------*/
-
-
-.btn-trade-contato{
-    background-color:#343537 !important;
-    border-radius: 5px !important;
-    color: #fff !important;
-    width: 100%;
-    margin: 0 !important;
+.btn-club{
+    background: #00788c;
+    color: white;
     border: none;
-    padding: 5px 10px;
-    transition: opacity 0.1s ease-in-out;
+    outline: none;
+    border-radius: 20px !important;
+}
+
+.btn-club:hover{
+    opacity: 0.7;
+    color: white;
+    transition: all 0.5s;
 }
 
 @media (max-width: 768px){

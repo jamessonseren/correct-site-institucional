@@ -1,5 +1,5 @@
 import React from 'react'
-import {Col, Row, Container, Image, Form} from 'react-bootstrap'
+import {Col, Row, Image, Form} from 'react-bootstrap'
 import { Button, ButtonGroup } from 'reactstrap';
 import './checkDevice.css'
 
@@ -48,30 +48,21 @@ class Tradeshop extends React.Component {
             let logo = `https://sisclub.com.br/upload_logo/${logotipo}`
             if(link === undefined){return false}
             return (
-                <Container>
-                    <Row className="ml-5 mr-5 p-5 justify-content-center align-items-center text-light padding-sm" key={index}>
-                    <Col sm={3}>
-                        <Row className="" key={index}>
-                        <a href={link} target='_blank' rel="noopener noreferrer">
-                            <Image src={url} fluid style={{borderRadius: 10}} />
-                        </a>
-                        </Row>
-                    </Col>
-                    <Col sm={6}>
+                    <Col sm={4} className='p-5 text-light'>
                         <Row className='justify-content-around align-items-center'> 
-                            <h5 className='text-center title'><strong>{descricao}</strong></h5>
-                            <Image className={"img"} src={logo} fluid/>
+                            <a href={link} target='_blank' rel="noopener noreferrer" className='d-flex justify-content-center align-items-center mb-3'>
+                                <Image src={url} fluid style={{borderRadius: 10, width: '50%', height: 'auto'}} />
+                            </a>
                         </Row>
                         <Col sm={12} className='align-items-center justify-content-center mb-4'> 
-                            <h5 className='text-center text'>De: R$ {parseFloat(preco).toFixed(2).replace('.',',')} </h5>
+                            <h5 className='text-center title'><strong>{descricao}</strong></h5>
+                            <h5 className='text-center text'><del>De: R$ {parseFloat(preco).toFixed(2).replace('.',',')}</del></h5>
                             <h3 className='text-center strong'><strong className='strong'>Por: R$ {parseFloat(preco_inicio).toFixed(2).replace('.',',')}</strong></h3>
                         </Col>
                         <Row className='align-items-center justify-content-center'> 
-                            <a href={link} className='btn-trade' style={{width: '70%', textAlign: 'center'}} target='_blank' rel="noopener noreferrer">Comprar</a>
+                            <a href={link} className='btn-club' style={{width: '70%', textAlign: 'center'}} target='_blank' rel="noopener noreferrer">Comprar</a>
                         </Row>
                     </Col>
-                </Row>
-                </Container>
             )
         })
     }

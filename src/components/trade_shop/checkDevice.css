@@ -1,3 +1,27 @@
+.btn-club{
+    background: #00788c;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px !important;
+}
+
+.btn-club:hover{
+    opacity: 0.7;
+    color: white;
+    transition: all 0.5s;
+}
+
+.title{
+    font-size: 1.2em;
+}
+
+.text{
+    font-size: 0.8em;
+}
+.strong{
+    font-size: 1.2em;
+}
 
 /* Para Desktop e notebooks*/
 @media (min-width:1224px) {

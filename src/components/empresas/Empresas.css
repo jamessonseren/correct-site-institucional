@@ -8,6 +8,7 @@
 
 .btn-club:hover{
     opacity: 0.7;
+    color: white;
     transition: all 0.5s;
 }
 
