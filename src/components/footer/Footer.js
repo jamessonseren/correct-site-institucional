@@ -22,8 +22,8 @@ export default function Footer() {
                     <Link className='text-light mr-2 contato'>(67) 3253-7232</Link>
                 </Row>
                 <Row>
-                    <a href={"https://www.facebook.com/pg/tradecardofc"} target='_blank' rel="noopener noreferrer"><FaFacebook color='white' className='mr-3' /></a>
-                    <a href={"https://www.instagram.com/tradecardofc/"} target='_blank' rel="noopener noreferrer"><FaInstagram color='white' /></a>
+                    <a href={"https://www.facebook.com/pg/correctofc"} target='_blank' rel="noopener noreferrer"><FaFacebook color='white' className='mr-3' /></a>
+                    <a href={"https://www.instagram.com/correctofc/"} target='_blank' rel="noopener noreferrer"><FaInstagram color='white' /></a>
                 </Row>
             </Col>
             <Col lg={2} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
