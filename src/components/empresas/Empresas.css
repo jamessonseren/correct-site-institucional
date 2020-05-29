@@ -20,3 +20,9 @@
     height: auto;
     width: 70% !important;
 }
+
+@media (max-width: 769px){
+    .button_responsive_app{
+        font-size: 0.8rem;
+    }
+}

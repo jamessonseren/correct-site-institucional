@@ -44,13 +44,13 @@ export default function SobreNos(){
             <Box pose={isVisibleHeader ? 'visible' : 'hidden'} className='d-flex justify-content-center p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
                 <Col sm={3} className='d-flex justify-content-center align-items-center' onClick={() => showPreOrPos(true)} style={{flexDirection: 'column', cursor: 'pointer', opacity: !ísPreOrPos ? 0.5 : 1 }}>
                     <img src={require('../../assets/cartoes/card_adiantamento.png')} style={{width: '100%'}} alt='Cartões Pós-pagos'/>
-                    <h4 className='text-light'>
+                    <h4 className='text-light text-center'>
                         Pós pagos
                     </h4>
                 </Col>
                 <Col sm={3} className='d-flex justify-content-center align-items-center' onClick={() => showPreOrPos(false)} style={{flexDirection: 'column', cursor: 'pointer', opacity: ísPreOrPos ? 0.5 : 1}}>
                     <img src={require('../../assets/cartoes/card_alimentacao.png')} style={{width: '100%'}} alt='Cartões Pré-pagos'/>
-                    <h4 className='text-light'>
+                    <h4 className='text-light text-center'>
                         Pré pagos
                     </h4>
                 </Col>
@@ -60,22 +60,22 @@ export default function SobreNos(){
                 <div>
                     {/* PÓS PAGOS */}
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}} >
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                             <img src={require('../../assets/cartoes/card_adiantamento_reto.png')} className="card_image" alt='Cartão de adiantamento salárial'/>
                         </Box>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className="description_subcategoria">
                             Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser livre escolha, Ganho de Krats (Cashback).
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)', height: '50vh',}}>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className="description_subcategoria">
                                 Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
                             </p>
                         </Box>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                             <img src={require('../../assets/cartoes/card_convenio_reto.png')} className="card_image" alt='Cartão convênio'/>
                         </Box>
                     </Row>
@@ -88,27 +88,27 @@ export default function SobreNos(){
                 <div>
                     {/* PRÉ PAGOS */}
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '50vh'}} >
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                             <img src={require('../../assets/cartoes/card_alimentacao_reto.png')} className="card_image" alt='Cartão Vale Alimentação Logo'/>
                         </Box>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className="description_subcategoria">
                                 Com benefício específico para aquisição de gêneros alimentícios. Pode ser utilizado em supermercados, mercearias, açougues, padarias e similares. Facilitando as rotinas das Empresas e substituindo as cestas básicas. Ganho de Krats (Cashback).
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)', height: '50vh'}}>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className="description_subcategoria">
                                 Com benefício específico para aquisição de refeições prontas. Pode ser utilizado em restaurantes, padarias, lanchonetes e similares. Facilitando a rotina da Empresa e dando mais qualidade de vida ao seu Colaborador. Ganho de Krats (Cashback)
                             </p>
                         </Box>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                             <img src={require('../../assets/cartoes/card_refeicao_reto.png')} className="card_image" alt='Cartão Vale Refeição'/>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}}>
-                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-6'>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
                             <h4 className='text-light'>Outras Vantagens</h4>
                             <ul className="description_subcategoria" style={{listStyle: 'circle'}}>
                                 <li>
@@ -119,8 +119,8 @@ export default function SobreNos(){
                                 </li>
                             </ul>
                             <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
-                                <h4 style={{color: '#00788b'}} className='text-center font-weight-bold'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
-                                <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
+                                <h4 style={{color: '#00788b'}} className='text-center font-weight-bold button_responsive_app'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
+                                <Link to='/correct_club' className='btn-sm btn-club mt-2 button_responsive_app'>Clique para saber mais</Link>
                             </div>
                         </Box>
                     </Row>
