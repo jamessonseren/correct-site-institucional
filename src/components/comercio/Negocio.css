@@ -1,4 +1,22 @@
+
+.title_app{
+    font-size: 1.2rem !important;
+}
+.list_responsive{
+    font-size: 0.7rem !important
+}
+
 .card_image{
     height: auto;
     width: 80% !important;
+}
+
+.button_responsive_app{
+    font-size: 0.8rem !important;
+}
+
+@media (max-width: 769px){
+    .list_responsive{
+        font-size: 0.5rem !important
+    }
 }
