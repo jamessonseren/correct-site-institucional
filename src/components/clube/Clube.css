@@ -6,3 +6,14 @@
 .description_subcategoria{
     font-size: 1.2rem;
 }
+
+.title_responsive{
+    font-size: 1.4rem !important;
+}
+
+@media (max-width: 769px){
+    .card_image{
+        height: auto;
+        width: 60% !important;
+    }
+}
