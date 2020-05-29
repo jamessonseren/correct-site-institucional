@@ -31,7 +31,7 @@ export default function Aplicativo(){
         <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
-                    <img src={require('../../assets/app_desktop.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/tela_inicial.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-light font-weight-bold title_app'>O aplicativo completo e TOTALMENTE GRATUITO, desenvolvido ESPECIALMENTE para Você!</h1>
@@ -58,12 +58,13 @@ export default function Aplicativo(){
                     <h2 className='text-success font-weight-bold title_app'>Não é promoção, é VANTAGEM! Não importa o valor da compra, seu Cashback está GARANTIDO!</h2>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
-                    <img src={require('../../assets/app_desktop.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/carteira.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
             </Row>
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
-                    <img src={require('../../assets/app_desktop.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/pagar.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/token.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-light font-weight-bold title_app'>Aqui seu dinheiro vale mais!</h1>
@@ -79,7 +80,7 @@ export default function Aplicativo(){
                     </ul>
                 </Box>
             </Row> 
-            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '50vh'}} >
+            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '60vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-warning font-weight-bold title_app'>Divirta-se!</h1>
                     <h3 className=" text-warning description_subcategoria">
@@ -87,7 +88,8 @@ export default function Aplicativo(){
                     </h3>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
-                    <img src={require('../../assets/app_desktop.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/biscoito_sorte.png')} className="card_image_app" alt='Correct Club'/>
+                    <img src={require('../../assets/jogo.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
                 <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
                     <h4 style={{color: '#00788b'}} className='text-center font-weight-bold button_responsive_app'>E ainda você ganha todos os benefícios oferecidos pelo Correct Club!</h4>
