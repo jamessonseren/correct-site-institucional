@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-.robot{
+.robot_description{
     width: 70% !important;
     height: auto;
 }
@@ -42,12 +42,19 @@
 
 .description_subcategoria{
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 0.9rem !important; 
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 @media (max-width: 960px){
     .description{
         font-size: 0.8rem
+    }
+    .description_subcategoria{
+        font-size: 0.5rem !important;
+        margin-top: 0.5rem;
+    }
+    .btn-club{
+        margin-bottom: 1rem !important;
     }
 } 

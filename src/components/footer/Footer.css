@@ -6,3 +6,9 @@
 .contato{
     font-size: 0.8rem;
 }
+
+@media (max-width: 960px){
+    .robot{
+        width: 15% !important;
+    }
+}

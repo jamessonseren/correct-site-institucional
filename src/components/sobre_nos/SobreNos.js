@@ -37,22 +37,22 @@ export default function SobreNos(){
                 </Box>
             </Row>
             <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                     <p className="description_subcategoria">
                         Para as Pessoas Físicas que buscam <strong>praticidade, descontos, economia e vantagens</strong>, lançamos o APP Correct. Dentro do APP você pode realizar compras, pagamentos, recargas e muito mais, tudo isso na palma da sua mão.
                         <br/><strong>Aqui seu Cashback é garantido em toda compra!</strong>
                     </p>
                     <Link to='/para_voce' className='w-100'><button className='btn-sm w-100 btn-club'>Saiba mais</button> </Link>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                     <img src={require('../../assets/robot_celular.png')} className="logotipo" alt='Correct Logo'/>
                 </Box>
             </Row>
             <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}}>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-4'>
-                    <img src={require('../../assets/robot.png')} className="robot" alt='Correct Logo'/>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
+                    <img src={require('../../assets/robot.png')} className="robot_description" alt='Correct Logo'/>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                     <p className="description_subcategoria">
                         Para o mundo Corporativo, a <strong><i>Correct</i></strong> lança no Mercado Brasileiro uma grande novidade na área de Recursos Humanos (Benefícios), como <strong>Adiantamento Salárial, Vale Alimentação, Refeição, Combustível, Programas de Saúde e outros</strong>. Tudo isso em uma plataforma de autogestão.
                         <br/><strong>Você escolhe como quer trabalhar!</strong>
