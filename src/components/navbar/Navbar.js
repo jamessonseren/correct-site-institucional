@@ -13,7 +13,7 @@ export default function NavBar(){
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="align-items-center justify-content-center margin-auto">
                     <Nav.Link><img src={require('../../assets/logo_correct_simbolo.png')} className="logo" alt='Correct Logo'/></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/sobre_nos'>Sobre Nós</Link></Nav.Link>
+                    <Nav.Link><Link className='navbar-link-trade' to='/'>Sobre Nós</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/para_voce'>Para Você</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-trade' to='/para_empresas'>Para Empresas</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/para_seu_negocio'>Para seu Negócio</Link></Nav.Link> 

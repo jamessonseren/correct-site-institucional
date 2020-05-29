@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <NavBar/> 
       <Switch>
-        <Route path='/sobre_nos'>
+        <Route exact path='/'>
           <SobreNos/>
           <Footer />
         </Route>
