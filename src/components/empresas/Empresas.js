@@ -64,14 +64,14 @@ export default function SobreNos(){
                             <img src={require('../../assets/cartoes/card_adiantamento_reto.png')} className="card_image" alt='Cartão de adiantamento salárial'/>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
-                            <p className="description_subcategoria">
+                            <p className="text-light description_cartoes_empresa">
                             Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser livre escolha, Ganho de Krats (Cashback).
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)', height: '50vh',}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
-                            <p className="description_subcategoria">
+                            <p className="text-light description_cartoes_empresa">
                                 Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
                             </p>
                         </Box>
@@ -80,7 +80,7 @@ export default function SobreNos(){
                         </Box>
                     </Row>
                     <div className='align-items-center justify-content-center d-flex w-100 pb-5' style={{flexDirection: 'column', backgroundColor: 'rgba(0,0,0,0.5)' }}>
-                        <h4 style={{color: '#00788b'}} className='text-center font-weight-bold'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
+                        <h4 style={{color: '#00788b'}} className='text-center font-weight-bold empresa_beneficio_responsive'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
                         <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
                     </div>
                 </div>
@@ -92,14 +92,14 @@ export default function SobreNos(){
                             <img src={require('../../assets/cartoes/card_alimentacao_reto.png')} className="card_image" alt='Cartão Vale Alimentação Logo'/>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
-                            <p className="description_subcategoria">
+                            <p className="text-light description_cartoes_empresa">
                                 Com benefício específico para aquisição de gêneros alimentícios. Pode ser utilizado em supermercados, mercearias, açougues, padarias e similares. Facilitando as rotinas das Empresas e substituindo as cestas básicas. Ganho de Krats (Cashback).
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)', height: '50vh'}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
-                            <p className="description_subcategoria">
+                            <p className="text-light description_cartoes_empresa">
                                 Com benefício específico para aquisição de refeições prontas. Pode ser utilizado em restaurantes, padarias, lanchonetes e similares. Facilitando a rotina da Empresa e dando mais qualidade de vida ao seu Colaborador. Ganho de Krats (Cashback)
                             </p>
                         </Box>
@@ -110,7 +110,7 @@ export default function SobreNos(){
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '50vh'}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
                             <h4 className='text-light'>Outras Vantagens</h4>
-                            <ul className="description_subcategoria" style={{listStyle: 'circle'}}>
+                            <ul className="text-light description_cartoes_empresa" style={{listStyle: 'circle'}}>
                                 <li>
                                     Para os cartões alimentação e refeição se for de interesse do empregador, a <strong><i>Correct</i></strong> mantém registro no PAT, proporcionando a Empresa, redução de custos, isenção de encargos e incentivos fiscais.
                                 </li>
@@ -119,8 +119,8 @@ export default function SobreNos(){
                                 </li>
                             </ul>
                             <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
-                                <h4 style={{color: '#00788b'}} className='text-center font-weight-bold button_responsive_app'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
-                                <Link to='/correct_club' className='btn-sm btn-club mt-2 button_responsive_app'>Clique para saber mais</Link>
+                                <h4 style={{color: '#00788b'}} className='text-center font-weight-bold empresa_beneficio_responsive'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
+                                <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
                             </div>
                         </Box>
                     </Row>

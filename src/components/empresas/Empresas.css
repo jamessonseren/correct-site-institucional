@@ -12,8 +12,8 @@
     transition: all 0.5s;
 }
 
-.description_subcategoria{
-    font-size: 1.2rem;
+.description_cartoes_empresa{
+    font-size: 1.5rem !important;
 }
 
 .card_image{
@@ -21,8 +21,27 @@
     width: 70% !important;
 }
 
-@media (max-width: 769px){
-    .button_responsive_app{
-        font-size: 0.8rem;
+@media (max-width: 1460px){
+    .description_cartoes_empresa{
+        font-size: 1rem !important;
+    }
+    .empresa_beneficio_responsive{
+        font-size: 1rem !important
+    }
+}
+
+@media (max-width: 960px){
+    .card_image{
+        height: auto;
+        width: 100% !important;
+    }
+} 
+
+@media (max-width: 767px){
+    .description_cartoes_empresa{
+        font-size: 0.8rem !important;
+    }
+    .empresa_beneficio_responsive{
+        font-size: 0.7rem !important
     }
 }
