@@ -71,9 +71,9 @@ class Contato extends React.Component {
     render() {
         return(
             <Box pose={this.state.isVisible ? 'visible' : 'hidden'}>
-                <Row className='justify-content-center align-items-center d-flex' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '90vh'}}>
+                <Row className='justify-content-center align-items-center d-flex padding-sm height_responsive_contato' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '90vh'}}>
                     <Col sm={8} className="mt-5 text-light">
-                        <h1 className='text-center title-sm'>Entre em contato conosco!</h1>
+                        <h1 className='text-center title_contato'>Entre em contato conosco!</h1>
                         <p className='text-center'>Preencha o formulário abaixo e aguarde nosso contato em breve.</p>
                     </Col>
                     <Col sm={8} className="justify-content-md-center">

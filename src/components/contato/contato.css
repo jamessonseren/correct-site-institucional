@@ -43,11 +43,20 @@ label{
     transition: all 0.5s;
 }
 
+@media (max-width: 1460px){
+    .height_responsive_contato{
+        height: 130vh !important
+    }
+}
+
 @media (max-width: 768px){
     .padding-sm{
         padding: 2rem !important
     }
     .title-sm{
         font-size: 1.7rem
+    }
+    .height_responsive_contato{
+        height: 150vh !important
     }
 } 
