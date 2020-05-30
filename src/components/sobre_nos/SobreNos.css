@@ -6,7 +6,7 @@
 }
 
 .logotipo{
-    width: 50%;
+    width: 55%;
     height: auto;    
 }
 
@@ -15,7 +15,7 @@
 }
 
 .robot_description{
-    width: 70% !important;
+    width: 80% !important;
     height: auto;
 }
 
@@ -42,19 +42,63 @@
 
 .description_subcategoria{
     color: whitesmoke;
-    font-size: 0.9rem !important; 
+    font-size: 1.2rem !important; 
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+@media (max-width: 1460px){
+    .description{
+        font-size: 1.5rem
+    }
+    .description_subcategoria{
+        font-size: 0.9rem !important;
+        margin-top: 0.5rem;
+    } 
+    .robot_description{
+        width: 80% !important;
+        height: auto;
+    }
+    .logotipo{
+        width: 60% !important;
+        height: auto;
+    }
 }
 
 @media (max-width: 960px){
     .description{
-        font-size: 0.8rem
+        font-size: 1.3rem
     }
     .description_subcategoria{
-        font-size: 0.5rem !important;
+        font-size: 0.8rem !important;
         margin-top: 0.5rem;
     }
     .btn-club{
         margin-bottom: 1rem !important;
     }
+    .robot_description{
+        width: 100% !important;
+        height: auto;
+    }
+    .logotipo{
+        width: 100% !important;
+        height: auto;
+    }
 } 
+
+@media (max-width: 767px){
+    .description{
+        font-size: 1rem
+    }
+    .description_subcategoria{
+        font-size: 0.8rem !important;
+        margin-top: 0.5rem;
+    }
+    .robot_description{
+        width: 50% !important;
+        height: auto;
+    }
+    .logotipo{
+        width: 35% !important;
+        height: auto;
+    }
+}
