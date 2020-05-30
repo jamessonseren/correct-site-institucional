@@ -3,7 +3,7 @@ strong{
 }
 
 .title_app{
-    font-size: 1.6rem !important;
+    font-size: 2rem !important;
 }
 .list_responsive{
     font-size: 1rem !important
@@ -12,22 +12,34 @@ strong{
     width: 45% !important;
 }
 .height_responsive{
-    height: 60vh !important
+    height: 70vh !important
+}
+
+@media (max-width: 1460px){
+    .title_app{
+        font-size: 1.5rem !important
+    }
+    .list_responsive{
+        font-size: 0.8rem !important
+    }
+    .height_responsive{
+        height: 80vh !important
+    }
 }
 
 
 @media (max-width: 769px){
     .title_app{
-        font-size: 0.7rem !important;
+        font-size: 1rem !important;
     }
     .list_responsive{
-        font-size: 0.5rem !important
+        font-size: 0.7rem !important
     }
     .card_image_app{
-        width: 45% !important;
+        width: 50% !important;
     }
     .height_responsive{
-        height: 80vh !important
+        height: 110vh !important
     }
     .button_responsive_app{
         font-size: 0.8rem;

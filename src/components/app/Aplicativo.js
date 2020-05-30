@@ -30,10 +30,10 @@ export default function Aplicativo(){
     return(
         <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
                     <img src={require('../../assets/tela_inicial.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-light font-weight-bold title_app'>O aplicativo completo e TOTALMENTE GRATUITO, desenvolvido ESPECIALMENTE para Você!</h1>
                     <p className="description_subcategoria">
                         Não criamos simplesmente uma Carteira Digital, e sim, um imenso Clube de Vantagens, onde você:
@@ -50,23 +50,23 @@ export default function Aplicativo(){
                 </Box>
             </Row> 
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '50vh'}} >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-light font-weight-bold title_app'>Correct Wallet (Carteira Digital)</h1>
                     <p className="description_subcategoria">
                         Armazene e realize pagamento com todos os seus cartões em um único lugar e ganhe Krats (Cashback) em toda compra.
                     </p>
                     <h2 className='text-success font-weight-bold title_app'>Não é promoção, é VANTAGEM! Não importa o valor da compra, seu Cashback está GARANTIDO!</h2>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
                     <img src={require('../../assets/carteira.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
             </Row>
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '50vh'}} >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
                     <img src={require('../../assets/pagar.png')} className="card_image_app" alt='Correct Club'/>
                     <img src={require('../../assets/token.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-light font-weight-bold title_app'>Aqui seu dinheiro vale mais!</h1>
                     <p className="description_subcategoria">
                         Realize compras com qualquer cartão de um forma prática e segura e ainda ganhe Krats (Cashback)!
@@ -80,14 +80,14 @@ export default function Aplicativo(){
                     </ul>
                 </Box>
             </Row> 
-            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '60vh'}} >
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-md-6' style={{flexDirection: 'column'}}>
+            <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.7)',height: '60vh'}} >
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-warning font-weight-bold title_app'>Divirta-se!</h1>
                     <h3 className=" text-warning description_subcategoria">
                         Dentro do APP temos uma área específica para seu entreterimento, com jogos e biscoito da sorte!
                     </h3>
                 </Box>
-                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
                     <img src={require('../../assets/biscoito_sorte.png')} className="card_image_app" alt='Correct Club'/>
                     <img src={require('../../assets/jogo.png')} className="card_image_app" alt='Correct Club'/>
                 </Box>
