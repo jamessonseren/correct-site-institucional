@@ -3,17 +3,31 @@
     width: 70% !important;
 }
 
-.description_subcategoria{
+.description_subcategoria_clube{
     font-size: 1.2rem;
 }
 
-.title_responsive{
-    font-size: 1.4rem !important;
+.title_responsive_clube{
+    font-size: 2rem !important;
+}
+
+
+@media (max-width: 1460px){
+    .height_responsive_clube{
+        height: 100vh !important;
+    }
 }
 
 @media (max-width: 769px){
     .card_image{
         height: auto;
         width: 60% !important;
+    }
+    .description_subcategoria_clube{
+        font-size: 0.8rem;
+    }
+    
+    .title_responsive_clube{
+        font-size: 1.6rem !important;
     }
 }
