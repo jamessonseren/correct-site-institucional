@@ -42,7 +42,6 @@ class Contato extends React.Component {
     submit = async () => {
         this.setState({isLoading: true})
         const {nome, email, message, empresa, tipo, cidade, phone} = this.state
-
         if(nome === '' || email === '' || message === ''){
             this.setState({err: true, isLoading: false})
             return true
@@ -52,20 +51,25 @@ class Contato extends React.Component {
             return true
         }
 
-        let url = `https://www.sisclub.com.br/ws_tradecard/sendEmail.php?nome=${nome}&email=${email}&message=${message}&empresa=${empresa}&tipo=${tipo}&phone=${phone}&cidade=${cidade}&apiKey=${apiKey}`
-        await fetch(url, { mode: "no-cors"})
-        this.setState({
-            err: false, 
-            success: true,
-            nome: '',
-            email: '',
-            message: '',
-            empresa: '',
-            tipo: 'pf',
-            isLoading: false,
-            phone : '',
-            cidade:''
-        })
+        let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/sendEmail.php?nome=${nome}&email=${email}&message=${message}&empresa=${empresa}&tipo=${tipo}&phone=${phone}&cidade=${cidade}&apiKey=${apiKey}`, {mode: 'no-cors'})
+        let result   = await response.text()
+        console.log(result)
+        if(result == 1){
+            this.setState({
+                err: false, 
+                success: true,
+                nome: '',
+                email: '',
+                message: '',
+                empresa: '',
+                tipo: 'pf',
+                isLoading: false,
+                phone : '',
+                cidade:''
+            })
+        }else{
+            this.setState({err: true, isLoading: false})
+        }
     }
 
     render() {
