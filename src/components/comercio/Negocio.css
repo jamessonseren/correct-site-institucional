@@ -1,9 +1,10 @@
 
-.title_app{
-    font-size: 1.2rem !important;
+.title_comercio{
+    font-size: 3rem !important;
 }
-.list_responsive{
-    font-size: 0.7rem !important
+
+.list_responsive_comercio{
+    font-size: 1rem !important
 }
 
 .card_image{
@@ -11,12 +12,38 @@
     width: 80% !important;
 }
 
-.button_responsive_app{
-    font-size: 0.8rem !important;
+.button_responsive_comercio{
+    font-size: 1rem !important;
 }
 
-@media (max-width: 769px){
-    .list_responsive{
-        font-size: 0.5rem !important
+@media (max-width: 1460px){
+
+    .title_comercio{
+        font-size: 2rem !important;
+    }
+    .list_responsive_comercio{
+        font-size: 0.80rem !important
+    }
+}
+
+@media (max-width: 960px){
+    .card_image{
+        height: auto;
+        width: 100% !important;
+    }
+} 
+
+@media (max-width: 767px){
+    .title_comercio{
+        font-size: 1rem !important;
+    }
+    .list_responsive_comercio{
+        font-size: 0.55rem !important
+    }
+    .button_responsive_comercio{
+        font-size: 0.7rem !important;
+    }
+    .description_subcategoria_comercio{
+        font-size: 0.8rem;
     }
 }
