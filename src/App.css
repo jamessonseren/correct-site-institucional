@@ -13,12 +13,12 @@ html, body{
   width: '100%';
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif !important;
-  background: var(--trade-dark)
+  background-color: rgba(0,0,0,0.5);
 }
 
 #root{
     height: 'auto'; 
-    background: var(--trade-dark);
+    background-color: rgba(0,0,0,0.5);
     width: '100%';
 }
 

@@ -24,7 +24,6 @@ class Tradeshop extends React.Component {
     getCities = async () => {
         let response = await fetch('https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/lista_cidades.php?apiKey=kCvWX9C0sDpPH65uKucz')
         let result   = await response.text()
-        console.log(result)
         this.setState({ cities : result.split(';') })
     }
 

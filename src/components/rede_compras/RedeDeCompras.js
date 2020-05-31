@@ -26,7 +26,7 @@ class RedeDeCompras extends React.Component {
     //Consulta estabelecimento a partir do select
     getRedeCompras = async (event) => {
         let city = event.target.value
-        let re = await fetch(`https://www.sisclub.com.br/ws_tradecard/guia.php?cidade=${city}&cifra=Y4g3niOIkGkLhmYrm1Yk`)
+        let re = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/guia.php?cidade=${city}&apiKey=Y4g3niOIkGkLhmYrm1Yk`)
         re = await re.json()
         this.setState({
             result : re
@@ -35,14 +35,14 @@ class RedeDeCompras extends React.Component {
 
     //Coleta todos parceiros virtuais
     getParceiros = async () => {
-        let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/parceiros.php?cifra=TdCGMBIGHF9JZOC6s1cr`)
+        let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/parceiros.php?apiKey=TdCGMBIGHF9JZOC6s1cr`)
         let result   = await response.text()
         this.setState({ parceiros : result.split(',') })
     }
 
     //Coleta todas as cidades disponíveis
     getCities = async () => {
-        let response = await fetch('https://www.sisclub.com.br/ws_tradecard/lista_cidades.php?cifra=kCvWX9C0sDpPH65uKucz')
+        let response = await fetch('https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/lista_cidades.php?apiKey=kCvWX9C0sDpPH65uKucz')
         let result   = await response.text()
         this.setState({ cities : result.split(';') })
     }
@@ -55,7 +55,7 @@ class RedeDeCompras extends React.Component {
 
     getParceiroInfo = async (id_estabelecimento) => {
         this.setState({isLoadingModal: true})
-        let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/parceiroInfo.php?id_estabelecimento=${id_estabelecimento}&cifra=2L6AcgOMu47bDTprQlIw`)
+        let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/parceiroInfo.php?id_estabelecimento=${id_estabelecimento}&apiKey=2L6AcgOMu47bDTprQlIw`)
         let result   = await response.text()
         this.setState({isLoadingModal: false, estabelecimento_info: result})
     };
@@ -77,12 +77,12 @@ class RedeDeCompras extends React.Component {
             let id_estabelecimento = parceiro[1]
             if(id_estabelecimento === '' || logotipo === ''){return <></>}
             return( 
-                <Image 
+                <img 
                     key={index} 
-                    onClick={() =>{ console.log(this.state.modalVisible); this.setState({modalVisible: true, logotipo: logotipo}, () => this.getParceiroInfo(id_estabelecimento)) }} 
+                    onClick={() =>{ this.setState({modalVisible: true, logotipo: logotipo}, () => this.getParceiroInfo(id_estabelecimento)) }} 
                     className="col-1 p-0 m-1" style={{cursor: 'pointer'}} 
                     src={`https://sisclub.com.br/upload_logo/${logotipo}`} 
-                    fluid 
+                    style={{cursor: 'pointer'}} 
                 /> 
             )  
         })
@@ -98,16 +98,16 @@ class RedeDeCompras extends React.Component {
             let abrangencia = estabelecimento[6]
             return (
                 <>
-                    <Row className='justify-content-between align-items-center m-0'>
-                        <MDBModalHeader className='justify-content-center'>
+                    <Row className='justify-content-around align-items-center m-0'>
+                        <MDBModalHeader className='justify-content-center no-border' >
                             {fantasia}
                         </MDBModalHeader>
-                        <IoIosClose color='black' onClick={() => this.setState({modalVisible: false}) } />
+                        <IoIosClose color='black' style={{cursor: 'pointer'}} onClick={() => this.setState({modalVisible: false}) } />
                     </Row>
                     <Row className='align-items-center justify-content-center'>
                         <Col sm={5} className='justify-content-center d-flex'> <Image src={`https://sisclub.com.br/upload_logo/${this.state.logotipo}`} /> </Col>
                         <Col sm={5} className='justify-content-center d-flex'>
-                            <Button outline color="danger" href={ecommerce}>Comprar</Button>
+                            <Button outline style={{borderRadius: '20px'}} color="info" href={ecommerce}>Comprar</Button>
                         </Col>
                     </Row>
                     <Col sm={12}>
@@ -194,7 +194,7 @@ class RedeDeCompras extends React.Component {
         return(
             <Row className='align-items-center justify-content-center'>
                 <MDBModal isOpen={this.state.modalVisible} toggle={() => this.setState({modalVisible: false})}>
-                    {this.state.isLoadingModal ? <div className="spinner-border text-light"></div> : renderEstabelecimentoInfo() }
+                    {this.state.isLoadingModal ? <div className="spinner-border text-light" style={{display: 'flex', alignSelf: 'center', margin: '1rem'}}></div> : renderEstabelecimentoInfo() }
                 </MDBModal>
 
                 <Col sm={12} className="align-items-center justify-content-center d-flex">
@@ -206,7 +206,7 @@ class RedeDeCompras extends React.Component {
 
                 { tipo === 'fisica' &&
                     <Col sm={12} className="justify-content-center d-flex align-items-center">
-                        <Form.Group className='col-sm-2 mt-3'>
+                        <Form.Group className='col-6 mt-3'>
                             <Form.Control as="select" onChange={this.getRedeCompras.bind(this)}> 
                                 <option value={'selecione'}>Selecione...</option> 
                                 {renderCities}
@@ -216,7 +216,7 @@ class RedeDeCompras extends React.Component {
                 }
 
                 { tipo === 'virtual' && <Row className='p-5 justify-content-center align-items-center'> {renderParceiros} </Row> }
-                { tipo === 'fisica' && <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center'> {renderRedeDeCompras} </Col> }
+                { tipo === 'fisica' && this.state.result.length != 0 ? <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center'> {renderRedeDeCompras} </Col> : <h3 className="text-light text-center">Selecione uma cidade</h3> }
             </Row>
         )
     }

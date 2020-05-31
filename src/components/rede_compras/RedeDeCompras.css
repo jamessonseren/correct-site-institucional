@@ -4,6 +4,16 @@
     border-bottom: 1px solid var(--trade-light);
 }
 
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    background-color: rgba(0,0,0,0.7) !important
+}
+
+.no-border{
+    border: none !important
+}
+
 
 @media (max-width: 768px){
     .column{
