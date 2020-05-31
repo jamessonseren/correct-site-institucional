@@ -15,21 +15,22 @@ class Tradeshop extends React.Component {
     //Consulta estabelecimento a partir do select
     getOfertas = async (event) => {
         let city = event.target.value
-        let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/indicador-de-ofertas.php?cidade=${city}&cifra=ZttQ0kjSJDdQ0Hv2UmP0`)
+        let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/indicador_de_ofertas.php?cidade=${city}&apiKey=ZttQ0kjSJDdQ0Hv2UmP0`)
         let result = await response.json()
         this.setState({ ofertas : result, cidade : city })
     }
 
     //Coleta todas as cidades disponíveis
     getCities = async () => {
-        let response = await fetch('https://www.sisclub.com.br/ws_tradecard/lista_cidades.php?cifra=kCvWX9C0sDpPH65uKucz')
+        let response = await fetch('https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/lista_cidades.php?apiKey=kCvWX9C0sDpPH65uKucz')
         let result   = await response.text()
+        console.log(result)
         this.setState({ cities : result.split(';') })
     }
 
     //Pega itens do TradeShop
     getShop = async () => {
-        let response = await fetch(`https://www.sisclub.com.br/ws_tradecard/tradeshop.php?cifra=HCADir2rVpBB0ROA1PxY`)
+        let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/correctShop.php?apiKey=HCADir2rVpBB0ROA1PxY`)
         let result   = await response.text()
         this.setState({ shop : result.split(',') })
     }
@@ -142,7 +143,7 @@ class Tradeshop extends React.Component {
                             renderPromos                        
                         : 
                             <Row className="justify-content-md-around mt-3 mb-3 text-light padding-sm'">
-                                <Col sm={10}>
+                                <Col sm={12}>
                                     <Row>
                                         {this.state.cidade === 'selecione' ? 
                                             <h3 className="text-light text-center">Selecione uma cidade</h3>
