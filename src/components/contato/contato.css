@@ -1,32 +1,32 @@
 .input{
-    color: #fff !important;
-    border-bottom: 1px solid #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
 }
 
 label{
-    color: #fff !important
+    color: #000 !important
 }
 
 /* ----------  Estilo do input de telefone   ----------*/
 .input-tel{
-    color: #fff !important;
-    border-color: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important;
     width: 100%;
 }
 .MuiInput-input{
-    color: #fff !important;
+    color: #000 !important;
 }
 .MuiInput-underline{
-    border-color: #fff !important;
+    border-color: #000 !important;
 }
 .MuiInput-underline:before{
-    border-bottom: 2px solid #fff !important;
+    border-bottom: 2px solid #000 !important;
 }
 .MuiInput-underline:hover:not(.Mui-disabled):before{
-    border-bottom: 2px solid #fff !important;
+    border-bottom: 2px solid #000 !important;
 }
 .MuiInput-underline:after{
-    border-bottom: 2px solid #fff !important;
+    border-bottom: 2px solid #000 !important;
 }
 /* ----------------------------------------------------*/
 .btn-club{
@@ -45,7 +45,7 @@ label{
 
 @media (max-width: 1460px){
     .height_responsive_contato{
-        height: 130vh !important
+        height: 140vh !important
     }
 }
 

@@ -142,7 +142,7 @@ class RedeDeCompras extends React.Component {
                     {imprimirRamo && <Col sm={12} className="justify-content-center ramo-title"> <h3>{item.ramo}</h3> </Col>}
                     <CollapsiblePanel className='col-12'  
                         title={
-                            <Col sm={12} className="d-flex text-light justify-content-center border-lista" >
+                            <Col sm={12} className="d-flex justify-content-center border-lista" >
                                 <Col sm={8}>
                                     <h3 className='text-underline small-font'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
@@ -158,7 +158,7 @@ class RedeDeCompras extends React.Component {
                             </Col> 
                         } 
                     >
-                        <Col sm={12} className='d-flex text-light column'>
+                        <Col sm={12} className='d-flex column'>
                             <Col lg={4} className='justify-content-center align-items-center'>
                                 { item.deal === 's' &&
                                     <div>
@@ -216,7 +216,8 @@ class RedeDeCompras extends React.Component {
                 }
 
                 { tipo === 'virtual' && <Row className='p-5 justify-content-center align-items-center'> {renderParceiros} </Row> }
-                { tipo === 'fisica' && this.state.result.length != 0 ? <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center'> {renderRedeDeCompras} </Col> : <h3 className="text-light text-center">Selecione uma cidade</h3> }
+                { tipo === 'fisica' && this.state.result.length != 0 && <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center'> {renderRedeDeCompras} </Col> }
+                { tipo === 'fisica' && this.state.result.length == 0 && <h3 className="text-light text-center">Selecione uma cidade</h3>}
             </Row>
         )
     }

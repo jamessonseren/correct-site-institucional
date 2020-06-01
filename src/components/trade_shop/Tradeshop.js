@@ -48,7 +48,7 @@ class Tradeshop extends React.Component {
             let logo = `https://sisclub.com.br/upload_logo/${logotipo}`
             if(link === undefined){return false}
             return (
-                    <Col sm={4} className='p-5 text-light'>
+                    <Col sm={4} className='p-5 '>
                         <Row className='justify-content-around align-items-center'> 
                             <a href={link} target='_blank' rel="noopener noreferrer" className='d-flex justify-content-center align-items-center mb-3'>
                                 <Image src={url} fluid style={{borderRadius: 10, width: '50%', height: 'auto'}} />
@@ -80,7 +80,7 @@ class Tradeshop extends React.Component {
             return (
 
             <Col sm={8} key={index} className='border-bottom p-4'>
-                <Row className='align-items-center justify-content-center text-light padding-sm'>
+                <Row className='align-items-center justify-content-center  padding-sm'>
                     <Col sm={4} className='align-items-center justify-content-center'>
                         <h3 className="text-justify title-sm"><strong> {item.Nome} </strong></h3>
                         <p className="text-justify">
@@ -141,13 +141,13 @@ class Tradeshop extends React.Component {
                         { this.state.ofertas.length > 0 ?
                             renderPromos                        
                         : 
-                            <Row className="justify-content-md-around mt-3 mb-3 text-light padding-sm'">
+                            <Row className="justify-content-md-around mt-3 mb-3  padding-sm'">
                                 <Col sm={12}>
                                     <Row>
                                         {this.state.cidade === 'selecione' ? 
-                                            <h3 className="text-light text-center">Selecione uma cidade</h3>
+                                            <h3 className=" text-center">Selecione uma cidade</h3>
                                         :
-                                            <h3 className="text-light text-center">Nenhuma oferta disponível em {this.state.cidade}</h3>
+                                            <h3 className=" text-center">Nenhuma oferta disponível em {this.state.cidade}</h3>
                                         }
                                     </Row>
                                 </Col>

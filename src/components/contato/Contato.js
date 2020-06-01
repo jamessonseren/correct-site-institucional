@@ -74,8 +74,8 @@ class Contato extends React.Component {
     render() {
         return(
             <Box pose={this.state.isVisible ? 'visible' : 'hidden'}>
-                <Row className='justify-content-center align-items-center d-flex padding-sm height_responsive_contato' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '90vh'}}>
-                    <Col sm={8} className="mt-5 text-light">
+                <Row className='justify-content-center align-items-center d-flex padding-sm height_responsive_contato' style={{height: '90vh'}}>
+                    <Col sm={8} className="mt-5 ">
                         <h1 className='text-center title_contato'>Entre em contato conosco!</h1>
                         <p className='text-center'>Preencha o formulário abaixo e aguarde nosso contato em breve.</p>
                     </Col>
@@ -104,7 +104,7 @@ class Contato extends React.Component {
                         <MDBInput className='input' required type="textarea" label="Mensagem" value={this.state.message} onChange={(e) => this.setState({message: e.target.value})} />
                         <button onClick={() => this.submit()} className="btn-club w-100">
                             {this.state.isLoading ? 
-                                <div className="spinner-border text-light"></div>
+                                <div className="spinner-border "></div>
                             :
                                 'Enviar'
                             }

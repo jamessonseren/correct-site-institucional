@@ -36,7 +36,7 @@ export default function SobreNos(){
                     </p>
                 </Box>
             </Row>
-            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.5)',height: '60vh'}} >
+            <Row className='d-flex justify-content-around p-5' style={{height: '60vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                     <p className="description_subcategoria">
                         Para as Pessoas Físicas que buscam <strong>praticidade, descontos, economia e vantagens</strong>, lançamos o APP Correct. Dentro do APP você pode realizar compras, pagamentos, recargas e muito mais, tudo isso na palma da sua mão.
@@ -48,7 +48,7 @@ export default function SobreNos(){
                     <img src={require('../../assets/robot_celular.png')} className="logotipo" alt='Correct Logo'/>
                 </Box>
             </Row>
-            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.7)', height: '60vh'}}>
+            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '60vh'}}>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                     <img src={require('../../assets/robot.png')} className="robot_description" alt='Correct Logo'/>
                 </Box>
