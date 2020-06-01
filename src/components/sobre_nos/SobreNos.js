@@ -32,7 +32,7 @@ export default function SobreNos(){
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-8'>
                     <p className="description">
                         A <strong><i>Correct</i></strong> surgiu no Brasil em 2018, com a finalidade de trazer o que existe de mais moderno e inovador, em um único APP. Atuamos nas áreas de Recursos Humanos (benefícios), 
-                        Compras, Pagamentos, Economia, Saúde e Bem Estar, Entreterimento, Segurança e muitas outras.
+                        Compras, Pagamentos, Economia, Saúde e Bem Estar, Entretenimento, Segurança e muitas outras.
                     </p>
                 </Box>
             </Row>

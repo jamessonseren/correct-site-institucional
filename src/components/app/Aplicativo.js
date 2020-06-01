@@ -44,7 +44,7 @@ export default function Aplicativo(){
                         <li>Faz pagamento de boletos (Contas de água, luz, etc...);</li>
                         <li>Pode armazenar e realizar pagamento com todos os seus cartões em um único lugar (Correct Wallet);</li>
                         <li>Tem opção de escolha de diversos tipos Fidelização;</li>
-                        <li>Garante seu entreterimento;</li>
+                        <li>Garante seu entretenimento;</li>
                         <li>Além de todas essas Vantagens, temos as melhores opções de <strong>Delivery</strong> com as melhores promoções.</li>
                     </ul>
                 </Box>
@@ -84,7 +84,7 @@ export default function Aplicativo(){
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='text-warning font-weight-bold title_app'>Divirta-se!</h1>
                     <h3 className=" text-warning description_subcategoria">
-                        Dentro do APP temos uma área específica para seu entreterimento, com jogos e biscoito da sorte!
+                        Dentro do APP temos uma área específica para seu entretenimento, com jogos e biscoito da sorte!
                     </h3>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
