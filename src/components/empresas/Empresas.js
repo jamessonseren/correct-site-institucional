@@ -65,24 +65,58 @@ export default function SobreNos(){
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className=" description_cartoes_empresa">
-                            Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser livre escolha, Ganho de Krats (Cashback).
+                                Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia. Com desconto em folha e sempre com ganho de Krats (Cashback) em cada compra.
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{height: '50vh',}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className=" description_cartoes_empresa">
-                                Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmentos específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
+                                Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmento(s) específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
                             </p>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                             <img src={require('../../assets/cartoes/card_convenio_reto.png')} className="card_image" alt='Cartão convênio'/>
                         </Box>
                     </Row>
-                    <div className='align-items-center justify-content-center d-flex w-100 pb-5' style={{flexDirection: 'column'}}>
-                        <h4 style={{color: '#00788b'}} className='text-center font-weight-bold empresa_beneficio_responsive'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
-                        <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
-                    </div>
+                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '110vh'}}>
+                        <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
+                            <h4 className=''>Outras Vantagens</h4>
+                            <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
+                                <li>
+                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APP Correct;
+                                </li>
+                                <li>
+                                    Compras na Rede Correct com prazo (médio de 45 dias) e sem juros;
+                                </li>
+                                <li>
+                                    Não precisa esperar o dia do pagamento para realizar suas compras;
+                                </li>
+                                <li>
+                                    Obtém facilidades nas compras sem burocracia, com tecnologia e sem consultas no SPC/Serasa;
+                                </li>
+                                <li>
+                                    Rede Correct de compras na cidade, de acordo com as necessidades dos usuários, podendo inclusive, dar sugestões de estabelecimentos comerciais de sua preferência;
+                                </li>
+                                <li>
+                                    Ganha Krats (Cashback) em todas as compras realizadas, que é creditado automaticamente em sua conta Correct;
+                                </li>
+                                <li>
+                                    Cartão Virtual, através do APP Correct, que proporciona maior segurança e facilidade nos pagamentos;
+                                </li>
+                                <li>
+                                    Possibilidade de efetuar compras, mesmo quando não estiver conectado na internet, através da tecnologia TOKEN;
+                                </li>
+                                <li>
+                                    Não tem custos: mensalidades, taxas e nem juros.
+                                </li>
+                            </ul>
+                            <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
+                                <h4 style={{color: '#00788b'}} className='text-center font-weight-bold empresa_beneficio_responsive'>Adquirindo qualquer benefício, ganhe o Correct Club!</h4>
+                                <Link to='/correct_club' className='btn-sm btn-club mt-2'>Clique para saber mais</Link>
+                            </div>
+                        </Box>
+                    </Row>
                 </div>
             :
                 <div>
@@ -107,10 +141,34 @@ export default function SobreNos(){
                             <img src={require('../../assets/cartoes/card_refeicao_reto.png')} className="card_image" alt='Cartão Vale Refeição'/>
                         </Box>
                     </Row>
-                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '70vh'}}>
+                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '120vh'}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
                             <h4 className=''>Outras Vantagens</h4>
                             <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
+                                <li>
+                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APP Correct;
+                                </li>
+                                <li>
+                                    Desburocratização e automação dos processos de convênios;
+                                </li>
+                                <li>
+                                    Padronização dos Benefícios a todos Usuários, independentemente do local de trabalho;
+                                </li>
+                                <li>
+                                    Ganha Krats (Cashback) em todas as compras realizadas, que são creditados automaticamente em sua conta Correct;
+                                </li>
+                                <li>
+                                    Vale Alimentação contempla a minimização de processos e custos, em relação a substituição da Cesta Básica, tais como: Usuários com livre escolha na aquisição dos produtos e para o Empregador a cotação, compra, armazenamento, distribuição e outros;
+                                </li>
+                                <li>
+                                    Autogestão dos processos de Convênios, permitindo que a área de Recursos Humanos tenha o controle de todos os procedimentos administrativos sobre o sistema, de forma centralizada ou não;
+                                </li>
+                                <li>
+                                    Possibilidade de efetuar compras, mesmo quando não estiver conectado na internet, através da tecnologia TOKEN;
+                                </li>
+                                <li>
+                                    Não tem custos: mensalidades, taxas e nem juros.
+                                </li>
                                 <li>
                                     Para os cartões alimentação e refeição se for de interesse do empregador, a <strong><i>Correct</i></strong> mantém registro no PAT, proporcionando a Empresa, redução de custos, isenção de encargos e incentivos fiscais.
                                 </li>

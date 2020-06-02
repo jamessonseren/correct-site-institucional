@@ -44,8 +44,8 @@ export default function Aplicativo(){
                         <li>Faz pagamento de boletos (Contas de água, luz, etc...);</li>
                         <li>Pode armazenar e realizar pagamento com todos os seus cartões em um único lugar (Correct Wallet);</li>
                         <li>Tem opção de escolha de diversos tipos Fidelização;</li>
-                        <li>Garante seu entretenimento;</li>
-                        <li>Além de todas essas Vantagens, temos as melhores opções de <strong>Delivery</strong> com as melhores promoções.</li>
+                        <li>Temos as melhores opções de <strong>Delivery</strong>, com as melhores promoções e com a Solimed proporcionando as melhores Vantagens de àrea de Saúde e Bem Estar;</li>
+                        <li>Além de tudo, garante seu entretenimento;</li>
                     </ul>
                 </Box>
             </Row> 
@@ -72,7 +72,8 @@ export default function Aplicativo(){
                         Realize compras com qualquer cartão de um forma prática e segura e ainda ganhe Krats (Cashback)!
                     </p>
                     <ul style={{listStyle: 'circle'}} className=' list_responsive'>
-                        <li>Pague com QR-Code ou TOKEN Offline (tecnologia exclusiva <strong><i>Correct</i></strong>)</li>
+                        <li>Escolha a forma de pagamento;</li>
+                        <li>Pague com QR-Code ou TOKEN Offline (tecnologia exclusiva <strong><i>Correct</i></strong>);</li>
                         <li>Realize transações financeiras (TED / DOC / Emissão de Boleto) <strong>sem custos ou taxas;</strong></li>
                         <li>Faça pagamento de boletos (Contas de água, luz, etc...);</li>
                         <li>Tenha a opção de escolha entre diversos tipos Fidelização com excelentes vantagens;</li>

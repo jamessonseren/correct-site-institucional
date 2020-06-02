@@ -16,7 +16,7 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/'>Sobre Nós</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/para_voce'>Para Você</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-trade' to='/para_empresas'>Para Empresas</Link></Nav.Link>
-                    <Nav.Link><Link className='navbar-link-trade' to='/para_seu_negocio'>Para seu Negócio</Link></Nav.Link> 
+                    <Nav.Link><Link className='navbar-link-trade' to='/para_seu_negocio'>Parceiros Comerciais</Link></Nav.Link> 
                     <Nav.Link><Link className='navbar-link-club' to='/correct_club'>Correct Club</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/correct_shop'>Correct Shop</Link></Nav.Link>

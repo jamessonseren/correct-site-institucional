@@ -38,7 +38,7 @@ export default function Aplicativos(){
                     <h2 className=' font-weight-bold title_responsive_clube'>Rede de Compras</h2>
                     <p className="description_subcategoria_clube ">
                         Aproveite toda nossa <strong>Rede de Compras Local, com Vantagens, Descontos e Sorteios exclusivos</strong> para você! 
-                        <br/>Além de todas as vantagens em sua região, disponibilizamos a <strong>Rede de Compras Online</strong>, com mais de 270 parceiros em diversos segmentos.
+                        <br/>Além de todas as vantagens em sua região, disponibilizamos a <strong>Rede de Compras Online</strong>, com mais de 160 parceiros em diversos segmentos.
                         <br/><strong>Com a <strong><i>Correct</i></strong> seu Cashback já está garantido!</strong>
                     </p>
                     <Link to='/rede_compras' className='btn-sm btn-club mt-2 text-center' >Clique para saber mais</Link>
@@ -64,7 +64,7 @@ export default function Aplicativos(){
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-4' style={{flexDirection: 'column'}}>
                     <h2 className=' font-weight-bold title_responsive_clube'>Fidelidade</h2>
                     <p className="description_subcategoria_clube ">
-                       O <strong>Clube de Vantagens</strong> disponibiliza aos Associados, vários Estabelecimentos que oferecem <strong>Fidelização</strong>, promovendo suas <strong>Vantagens</strong>. Disponibiliza também, GPS para facilidade de percurso e toda tecnologia desenvolvida para o maior conforto e facilidades nos processos de pedidos (cardápios), pagamentos e controle. Além das promoções pontuais oferecidas, o ganho sempre de Krats (Cashback)
+                       O <strong>Clube de Vantagens</strong> disponibiliza aos Associados, vários Estabelecimentos que oferecem <strong>Fidelização</strong>, promovendo suas <strong>Vantagens</strong>. Disponibiliza também, GPS para facilidade de percurso e toda tecnologia desenvolvida para o maior conforto e facilidades nos processos de pedidos (cardápios), pagamentos e controle. Além das promoções pontuais oferecidas, o ganho sempre de Krats (Cashback).
                     </p>
                 </Box>
             </Row> 
@@ -84,9 +84,9 @@ export default function Aplicativos(){
                     <img src={require('../../assets/cartoes/card_solimed.png')} className="card_image" style={{width:  '60% !important'}} alt='Saúde e bem estar'/>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-4' style={{flexDirection: 'column'}}>
-                    <h2 className=' font-weight-bold title_responsive_clube'>Saúde e Bem Estar</h2>
+                    <h2 className=' font-weight-bold title_responsive_clube'>Assistencia Social à Saude</h2>
                     <p className="description_subcategoria_clube ">
-                        Programa de vantagens para a <strong>Saúde e Bem Estar</strong>. Esse Programa <strong>objetiva a Saúde e Bem Estar do Usuário</strong>, envolvendo estabelecimentos parceiros e profissionais liberais, que proporcionam excelentes atendimentos com descontos especiais:
+                        Atendimento excelente direto e diferenciado, com preços reduzidos, em estabelecimentos e profissionais da <strong>àrea de saúde e bem estar.</strong>
                     </p>
                     <Row>
                         <ul style={{listStyle: 'circle', fontSize: '0.8rem'}} className='col-lg-4 '>
