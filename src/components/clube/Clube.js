@@ -107,7 +107,7 @@ export default function Aplicativos(){
                             <li>Outros relacionados à saúde e bem-estar</li>
                         </ul>
                     </Row>
-                    <span className='text-info'>*Consulte disponibilidade em sua região</span>
+                    <span className='text-info font-weight-bold'>*Consulte disponibilidade em sua região</span>
                 </Box>
             </Row> 
         </Container>

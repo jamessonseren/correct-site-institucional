@@ -15,7 +15,8 @@ class RedeDeCompras extends React.Component {
         estabelecimento_info: '',
         isLoadingModal: true,
         modalVisible: false,
-        tipo: 'fisica'
+        tipo: 'fisica',
+        isLoading: false
     }
 
     componentDidMount() {
@@ -25,11 +26,13 @@ class RedeDeCompras extends React.Component {
 
     //Consulta estabelecimento a partir do select
     getRedeCompras = async (event) => {
+        this.setState({isLoading: true, result: []})
         let city = event.target.value
         let re = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/guia.php?cidade=${city}&apiKey=Y4g3niOIkGkLhmYrm1Yk`)
         re = await re.json()
         this.setState({
-            result : re
+            result : re,
+            isLoading: false
         })
     }
 
@@ -61,7 +64,7 @@ class RedeDeCompras extends React.Component {
     };
     
     render() {
-        const {result, tipo} = this.state
+        const {result, tipo, isLoading} = this.state
         let prevRamo = '';
 
         const renderCities = this.state.cities.map((item, index) => {
@@ -75,7 +78,7 @@ class RedeDeCompras extends React.Component {
             let parceiro = item.split(';')
             let logotipo = parceiro[0]
             let id_estabelecimento = parceiro[1]
-            if(id_estabelecimento === '' || logotipo === ''){return <></>}
+            if(id_estabelecimento === '' || logotipo === '' || logotipo === 'LOGO_CENTAURO.jpg'){return <></>}
             return( 
                 <img 
                     key={index} 
@@ -107,7 +110,7 @@ class RedeDeCompras extends React.Component {
                     <Row className='align-items-center justify-content-center'>
                         <Col sm={5} className='justify-content-center d-flex'> <Image src={`https://sisclub.com.br/upload_logo/${this.state.logotipo}`} /> </Col>
                         <Col sm={5} className='justify-content-center d-flex'>
-                            <Button outline style={{borderRadius: '20px'}} color="info" href={ecommerce}>Comprar</Button>
+                            <a style={{borderRadius: '20px'}} color="btn btn-info" href={ecommerce} target='_blank' >Comprar</a>
                         </Col>
                     </Row>
                     <Col sm={12}>
@@ -137,16 +140,18 @@ class RedeDeCompras extends React.Component {
                 var imprimirRamo = false
             }
             prevRamo = item.ramo
+            var link = `tel:${item.Telefone}`
             return (
-                <Row>
-                    {imprimirRamo && <Col sm={12} className="justify-content-center ramo-title"> <h3>{item.ramo}</h3> </Col>}
-                    <CollapsiblePanel className='col-12'  
+                <Row className='border-lista' style={{cursor: 'pointer'}} >
+                    {imprimirRamo && <Col sm={12} className="justify-content-center text-light font-weight-bold" style={{backgroundColor: "#00788C"}}> <h3>{item.ramo}</h3> </Col>}
+                    <CollapsiblePanel className='col-12 border-lista' 
                         title={
-                            <Col sm={12} className="d-flex justify-content-center border-lista" >
+                            <Col sm={12} className="d-flex justify-content-center" >
                                 <Col sm={8}>
                                     <h3 className='text-underline small-font'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
-                                    <p className='mb-0'>{item.Telefone}</p>
+                                    <a href={link} target='_blank' style={{width: '20%'}}><p style={{width: '20%'}} className='mb-0'>{item.Telefone}</p></a>
+                                    <p className='text-danger'>Clique para saber mais</p>
                                 </Col>
                                 <Col className='align-items-center justify-content-end row' sm={4}>
                                     {(item.deal === 's') && <Image src="https://www.starkclub.com.br/new/img2/StarkDeal.png" className='col-6' fluid/>}
@@ -194,7 +199,7 @@ class RedeDeCompras extends React.Component {
         return(
             <Row className='align-items-center justify-content-center'>
                 <MDBModal isOpen={this.state.modalVisible} toggle={() => this.setState({modalVisible: false})}>
-                    {this.state.isLoadingModal ? <div className="spinner-border text-light" style={{display: 'flex', alignSelf: 'center', margin: '1rem'}}></div> : renderEstabelecimentoInfo() }
+                    {this.state.isLoadingModal ? <div className="spinner-border text-info" style={{display: 'flex', alignSelf: 'center', margin: '1rem'}}></div> : renderEstabelecimentoInfo() }
                 </MDBModal>
 
                 <Col sm={12} className="align-items-center justify-content-center d-flex">
@@ -216,8 +221,13 @@ class RedeDeCompras extends React.Component {
                 }
 
                 { tipo === 'virtual' && <Row className='p-5 justify-content-center align-items-center'> {renderParceiros} </Row> }
-                { tipo === 'fisica' && this.state.result.length != 0 && <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center'> {renderRedeDeCompras} </Col> }
-                { tipo === 'fisica' && this.state.result.length == 0 && <h3 className="text-light text-center">Selecione uma cidade</h3>}
+                { tipo === 'fisica' && this.state.result.length != 0 &&  <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center col-sm-10'> {renderRedeDeCompras} </Col> }
+                { tipo === 'fisica' && this.state.result.length == 0 && 
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                        <h3 className="text-center">Selecione uma cidade</h3>
+                        {isLoading && <div className="spinner-border text-center text-info" style={{display: 'flex', alignSelf: 'center', margin: '1rem'}}></div>}
+                    </div>
+                }
             </Row>
         )
     }
