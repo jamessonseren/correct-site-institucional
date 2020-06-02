@@ -12,9 +12,7 @@ export default function Footer() {
             </Col>
             <Col lg={8} className="justify-content-around align-items-center d-flex" style={{flexDirection: 'column'}}>
                 <Row className='text-light align-items-center mb-2'>
-                    <Link className='navbar-link-trade mr-2'>Privacidade</Link>
-                    |
-                    <Link className='navbar-link-trade ml-2 mr-2'>Segurança</Link>
+                    <a className='navbar-link-trade mr-2' href='https://www.correct.com.br/termos/POLITICA_DE_PRIVACIDADE.pdf'>Segurança e Privacidade</a>
                     |
                     <Link className='navbar-link-trade ml-2' to='/contato'>Contato</Link>
                 </Row>
