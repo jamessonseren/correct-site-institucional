@@ -38,14 +38,12 @@ class Tradeshop extends React.Component {
         return this.state.shop.map(( produto, index) => {
             let item = produto.split(';')
             if(item === '' && item === null && item === undefined){return true}
-            let logotipo      = item[0]
             let descricao     = item[1]
             let preco         = item[2]
             let imagem        = item[3] 
             let link          = item[4]
             let preco_inicio  = item[5]
             let url = `https://starkclub.com.br/club/uploadIMG/${imagem}`
-            let logo = `https://sisclub.com.br/upload_logo/${logotipo}`
             if(link === undefined){return false}
             return (
                     <Col sm={4} className='p-5 '>

@@ -81,6 +81,7 @@ class RedeDeCompras extends React.Component {
             if(id_estabelecimento === '' || logotipo === '' || logotipo === 'LOGO_CENTAURO.jpg'){return <></>}
             return( 
                 <img 
+                    alt="Logo Estabelecimento"
                     key={index} 
                     onClick={() =>{ this.setState({modalVisible: true, logotipo: logotipo}, () => this.getParceiroInfo(id_estabelecimento)) }} 
                     className="col-1 p-0 m-1" style={{cursor: 'pointer'}} 
@@ -110,7 +111,7 @@ class RedeDeCompras extends React.Component {
                     <Row className='align-items-center justify-content-center'>
                         <Col sm={5} className='justify-content-center d-flex'> <Image src={`https://sisclub.com.br/upload_logo/${this.state.logotipo}`} /> </Col>
                         <Col sm={5} className='justify-content-center d-flex'>
-                            <a style={{borderRadius: '20px'}} color="btn btn-info" href={ecommerce} target='_blank' >Comprar</a>
+                            <a style={{borderRadius: '20px'}} color="btn btn-info" href={ecommerce} target='_blank' rel="noopener noreferrer" >Comprar</a>
                         </Col>
                     </Row>
                     <Col sm={12}>
@@ -150,7 +151,7 @@ class RedeDeCompras extends React.Component {
                                 <Col sm={8}>
                                     <h3 className='text-underline small-font'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
-                                    <a href={link} target='_blank' style={{width: '20%'}}><p style={{width: '20%'}} className='mb-0'>{item.Telefone}</p></a>
+                                    <a href={link} target='_blank' rel="noopener noreferrer" style={{width: '20%'}}><p style={{width: '20%'}} className='mb-0'>{item.Telefone}</p></a>
                                     <p className='text-danger'>Clique para saber mais</p>
                                 </Col>
                                 <Col className='align-items-center justify-content-end row' sm={4}>
@@ -221,8 +222,8 @@ class RedeDeCompras extends React.Component {
                 }
 
                 { tipo === 'virtual' && <Row className='p-5 justify-content-center align-items-center'> {renderParceiros} </Row> }
-                { tipo === 'fisica' && this.state.result.length != 0 &&  <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center col-sm-10'> {renderRedeDeCompras} </Col> }
-                { tipo === 'fisica' && this.state.result.length == 0 && 
+                { tipo === 'fisica' && this.state.result.length !== 0 &&  <Col sm={8} className='p-5 justify-content-center align-items-center align-self-center col-sm-10'> {renderRedeDeCompras} </Col> }
+                { tipo === 'fisica' && this.state.result.length === 0 && 
                     <div style={{display: 'flex', flexDirection: 'column'}}>
                         <h3 className="text-center">Selecione uma cidade</h3>
                         {isLoading && <div className="spinner-border text-center text-info" style={{display: 'flex', alignSelf: 'center', margin: '1rem'}}></div>}

@@ -53,7 +53,7 @@ class Contato extends React.Component {
 
         let response = await fetch(`https://www.correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/sendEmail.php?nome=${nome}&email=${email}&message=${message}&empresa=${empresa}&tipo=${tipo}&phone=${phone}&cidade=${cidade}&apiKey=${apiKey}`, {mode: 'no-cors'})
         let result   = await response.text()
-        if(result == 1){
+        if(result === 1){
             this.setState({
                 err: false, 
                 success: true,
