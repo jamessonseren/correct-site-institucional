@@ -54,7 +54,7 @@ export default function SobreNos(){
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                     <p className="description_subcategoria">
-                        Para o mundo Corporativo, a <strong><i>Correct</i></strong> lança no Mercado Brasileiro uma grande novidade na área de Recursos Humanos (Benefícios), como <strong>Adiantamento Salárial, Vale Alimentação, Refeição, Combustível, Programas de Saúde e outros</strong>. Tudo isso em uma plataforma de autogestão.
+                        Para o mundo Corporativo, a <strong><i>Correct</i></strong> lança no Mercado Brasileiro uma grande novidade na área de Recursos Humanos (Benefícios), como <strong>Adiantamento Salarial, Vale Alimentação, Refeição, Combustível, Programas de Saúde e outros</strong>. Tudo isso em uma plataforma de autogestão.
                         <br/><strong>Você escolhe como quer trabalhar!</strong>
                     </p>
                     <Link to='/para_empresas' onclick={() => window.scrollTo(0, 0)} className='w-100'><button className='btn-sm w-100 btn-club'>Saiba mais</button> </Link>

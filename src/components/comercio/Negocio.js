@@ -66,7 +66,7 @@ export default function Negocio(){
                         Facilidade de <strong>recebimento através do sistema de repasse</strong> (depósitos e transferências diretas na conta Correct);
                       </li>
                       <li>
-                        Possibilidade de escolhas da <strong>técnologia para recebimento das vendas</strong>, tais como:
+                        Possibilidade de escolhas da <strong>tecnologia para recebimento das vendas</strong>, tais como:
                         <ul style={{listStyle: "disc"}}>
                           <li>Siscorrect;</li>
                           <li>QR Code e TOKEN Offline;</li>

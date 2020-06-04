@@ -61,18 +61,18 @@ export default function SobreNos(){
                     {/* PÓS PAGOS */}
                     <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '50vh'}} >
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
-                            <img src={require('../../assets/cartoes/card_adiantamento_reto.png')} className="card_image" alt='Cartão de adiantamento salárial'/>
+                            <img src={require('../../assets/cartoes/card_adiantamento_reto.png')} className="card_image" alt='Cartão de adiantamento salarial'/>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className=" description_cartoes_empresa">
-                                Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia. Com desconto em folha e sempre com ganho de Krats (Cashback) em cada compra.
+                                Com limite predefinido, que possibilita atender as necessidades de compras do dia a dia. Com desconto em folha e sempre com ganho de Krats (Cashback) em cada compra.
                             </p>
                         </Box>
                     </Row>
                     <Row className='d-flex justify-content-around p-5' style={{height: '70vh',}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className=" description_cartoes_empresa">
-                                Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmento(s) específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
+                                Com limite predefinido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmento(s) específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
                             </p>
                         </Box>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
