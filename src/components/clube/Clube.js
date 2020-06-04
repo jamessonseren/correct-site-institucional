@@ -84,9 +84,9 @@ export default function Aplicativos(){
                     <img src={require('../../assets/cartoes/card_solimed.png')} className="card_image" style={{width:  '60% !important'}} alt='Saúde e bem estar'/>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-4' style={{flexDirection: 'column'}}>
-                    <h2 className=' font-weight-bold title_responsive_clube'>Assistencia Social à Saude</h2>
+                    <h2 className=' font-weight-bold title_responsive_clube'>Assistência Social à Saúde</h2>
                     <p className="description_subcategoria_clube ">
-                        Atendimento excelente direto e diferenciado, com preços reduzidos, em estabelecimentos e profissionais da <strong>àrea de saúde e bem estar.</strong>
+                        Atendimento excelente direto e diferenciado, com preços reduzidos, em estabelecimentos e profissionais da <strong>área de saúde e bem estar.</strong>
                     </p>
                     <Row>
                         <ul style={{listStyle: 'circle', fontSize: '0.8rem'}} className='col-lg-4 '>

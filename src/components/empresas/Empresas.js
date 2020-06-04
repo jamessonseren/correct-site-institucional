@@ -69,7 +69,7 @@ export default function SobreNos(){
                             </p>
                         </Box>
                     </Row>
-                    <Row className='d-flex justify-content-around p-5' style={{height: '50vh',}}>
+                    <Row className='d-flex justify-content-around p-5' style={{height: '70vh',}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-4'>
                             <p className=" description_cartoes_empresa">
                                 Com limite pré-definido, que possibilita atender as necessidades de compras do dia a dia do Usuário, em segmento(s) específico(s), determinado(s) pela Gestão, com desconto em folha de pagamento. Ex: Farmácias, Oficinas de Motos ou qualquer outro segmento, podendo ainda ser de livre escolha. Ganho de Krats (Cashback).
@@ -79,7 +79,7 @@ export default function SobreNos(){
                             <img src={require('../../assets/cartoes/card_convenio_reto.png')} className="card_image" alt='Cartão convênio'/>
                         </Box>
                     </Row>
-                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '110vh'}}>
+                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '130vh'}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
                             <h4 className=''>Outras Vantagens</h4>
                             <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
