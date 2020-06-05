@@ -84,9 +84,9 @@ export default function Aplicativo(){
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.1)',height: '50vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className=' font-weight-bold title_app'>Recargas de todos os tipos!</h1>
-                    <h2 className='text-success font-weight-bold title_app'>Recarregue sem sair de casa e ainda ganhe Krats (Cashback)!</h2>
+                    <h2 className='text-info font-weight-bold title_app'>Recarregue sem sair de casa e ainda ganhe Krats (Cashback)!</h2>
                     <p className="description_subcategoria">
-                        Dentro do APP você poderá realizar recargas de celular, Uber, Google Play, Netflix, Spotify e muitos outros!
+                        Dentro do APP você poderá realizar <strong>Recargas de celular, Uber, Google Play, Netflix, Spotify e muitos outros!</strong>
                     </p>
                 </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-lg-4'>
