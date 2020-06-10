@@ -38,7 +38,7 @@ export default function Negocio(){
                     <p className="description_subcategoria_comercio ">
                         Para os Parceiros que compõem a Rede de Compras com Lojas Físicas e/ou Virtuais, a <strong><i>Correct</i></strong>, disponibiliza um sistema para administração e controle financeiro, sem custos e taxas, para melhor controle das operações comerciais, recebimentos de vendas, transferências, pagamentos de contas e outras.
                     </p>
-                    <Link className='btn-sm btn-club mt-2 text-center button_responsive_comercio' >Clique para baixar o nosso módulo de vendas</Link>
+                    <a href='http://adm.correct.com.br' target='_blank' className='btn-sm btn-club mt-2 text-center button_responsive_comercio' >Clique para acessar a Área Administrativa</a>
                 </Box>
             </Row> 
             <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)',height: '100vh'}} >
