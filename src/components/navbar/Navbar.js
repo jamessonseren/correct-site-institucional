@@ -21,7 +21,7 @@ export default function NavBar(){
                     <Nav.Link><Link className='navbar-link-trade' to='/correct_shop'>Correct Shop</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/rede_compras'>Rede de compras</Link></Nav.Link>
                     <Nav.Link><Link className='navbar-link-trade' to='/contato'>Contato</Link></Nav.Link>
-                    {/* <a style={{backgroundColor: '#00788c', color: 'white', borderWidth: 0, padding: 10, outline: 'none', fontSize: '0.8rem', borderRadius: '20px', textAlign: 'center'}} className='font-weight-bold'>Baixe o APP</a> */}
+                    <a rel="noopener noreferrer" target='_blank' href='https://play.google.com/store/apps/details?id=com.correct_app' style={{backgroundColor: '#00788c', color: 'white', borderWidth: 0, padding: 10, outline: 'none', fontSize: '0.8rem', borderRadius: '20px', textAlign: 'center'}} className='font-weight-bold'>Baixe o APP</a>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
