@@ -71,7 +71,11 @@ class Tradeshop extends React.Component {
             let city = item.split(",")
             let cidade = city[0]
             let estado = city[1]
-            return <option key={index} value={cidade}>{`${cidade} - ${estado}`}</option> 
+            if(cidade === ''){
+                return true
+            }else{
+                return <option key={index} value={cidade}>{`${cidade} - ${estado}`}</option> 
+            }
         })
 
         const renderPromos = this.state.ofertas.map((item,index) => {

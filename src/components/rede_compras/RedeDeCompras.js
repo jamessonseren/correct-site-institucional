@@ -50,11 +50,14 @@ class RedeDeCompras extends React.Component {
         this.setState({ cities : result.split(';') })
     }
 
-    //Lista as bandeiras autorizadas
-    renderBandeiras = (itens) => itens.split('§').map(place => <li> {place} </li>)
-
     //Lista as vantagens oferecidas para club
-    renderVantagens = (itens) => itens.split(';').map(place => <li className="label"> {place} </li>)
+    renderVantagens = (itens) => itens.split(';').map(place => {
+        if(place === ''){
+            return true
+        }else{
+            return <li className="label"> {place} </li>
+        }
+    })
 
     getParceiroInfo = async (id_estabelecimento) => {
         this.setState({isLoadingModal: true})
@@ -71,7 +74,11 @@ class RedeDeCompras extends React.Component {
             let city = item.split(",")
             let cidade = city[0]
             let estado = city[1]
-            return <option key={index} value={cidade}>{`${cidade} - ${estado}`}</option> 
+            if(cidade === ''){
+                return true
+            }else{
+                return <option key={index} value={cidade}>{`${cidade} - ${estado}`}</option> 
+            }
         })
 
         const renderParceiros = this.state.parceiros.map((item, index) =>{
@@ -155,27 +162,16 @@ class RedeDeCompras extends React.Component {
                                     <p className='text-danger'>Clique para saber mais</p>
                                 </Col>
                                 <Col className='align-items-center justify-content-end row' sm={4}>
-                                    {(item.deal === 's') && <Image src="https://www.starkclub.com.br/new/img2/StarkDeal.png" className='col-6' fluid/>}
-                                    {(item.club === 's') && <Image src="https://www.starkclub.com.br/new/img2/StarkClub.png" className='col-6' fluid/>}
-                                    {(item.alim === 's') && <Image src="https://www.starkclub.com.br/new/img2/starkticket.png" className='col-6' fluid/>}
-                                    {(item.refei === 's') && <Image src="https://www.starkclub.com.br/new/img2/starkticketAl.png" className='col-6' fluid/>}
-                                    {(item.qrcode === 1) && <Image src="https://www.starkclub.com.br/new/img2/venda_qrcode_vermelho.png" className='col-6' fluid/>}
+                                    {(item.deal === 's') && <Image src="https://www.sisclub.com.br/images/adiantamento.png" className='col-6' fluid/>}
+                                    {(item.club === 's') && <Image src="https://www.sisclub.com.br/images/correct_club.png" className='col-6' fluid/>}
+                                    {(item.alim === 's') && <Image src="https://www.sisclub.com.br/images/refeicao.png" className='col-6' fluid/>}
+                                    {(item.refei === 's') && <Image src="https://www.sisclub.com.br/images/alimentacao.png" className='col-6' fluid/>}
                                 </Col>
                             </Col> 
                         } 
                     >
                         <Col sm={12} className='d-flex column'>
-                            <Col lg={4} className='justify-content-center align-items-center'>
-                                { item.deal === 's' &&
-                                    <div>
-                                        <h3><u>Adiantamento Salarial</u></h3>
-                                        <ul>
-                                            {this.renderBandeiras(item.bandeiras)}
-                                        </ul>
-                                    </div>
-                                }
-                            </Col>
-                            <Col lg={4} className='justify-content-center align-items-center'>
+                            <Col lg={6} className='justify-content-center align-items-center'>
                                 { item.club === 's' &&
                                     <div>
                                         <h3><u>Vantagens</u></h3>
@@ -183,7 +179,7 @@ class RedeDeCompras extends React.Component {
                                     </div>
                                 }
                             </Col>
-                            <Col lg={4} className='justify-content-center align-items-center'>
+                            <Col lg={6} className='justify-content-center align-items-center'>
                                 <div>
                                     <h3><u>Endereço</u></h3>
                                     <p className="label">{item.logradouro}, {item.numero} - {item.bairro}</p>
