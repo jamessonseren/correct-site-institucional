@@ -47,6 +47,7 @@ export default function Aplicativo(){
                         <li>Temos as melhores opções de <strong>Delivery</strong>, com as melhores promoções e com a Solimed proporcionando as melhores Vantagens de área de Saúde e Bem Estar;</li>
                         <li>Além de tudo, garante seu entretenimento;</li>
                     </ul>
+                    <a href='https://play.google.com/store/apps/details?id=com.correct_app' target='_blank' rel="noopener noreferrer" className='btn-sm btn-club mt-2 button_responsive_app font-weight-bold text-center'>BAIXE O APP</a>  
                 </Box>
             </Row> 
             <Row className='d-flex justify-content-around p-5 height_responsive' style={{backgroundColor: 'rgba(0,0,0,0.1)',height: '50vh'}} >
