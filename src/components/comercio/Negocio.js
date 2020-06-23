@@ -45,7 +45,7 @@ export default function Negocio(){
                     <h2 className=' font-weight-bold title_comercio'>Outras vantagens para os nossos Parceiros</h2>
                     <ul style={{listStyle: 'circle'}} className=' list_responsive_comercio'>
                       <li>
-                        Ganha um <strong>Clube de Vantagens de Presente</strong>, podendo utilizar vários recursos sem taxas e juros, através do <strong>APP Correct;</strong>
+                        Ganha um <strong>Clube de Vantagens de Presente</strong>, podendo utilizar vários recursos sem taxas e juros, através do <strong>APPCorrect;</strong>
                       </li>
                       <li>
                         Fidelização dos Usuários <strong>Correct;</strong>
@@ -79,7 +79,7 @@ export default function Negocio(){
                         Possibilidade de adesão aos produtos <strong>Fidelidade e Delivery;</strong>
                       </li>
                       <li>Correct Shop, que é uma <strong>ferramenta de marketing, para divulgação de ofertas, promoções, realização de sorteios e descontos especiais aos Usuários</strong>. É a permissão que a <strong>Correct dá aos seus Parceiros, para a comunicação direta com os Usuários</strong>.</li>
-                      <li>Correct Business - Cartão criado para os Parceiros, que possuem "créditos a receber", originados pelas vendas com Cartões de Benefícios ou de Créditos, através do nosso APP Correct. Sem taxas de antecipação de crédito e ainda ganha Krats (Cashback) na utilização.</li>
+                      <li>Correct Business - Cartão criado para os Parceiros, que possuem "créditos a receber", originados pelas vendas com Cartões de Benefícios ou de Créditos, através do nosso APPCorrect. Sem taxas de antecipação de crédito e ainda ganha Krats (Cashback) na utilização.</li>
                     </ul>
                 </Box>
             </Row>

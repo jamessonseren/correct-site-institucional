@@ -39,7 +39,7 @@ export default function SobreNos(){
             <Row className='d-flex justify-content-around p-5' style={{height: '60vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center row col-md-4'>
                     <p className="description_subcategoria">
-                        Para as Pessoas Físicas que buscam <strong>praticidade, descontos, economia e vantagens</strong>, lançamos o APP Correct. Dentro do APP você pode realizar compras, pagamentos, recargas e muito mais, tudo isso na palma da sua mão.
+                        Para as Pessoas Físicas que buscam <strong>praticidade, descontos, economia e vantagens</strong>, lançamos o APPCorrect. Dentro do APP você pode realizar compras, pagamentos, recargas e muito mais, tudo isso na palma da sua mão.
                         <br/><strong>Aqui seu Cashback é garantido em toda compra!</strong>
                     </p>
                     <Link to='/para_voce' className='w-100'><button className='btn-sm w-100 btn-club'>Saiba mais</button> </Link>

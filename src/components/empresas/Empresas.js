@@ -84,7 +84,7 @@ export default function SobreNos(){
                             <h4 className=''>Outras Vantagens</h4>
                             <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
                                 <li>
-                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APP Correct;
+                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APPCorrect;
                                 </li>
                                 <li>
                                     Compras na Rede Correct com prazo (médio de 45 dias) e sem juros;
@@ -102,7 +102,7 @@ export default function SobreNos(){
                                     Ganha Krats (Cashback) em todas as compras realizadas, que é creditado automaticamente em sua conta Correct;
                                 </li>
                                 <li>
-                                    Cartão Virtual, através do APP Correct, que proporciona maior segurança e facilidade nos pagamentos;
+                                    Cartão Virtual, através do APPCorrect, que proporciona maior segurança e facilidade nos pagamentos;
                                 </li>
                                 <li>
                                     Possibilidade de efetuar compras, mesmo quando não estiver conectado na internet, através da tecnologia TOKEN;
@@ -146,7 +146,7 @@ export default function SobreNos(){
                             <h4 className=''>Outras Vantagens</h4>
                             <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
                                 <li>
-                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APP Correct;
+                                    Ganha um Clube de Vantagens de presente, podendo utilizar vários recursos sem taxas e juros, através do APPCorrect;
                                 </li>
                                 <li>
                                     Desburocratização e automação dos processos de convênios;
