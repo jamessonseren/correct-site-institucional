@@ -81,6 +81,7 @@ export default function Negocio(){
                       <li>Correct Shop, que é uma <strong>ferramenta de marketing, para divulgação de ofertas, promoções, realização de sorteios e descontos especiais aos Usuários</strong>. É a permissão que a <strong>Correct dá aos seus Parceiros, para a comunicação direta com os Usuários</strong>.</li>
                       <li>Correct Business - Cartão criado para os Parceiros, que possuem "créditos a receber", originados pelas vendas com Cartões de Benefícios ou de Créditos, através do nosso APPCorrect. Sem taxas de antecipação de crédito e ainda ganha Krats (Cashback) na utilização.</li>
                     </ul>
+                    <a rel="noopener noreferrer" href='http://correct.com.br/modulo_vendas/correct-setup.exe' target='_blank' className='btn-sm btn-club mt-2 text-center button_responsive_comercio' >Baixe o módulo de vendas!</a>
                 </Box>
             </Row>
         </Container>
