@@ -40,7 +40,7 @@ export default function Negocio(){
                     <a rel="noopener noreferrer" href='http://adm.correct.com.br' target='_blank' className='btn-sm btn-club mt-2 text-center button_responsive_comercio' >Clique para acessar a Área Administrativa</a>
                 </Box>
             </Row> 
-            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)',height: '100vh'}} >
+            <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)',height: '115vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-8' style={{flexDirection: 'column'}}>
                     <h2 className=' font-weight-bold title_comercio'>Outras vantagens para os nossos Parceiros</h2>
                     <ul style={{listStyle: 'circle'}} className=' list_responsive_comercio'>
