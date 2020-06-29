@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Row, Container} from 'react-bootstrap'
+import {Row, Container, Col} from 'react-bootstrap'
 import posed from 'react-pose'
 import './Negocio.css'
+import { MDBModal, MDBModalHeader, MDBInput, MDBAlert } from 'mdbreact';
+import {IoIosClose} from 'react-icons/io'
+import MuiPhoneNumber from "material-ui-phone-number";
 
 const Box = posed.div({
     visible: { 
@@ -18,17 +21,94 @@ const Box = posed.div({
     }
 });
 
+const apiKey = "G8icTPGPQJhd0uMHRqaE";
+
 export default function Negocio(){
 
     const [isVisible, setVisible] = useState(false)
-    
+    const [modalVisible, setModalVisible] = useState(false)
+    const [err, setErr] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [fantasia, setFantasia] = useState('')
+    const [cnpj, setCNPJ] = useState('')
+    const [telefone, setTelefone] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+
+
     useEffect(() => {
         setVisible(true)
     }, [])
 
+    const formatarCNPJ = (cnpj_input) => {
+      console.log(cnpj_input.length)
+      if(cnpj_input.length <= 14){
+        return cnpj_input.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3/\$4-\$5");
+      }else{
+        return cnpj
+      }
+    }
+
+    const sendEmail = async () => {
+      setLoading(true)
+      if(email === '' || fantasia === '' || telefone === '' || cnpj === '' || message === ''){
+        setErr(true)
+      }else{  
+        await fetch(`https://correct.com.br/B5IxozrETYlXSNXj81PvDtFjVb531fVl55hNEDLK/sendEmailComercio.php?fantasia=${fantasia}&email=${email}&telefone=${telefone}&cnpj=${cnpj}&message=${message}&apiKey=${apiKey}`, {mode: 'no-cors'})
+        setFantasia('')
+        setCNPJ('')
+        setTelefone('')
+        setEmail('')
+        setMessage('')
+        setErr(false)
+        setSuccess(true)
+      }
+      setLoading(false)
+    }
+
     return(
         <Container fluid={true} className='p-0 m-0'  style={{overflow: 'hidden'}}>
-            <Row className='d-flex justify-content-around p-5' style={{height: '75vh'}} >
+            <MDBModal isOpen={modalVisible} toggle={() => {setModalVisible(false); setSuccess(false); setErr(false)}}>
+              <Row className='justify-content-around align-items-center m-0'>
+                <MDBModalHeader className='justify-content-center no-border' > Seja um Parceiro Correct! </MDBModalHeader>
+                <IoIosClose color='black' style={{cursor: 'pointer'}} onClick={() => {setModalVisible(false); setSuccess(false); setErr(false)} } />
+              </Row>
+              <Row className='align-items-center justify-content-center'>
+                  <Col sm={12} className='text-center font-weight-bold justify-content-center d-flex'>
+                    <h5>Preencha essas informações para se tornar um Parceiro</h5>
+                  </Col>
+                  <MDBInput label="Fantasia" className='input' required value={fantasia} onChange={(e) => setFantasia(e.target.value) } />
+                  <MDBInput label="E-mail" className='input' type='email' required value={email} onChange={(e) => setEmail(e.target.value) } />
+                  <MDBInput label="CNPJ" className='input' required value={cnpj} style={{paddingTop: 0}} maxlenght={17} onChange={(e) => setCNPJ(formatarCNPJ(e.target.value)) } />
+                  <MuiPhoneNumber
+                    name="phone"
+                    label="Telefone"
+                    data-cy="user-phone"
+                    defaultCountry={"br"}
+                    className='input-tel'
+                    value={telefone}
+                    onChange={value => setTelefone(value) }
+                  />          
+                  <MDBInput className='input' required type="textarea" label="Mensagem" value={message} onChange={(e) => setMessage(e.target.value)} />
+                  <Col sm={12} className='text-center font-weight-bold d-flex'>
+                    <button onClick={() => sendEmail()} target='_blank' style={{color: 'white', width: '100%', marginLeft: '2rem', marginRight: '2rem'}} className=' mt-3 mb-3 btn-sm btn-club text-center button_responsive_comercio' >
+                      {loading ? 
+                        <div className="spinner-border "></div>
+                      : 
+                        'Enviar!'
+                      }
+                    </button>
+                  </Col>
+                  {err && <MDBAlert color='primary' className='mt-3'> Preencha todos os campos </MDBAlert> }
+                  {success && <MDBAlert color='success' className='mt-3'> Mensagem enviada com sucesso! </MDBAlert> }
+              </Row>          
+            </MDBModal>
+            <Row className='d-flex justify-content-around p-5' style={{height: '60vh'}} >
+                <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center d-flex col-lg-12'>
+                  <button onClick={() => setModalVisible(true)} target='_blank' style={{color: 'white'}} className='btn-sm btn-club text-center button_responsive_comercio' >Clique aqui para se tornar um parceiro!</button>
+                </Box>
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center d-flex col-lg-4'>
                     <img src={require('../../assets/app_desktop.png')} className="card_image" alt='Correct Club'/>
                 </Box>

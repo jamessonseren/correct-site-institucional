@@ -16,6 +16,16 @@
     font-size: 1rem !important;
 }
 
+.md-form, .input-tel{
+    padding: 0 !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important; 
+}
+
 @media (max-width: 1460px){
 
     .title_comercio{
