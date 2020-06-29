@@ -35,7 +35,7 @@ export default function Negocio(){
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center col-lg-4' style={{flexDirection: 'column'}}>
                     <h2 className=' font-weight-bold title_comercio'>Parceiros</h2>
                     <p className="description_subcategoria_comercio ">
-                        Para os Parceiros que compõem a Rede de Compras com Lojas Físicas e/ou Virtuais, a <strong><i>Correct</i></strong>, disponibiliza um sistema para administração e controle financeiro, sem custos e taxas, para melhor controle das operações comerciais, recebimentos de vendas, transferências, pagamentos de contas e outras.
+                        Para os Parceiros que compõem a Rede de Compras com Lojas Físicas e/ou Virtuais, a <strong><i>Correct</i></strong>, disponibiliza um sistema para administração e controle financeiro, para melhor controle das operações comerciais, recebimentos de vendas, transferências, pagamentos de contas e outras.
                     </p>
                     <a rel="noopener noreferrer" href='http://adm.correct.com.br' target='_blank' className='btn-sm btn-club mt-2 text-center button_responsive_comercio' >Clique para acessar a Área Administrativa</a>
                 </Box>
