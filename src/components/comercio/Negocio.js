@@ -105,7 +105,7 @@ export default function Negocio(){
                   {success && <MDBAlert color='success' className='mt-3'> Mensagem enviada com sucesso! </MDBAlert> }
               </Row>          
             </MDBModal>
-            <Row className='d-flex justify-content-around p-5' style={{height: '60vh'}} >
+            <Row className='d-flex justify-content-around p-5' style={{height: '70vh'}} >
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center justify-content-center d-flex col-lg-12'>
                   <button onClick={() => setModalVisible(true)} target='_blank' style={{color: 'white'}} className='btn-sm btn-club text-center button_responsive_comercio' >Clique aqui para se tornar um parceiro!</button>
                 </Box>

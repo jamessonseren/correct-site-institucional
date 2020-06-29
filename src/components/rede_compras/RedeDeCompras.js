@@ -154,20 +154,20 @@ class RedeDeCompras extends React.Component {
                     {imprimirRamo && <Col sm={12} className="justify-content-center text-light font-weight-bold" style={{backgroundColor: "#00788C"}}> <h3>{item.ramo}</h3> </Col>}
                     <CollapsiblePanel className='col-12 border-lista' 
                         title={
-                            <Col sm={12} className="d-flex justify-content-center" >
-                                <Col sm={8}>
+                            <Row className="d-flex justify-content-center" >
+                                <Col lg={8}>
                                     <h3 className='text-underline small-font'><u>{item.Nome}</u></h3>
                                     <p className='mb-1'>{item.Cidade} - {item.Estado}</p>
                                     <a href={link} target='_blank' rel="noopener noreferrer" style={{width: '20%'}}><p style={{width: '20%'}} className='mb-0'>{item.Telefone}</p></a>
                                     <p className='text-danger'>Clique para saber mais</p>
                                 </Col>
-                                <Col className='align-items-center justify-content-end row' sm={4}>
+                                <Col className='align-items-center justify-content-end row' lg={4}>
                                     {(item.deal === 's') && <Image src="https://www.sisclub.com.br/images/adiantamento.png" className='col-6' fluid/>}
                                     {(item.club === 's') && <Image src="https://www.sisclub.com.br/images/correct_club.png" className='col-6' fluid/>}
                                     {(item.alim === 's') && <Image src="https://www.sisclub.com.br/images/refeicao.png" className='col-6' fluid/>}
                                     {(item.refei === 's') && <Image src="https://www.sisclub.com.br/images/alimentacao.png" className='col-6' fluid/>}
                                 </Col>
-                            </Col> 
+                            </Row> 
                         } 
                     >
                         <Col sm={12} className='d-flex column'>

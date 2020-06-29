@@ -141,7 +141,7 @@ export default function SobreNos(){
                             <img src={require('../../assets/cartoes/card_refeicao_reto.png')} className="card_image" alt='Cartão Vale Refeição'/>
                         </Box>
                     </Row>
-                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '120vh'}}>
+                    <Row className='d-flex justify-content-around p-5' style={{backgroundColor: 'rgba(0,0,0,0.1)', height: '150vh'}}>
                         <Box pose={isVisible ? 'visible' : 'hidden'} className='align-items-center row col-md-6'>
                             <h4 className=''>Outras Vantagens</h4>
                             <ul className=" description_cartoes_empresa" style={{listStyle: 'circle'}}>
