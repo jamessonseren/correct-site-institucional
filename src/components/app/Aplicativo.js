@@ -103,7 +103,7 @@ export default function Aplicativo(){
                 <Box pose={isVisible ? 'visible' : 'hidden'} className='d-flex justify-content-center row col-lg-6' style={{flexDirection: 'column'}}>
                     <h1 className='font-weight-bold title_app'>Divirta-se!</h1>
                     <h3 className="description_subcategoria" >
-                        Dentro do APP temos uma área específica para seu entretenimento, com jogos e biscoito da sorte!
+                        Dentro do APP temos uma área específica para seu entretenimento, com jogos e baú de mensagens!
                     </h3>
                 </Box>
                 <div className='align-items-center justify-content-center d-flex w-100' style={{flexDirection: 'column'}}>
