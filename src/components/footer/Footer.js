@@ -26,7 +26,7 @@ export default function Footer() {
             </Col>
             <Col lg={2} className="justify-content-center align-items-center d-flex" style={{flexDirection: 'column'}}>
                 <a target='_blank' rel="noopener noreferrer" href='https://play.google.com/store/apps/details?id=com.correct_app'> <Image src={require('../../assets/download_google_play.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
-                {/* <a href='#'> <Image src={require('../../assets/download_app_store.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a> */}
+                <a href='https://apps.apple.com/br/app/appcorrect/id1527428934'> <Image src={require('../../assets/download_app_store.png')} style={{width: '15vh', marginTop: 10}} rounded fluid/> </a>
             </Col>
             <Col sm={12} className="justify-content-center align-items-center d-flex mt-3 text-center" style={{color: '#ccc'}}>
                 © Correct 2018 - 2020 - Todos os direitos reservados.
